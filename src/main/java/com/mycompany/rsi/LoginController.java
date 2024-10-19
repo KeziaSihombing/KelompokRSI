@@ -32,6 +32,10 @@ public class LoginController {
             loginInstance.getjPasswordField1().setText("Ketik kata sandi..");   
         }
     }
+    
+    public void helllo(){
+        System.out.print("hello");
+    }
 
     public void setValidation(boolean validation) {
         this.validation = validation;
