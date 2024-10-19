@@ -27,11 +27,7 @@ public class Guest {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    public void hello(){
-        System.out.print("hello");
-    }
-   
+ 
    
   
     
