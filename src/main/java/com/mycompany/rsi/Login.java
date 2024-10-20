@@ -51,7 +51,7 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\KelompokRSI\\RSI\\src\\main\\java\\IMAGE\\Property 1=Default.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Property 1=Default.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 186, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
@@ -108,10 +108,10 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 435, -1, -1));
         jPasswordField1.getAccessibleContext().setAccessibleName("PassPsField");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\KelompokRSI\\RSI\\src\\main\\java\\IMAGE\\girl-with-red-hat-f4_Obgjio9Y-unsplash.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/girl-with-red-hat-f4_Obgjio9Y-unsplash.jpg"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\KelompokRSI\\RSI\\src\\main\\java\\IMAGE\\Button.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Button.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setPreferredSize(new java.awt.Dimension(135, 55));
