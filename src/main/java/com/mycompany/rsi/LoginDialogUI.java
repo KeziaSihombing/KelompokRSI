@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  * @author ASUS
  */
 public class LoginDialogUI {
-    public static void showMessage (String message){
+    public void showMessage (String message){
         JOptionPane.showMessageDialog(new LoginUI(), message);
     } 
     

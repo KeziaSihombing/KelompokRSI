@@ -11,10 +11,21 @@ package com.mycompany.rsi;
 public class Akun {
    private String email;
    private String password;
+   
+   public Akun(String emal, String password){
+       this.email = email;
+       this.password = password;
+   }
+   
+   public Akun(){
+       
+   }
       
    public boolean getUser(String email, String password){
+       //codingan database      
        return true;
    }
+   
       
     
 }
