@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  */
 public class LoginDialogUI {
     public static void showMessage (String message){
-        JOptionPane.showMessageDialog(new Login(), message);
+        JOptionPane.showMessageDialog(new LoginUI(), message);
     } 
     
 }

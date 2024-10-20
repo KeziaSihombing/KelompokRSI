@@ -16,7 +16,7 @@ public class LoginController {
     }    
     
     public static void showLoginForm(){
-        Login loginInstance = Login.getInstance();
+        LoginUI loginInstance = LoginUI.getInstance();
         loginInstance.setVisible(true);
     }
         
@@ -27,7 +27,7 @@ public class LoginController {
         }else{
             LoginDialogUI.showMessage("Email atau password salah");
             setValidation(false);
-            Login loginInstance = Login.getInstance();
+            LoginUI loginInstance = LoginUI.getInstance();
             loginInstance.getjTextField2().setText("Ketik email...");
             loginInstance.getjPasswordField1().setText("Ketik kata sandi..");   
         }
