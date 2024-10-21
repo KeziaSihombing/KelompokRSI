@@ -9,7 +9,7 @@ package com.mycompany.rsi;
  * @author ASUS
  */
 public class LoginController {
-    
+        
     public LoginController(){
      
     }    
@@ -28,6 +28,10 @@ public class LoginController {
             Aplikasi.loginUI.getjPasswordField1().setText("Ketik kata sandi..");   
         }
     }
+    
+
+    
+    
 
 
    
