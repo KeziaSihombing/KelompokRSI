@@ -15,13 +15,17 @@ public class Aplikasi {
     public static LoginDialogUI dialogUI;
     public static LoginUI loginUI;
     public static sesiKonsultasiUI sesiKonsultasiUI;
-  
+    public static Database database;
+       
     public static void main(String[] args){
         Aplikasi.dialogUI = new LoginDialogUI();
         Aplikasi.loginUI = new LoginUI();
         Aplikasi.akun = new Akun();
         Aplikasi.sesiKonsultasiUI = new sesiKonsultasiUI();
+        Aplikasi.database = new Database();
         Aplikasi.controllerLogin = new LoginController();
+        
+        
         Aplikasi.controllerLogin.showLoginForm();
     }
             
