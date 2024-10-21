@@ -46,8 +46,10 @@ public class Akun {
             rs2 = pStatement2.executeQuery(); //apabila yang login merupakan konsultan 
             
             if (rs.next()) {
+                person = "klien";
                 return true;
-            }else if(rs2.next()){                
+            }else if(rs2.next()){
+                person = "konsultan";
                 return true;
             }
             
@@ -57,6 +59,9 @@ public class Akun {
        return false;
    }
    
+   public String getPerson(){
+       return person;
+   }
    
    
    
