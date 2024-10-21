@@ -23,9 +23,9 @@ public class Aplikasi {
         Aplikasi.akun = new Akun();
         Aplikasi.sesiKonsultasiUI = new sesiKonsultasiUI();
         Aplikasi.database = new Database();
-        Aplikasi.controllerLogin = new LoginController();
-        
-        
+        Aplikasi.database.databaseConnection(); //connect ke database
+        Aplikasi.database.insertTable(); //memasukkan semua table yang diperlukan
+        Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }
             
