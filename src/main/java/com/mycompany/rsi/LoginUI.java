@@ -136,7 +136,7 @@ public class LoginUI extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 623, 600, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 623, 580, -1));
         jButton2.getAccessibleContext().setAccessibleName("RegisterButton");
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
