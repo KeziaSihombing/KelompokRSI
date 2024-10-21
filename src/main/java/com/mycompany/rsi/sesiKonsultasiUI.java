@@ -305,7 +305,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public void tampilkan(){
-        Aplikasi.loginUI.setVisible(true);
+        
         this.setVisible(true);
     }
 
