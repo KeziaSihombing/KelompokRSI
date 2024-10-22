@@ -40,7 +40,7 @@ public class LoginUI extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Famify");
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(java.awt.Color.white);

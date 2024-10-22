@@ -47,9 +47,13 @@ public class Akun {
             
             if (rs.next()) {
                 person = "klien";
+                this.email = email;
+                this.password = password;
                 return true;
             }else if(rs2.next()){
                 person = "konsultan";
+                this.email = email;
+                this.password = password;
                 return true;
             }
             

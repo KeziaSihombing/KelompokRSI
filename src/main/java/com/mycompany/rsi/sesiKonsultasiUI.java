@@ -4,6 +4,8 @@
  */
 package com.mycompany.rsi;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -167,7 +169,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 20)); // NOI18N
         jLabel4.setText("Hari ini");
         jLabel4.setPreferredSize(new java.awt.Dimension(71, 28));
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 450, -1));
 
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setDoubleBuffered(false);
@@ -414,6 +416,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public void tampilkan(List<DataDaftarSesi> daftar){
+        jPanel1.setVisible(false);
+        jPanel3.setVisible(false);
+        jPanel4.setVisible(false);
+        
         //perbedaan tampilan untuk klien dan konsultan
         if(Aplikasi.akun.getPerson().equals("klien")){
             //tampilan klien  
@@ -421,6 +427,76 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
             
         }else{
             //tampulan konsultan
+            
+            if(daftar.size()>=1){              
+                DataDaftarSesi sesi1 = daftar.get(0);
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                // Konversi string tanggalKonsul menjadi LocalDate
+                LocalDate tanggalKonsultasi = LocalDate.parse(sesi1.getTanggalKonsul(), formatter);
+                DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                
+                jLabel4.setText(formattedTanggal);
+                jLabel13.setText(sesi1.getNama()); // Nama
+                jLabel14.setText(sesi1.getUmur() + " Tahun"); // Umur
+                jLabel19.setText(formattedTanggal); // Tanggal Konsultasi
+                jLabel21.setText(sesi1.getWaktuKonsul()); // Waktu Konsultasi
+                jLabel20.setText("Konsultasi " + sesi1.getTempat()); // Tempat
+                if(tanggalKonsultasi.isBefore(LocalDate.now())){
+                    jLabel7.setText("Sudah Berakhir");
+                }else{
+                    jLabel7.setText("Akan Berlangsung");
+                    jButton12.setVisible(false);
+                }
+                
+                jPanel1.setVisible(true);
+            }
+            if(daftar.size()>=2){
+                DataDaftarSesi sesi2 = daftar.get(1);
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                // Konversi string tanggalKonsul menjadi LocalDate
+                LocalDate tanggalKonsultasi = LocalDate.parse(sesi2.getTanggalKonsul(), formatter);
+                DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                
+                jLabel15.setText(sesi2.getNama()); // Nama
+                jLabel16.setText(sesi2.getUmur() + " Tahun"); // Umur
+                jLabel18.setText(formattedTanggal); // Tanggal Konsultasi
+                jLabel22.setText(sesi2.getWaktuKonsul()); // Waktu Konsultasi
+                jLabel17.setText("Konsultasi " + sesi2.getTempat()); // Tempat
+
+                if(tanggalKonsultasi.isBefore(LocalDate.now())){
+                    jLabel11.setText("Sudah Berakhir");
+                }else{
+                    jLabel11.setText("Akan Berlangsung");
+                    jButton10.setVisible(false);
+                }
+                jPanel3.setVisible(true);
+            }
+            if(daftar.size()>=3){
+                DataDaftarSesi sesi3 = daftar.get(2);
+                
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                // Konversi string tanggalKonsul menjadi LocalDate
+                LocalDate tanggalKonsultasi = LocalDate.parse(sesi3.getTanggalKonsul(), formatter);
+                DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                
+                jLabel34.setText(sesi3.getNama()); // Nama
+                jLabel36.setText(sesi3.getUmur() + " Tahun"); // Umur
+                jLabel33.setText(formattedTanggal); // Tanggal Konsultasi
+                jLabel37.setText(sesi3.getWaktuKonsul()); // Waktu Konsultasi
+                jLabel32.setText("Konsultasi " + sesi3.getTempat()); // Tempat
+                
+                if(tanggalKonsultasi.isBefore(LocalDate.now())){
+                    jLabel35.setText("Sudah Berakhir");
+                }else{
+                    jLabel35.setText("Akan Berlangsung");
+                    jButton11.setVisible(false);
+                }
+                jPanel4.setVisible(true);
+            }
+           
         }
         this.setVisible(true);
     }

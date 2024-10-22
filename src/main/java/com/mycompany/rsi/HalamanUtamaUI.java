@@ -34,7 +34,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1446, 1256));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -104,8 +104,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.controllerDaftarSesi.load();
         this.dispose();
+        Aplikasi.controllerDaftarSesi.load();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

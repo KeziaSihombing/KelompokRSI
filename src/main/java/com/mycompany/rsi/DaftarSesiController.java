@@ -19,10 +19,21 @@ public class DaftarSesiController {
     public void load(){
         daftarSesiKlien = Aplikasi.daftar.getDaftarSesiKlien();
         //daftarSesiKonsultan = Aplikasi.daftar.getDaftarSesiKonsultan();
+        if(daftarSesiKlien.size()>1){
+            showDaftarSesiKonsultasi(daftarSesiKlien);
+            
+        }
+        else {
+            Aplikasi.dialogUI.showMessage("Anda tidak memiliki sesi konsultasi");
+            Aplikasi.beranda.tampilkan();
+        }
+        
+        //ini juga ada untuk daftarSesiKonsultan
     }
     
     public void showDaftarSesiKonsultasi(List<DataDaftarSesi> daftarKonsultasi){
         Aplikasi.sesiKonsultasiUI.tampilkan(daftarKonsultasi);
+        
     }
     
 }

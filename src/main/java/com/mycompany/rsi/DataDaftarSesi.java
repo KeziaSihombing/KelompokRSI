@@ -16,36 +16,35 @@ import java.util.ArrayList;
  * @author ASUS
  */
 public class DataDaftarSesi {
-    private List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
+    
     private List<DataDaftarSesi> daftarSesiKonsultan = new ArrayList<>();
     
     private String nama;
     private int umur;
-    private int tanggalKonsul;
-    private int waktuKonsul;
-    private int jenisKonsul;
+    private String tanggalKonsul;
+    private String waktuKonsul;
+    private String tempat;
     
     //untuk mendapatkan list Klien konsultan
     public List<DataDaftarSesi> getDaftarSesiKlien(){
        String email = Aplikasi.akun.getEmail();
-       String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_KONSULTAN, k.SPESIALISASI FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KONSULTAN k ON r.ID_KONSULTAN = k.ID_KONSULTAN k.EMAIL = ? ";
-       PreparedStatement pStatement = null;
-       ResultSet rs;
-     
+       String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE kl.EMAIL = ?";
+        List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
        try{
             Aplikasi.database.databaseConnection();
             Connection con = Aplikasi.database.getCon();
-            pStatement = con.prepareStatement(query);
+            PreparedStatement pStatement = con.prepareStatement(query);
             pStatement.setString(1, email);
-            rs = pStatement.executeQuery(); 
+            ResultSet rs = pStatement.executeQuery(); 
             while(rs.next()){
                 DataDaftarSesi sesi = new DataDaftarSesi();
-                sesi.tanggalKonsul = rs.getDate("TANGGAL").toLocalDate().getDayOfMonth();
-                sesi.waktuKonsul = rs.getTime("WAKTU").toLocalTime().getHour();
-                sesi.nama = rs.getString("NAMA_KONSULTAN");
+                sesi.tanggalKonsul = rs.getString("TANGGAL");
+                sesi.waktuKonsul = rs.getString("WAKTU");
+                sesi.nama = rs.getString("NAMA_LENGKAP");
+                sesi.umur = rs.getInt("UMUR");
+                sesi.tempat = rs.getString("TEMPAT");
                 daftarSesiKlien.add(sesi);
             }
-            
        }catch(Exception ex){
            Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
        } 
@@ -60,8 +59,11 @@ public class DataDaftarSesi {
         return daftarSesiKonsultan;
     }
 
+    public List<DataDaftarSesi> getDaftarSesiKonsultan() {
+        return daftarSesiKonsultan;
+    }
+
     public String getNama() {
-        //sql
         return nama;
     }
 
@@ -69,17 +71,22 @@ public class DataDaftarSesi {
         return umur;
     }
 
-    public int getTanggalKonsul() {
+    public String getTanggalKonsul() {
         return tanggalKonsul;
     }
 
-    public int getWaktuKonsul() {
+    public String getWaktuKonsul() {
         return waktuKonsul;
     }
 
-    public int getJenisKonsul() {
-        return jenisKonsul;
+    public String getTempat() {
+        return tempat;
     }
+    
+    
+    
+
+
     
     
     
