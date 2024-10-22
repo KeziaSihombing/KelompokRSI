@@ -18,7 +18,7 @@ public class DaftarSesiController {
     
     public void load(){
         daftarSesiKlien = Aplikasi.daftar.getDaftarSesiKlien();
-        daftarSesiKonsultan = Aplikasi.daftar.getDaftarSesiKonsultan();
+        //daftarSesiKonsultan = Aplikasi.daftar.getDaftarSesiKonsultan();
     }
     
     public void showDaftarSesiKonsultasi(List<DataDaftarSesi> daftarKonsultasi){

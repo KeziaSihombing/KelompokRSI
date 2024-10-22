@@ -19,46 +19,68 @@ public class DataDaftarSesi {
     private List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
     private List<DataDaftarSesi> daftarSesiKonsultan = new ArrayList<>();
     
+    private String nama;
+    private int umur;
+    private int tanggalKonsul;
+    private int waktuKonsul;
+    private int jenisKonsul;
+    
     //untuk mendapatkan list Klien konsultan
     public List<DataDaftarSesi> getDaftarSesiKlien(){
-//       String query = "SELECT * FROM FAMIFY.KLIEN WHERE EMAIL = ? AND PASSWORD = ?";
-//       String query2 = "SELECT * FROM FAMIFY.KONSULTAN WHERE EMAIL = ? AND PASSWORD = ?";
-//       PreparedStatement pStatement = null;
-//       PreparedStatement pStatement2 = null;
-//       ResultSet rs;
-//       ResultSet rs2;
+       String email = Aplikasi.akun.getEmail();
+       String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_KONSULTAN, k.SPESIALISASI FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KONSULTAN k ON r.ID_KONSULTAN = k.ID_KONSULTAN k.EMAIL = ? ";
+       PreparedStatement pStatement = null;
+       ResultSet rs;
+     
        try{
             Aplikasi.database.databaseConnection();
             Connection con = Aplikasi.database.getCon();
+            pStatement = con.prepareStatement(query);
+            pStatement.setString(1, email);
+            rs = pStatement.executeQuery(); 
+            while(rs.next()){
+                DataDaftarSesi sesi = new DataDaftarSesi();
+                sesi.tanggalKonsul = rs.getDate("TANGGAL").toLocalDate().getDayOfMonth();
+                sesi.waktuKonsul = rs.getTime("WAKTU").toLocalTime().getHour();
+                sesi.nama = rs.getString("NAMA_KONSULTAN");
+                daftarSesiKlien.add(sesi);
+            }
             
-//            pStatement = con.prepareStatement(query);
-//            pStatement.setString(1, email);
-//            pStatement.setString(2, password);
-//            rs = pStatement.executeQuery(); //apabila yang login merupakan klien
-//            
-//            pStatement2 = con.prepareStatement(query2);
-//            pStatement2.setString(1, email);
-//            pStatement2.setString(2, password);
-//            rs2 = pStatement2.executeQuery(); //apabila yang login merupakan konsultan 
-//            
-//            if (rs.next()) {
-//                person = "klien";
-//                return true;
-//            }else if(rs2.next()){
-//                person = "konsultan";
-//                return true;
-//            }
-//            
        }catch(Exception ex){
            Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
        } 
        return daftarSesiKlien;        
     }
     
-    //untuk mendapatkan list Konsultan klien
-    public List<DataDaftarSesi> getDaftarSesiKonsultan(){
+    //untuk mendapatkan list Konsultan klien MALES BRO TOLONG CARRY
+    public List<DataDaftarSesi> getDaftarSesiKonsultan(String namaKlien){
+        String query ;
+        
+        
         return daftarSesiKonsultan;
     }
+
+    public String getNama() {
+        //sql
+        return nama;
+    }
+
+    public int getUmur() {
+        return umur;
+    }
+
+    public int getTanggalKonsul() {
+        return tanggalKonsul;
+    }
+
+    public int getWaktuKonsul() {
+        return waktuKonsul;
+    }
+
+    public int getJenisKonsul() {
+        return jenisKonsul;
+    }
+    
     
     
 }

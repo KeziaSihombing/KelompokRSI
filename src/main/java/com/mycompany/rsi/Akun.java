@@ -63,6 +63,9 @@ public class Akun {
        return person;
    }
    
+   public String getEmail(){
+       return email;
+   }
    
    
    
