@@ -18,6 +18,8 @@ public class Aplikasi {
     public static Database database;
     public static UpHasilKonsultasiUI upHasil;
     public static HalamanUtamaUI beranda;
+    public static DataDaftarSesi daftar;
+    public static DaftarSesiController controllerDaftarSesi;
        
     public static void main(String[] args){
         Aplikasi.dialogUI = new LoginDialogUI();
@@ -29,6 +31,8 @@ public class Aplikasi {
         Aplikasi.database.insertTable(); //memasukkan semua table yang diperlukan
         Aplikasi.upHasil = new UpHasilKonsultasiUI();
         Aplikasi.beranda = new HalamanUtamaUI();
+        Aplikasi.controllerDaftarSesi = new DaftarSesiController();
+        Aplikasi.daftar = new DataDaftarSesi();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }

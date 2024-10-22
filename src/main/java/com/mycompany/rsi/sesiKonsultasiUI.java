@@ -4,6 +4,8 @@
  */
 package com.mycompany.rsi;
 
+import java.util.List;
+
 /**
  *
  * @author ASUS
@@ -411,7 +413,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void tampilkan(){
+    public void tampilkan(List<DataDaftarSesi> daftar){
         //perbedaan tampilan untuk klien dan konsultan
         if(Aplikasi.akun.getPerson().equals("klien")){
             //tampilan klien  
