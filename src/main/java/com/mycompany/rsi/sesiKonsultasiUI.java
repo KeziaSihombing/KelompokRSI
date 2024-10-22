@@ -88,6 +88,11 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setPreferredSize(new java.awt.Dimension(78, 15));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 40, 100, -1));
 
         jButton3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
@@ -104,6 +109,11 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
         jButton4.setPreferredSize(new java.awt.Dimension(143, 15));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
@@ -173,7 +183,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
         jButton8.setText("Mulai Obrolan");
-        jButton8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jButton8.setBorder(null);
         jButton8.setBorderPainted(false);
         jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton8.setFocusPainted(false);
@@ -185,7 +195,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton12.setForeground(new java.awt.Color(34, 184, 185));
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize (1).png"))); // NOI18N
         jButton12.setText("Lihat Detail Sesi");
-        jButton12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jButton12.setBorder(null);
         jButton12.setBorderPainted(false);
         jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton12.setFocusPainted(false);
@@ -280,7 +290,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
         jButton9.setText("Mulai Obrolan");
-        jButton9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jButton9.setBorder(null);
         jButton9.setBorderPainted(false);
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton9.setFocusPainted(false);
@@ -292,7 +302,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton10.setForeground(new java.awt.Color(34, 184, 185));
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize (1).png"))); // NOI18N
         jButton10.setText("Lihat Detail Sesi");
-        jButton10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jButton10.setBorder(null);
         jButton10.setBorderPainted(false);
         jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton10.setFocusPainted(false);
@@ -352,7 +362,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton13.setForeground(new java.awt.Color(255, 255, 255));
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
         jButton13.setText("Mulai Obrolan");
-        jButton13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jButton13.setBorder(null);
         jButton13.setBorderPainted(false);
         jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton13.setFocusPainted(false);
@@ -364,7 +374,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton11.setForeground(new java.awt.Color(34, 184, 185));
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize (1).png"))); // NOI18N
         jButton11.setText("Lihat Detail Sesi");
-        jButton11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jButton11.setBorder(null);
         jButton11.setBorderPainted(false);
         jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton11.setFocusPainted(false);
@@ -388,6 +398,16 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -395,6 +415,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         //perbedaan tampilan untuk klien dan konsultan
         if(Aplikasi.akun.getPerson().equals("klien")){
             //tampilan klien  
+            
             
         }else{
             //tampulan konsultan

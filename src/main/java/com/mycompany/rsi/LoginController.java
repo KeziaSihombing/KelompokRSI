@@ -21,7 +21,8 @@ public class LoginController {
     public void validateUser(String email, String password){
         boolean validation = Aplikasi.akun.getUser(email, password);
         if(validation == true){
-            Aplikasi.sesiKonsultasiUI.tampilkan();//ke controller ya...
+            Aplikasi.beranda.tampilkan();
+            Aplikasi.loginUI.dispose();
         }else{
             Aplikasi.dialogUI.showMessage("Email atau password salah");
             Aplikasi.loginUI.getjTextField2().setText("Ketik email...");

@@ -17,6 +17,7 @@ public class Aplikasi {
     public static sesiKonsultasiUI sesiKonsultasiUI;
     public static Database database;
     public static UpHasilKonsultasiUI upHasil;
+    public static HalamanUtamaUI beranda;
        
     public static void main(String[] args){
         Aplikasi.dialogUI = new LoginDialogUI();
@@ -27,6 +28,7 @@ public class Aplikasi {
         Aplikasi.database.databaseConnection(); //connect ke database
         Aplikasi.database.insertTable(); //memasukkan semua table yang diperlukan
         Aplikasi.upHasil = new UpHasilKonsultasiUI();
+        Aplikasi.beranda = new HalamanUtamaUI();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }
