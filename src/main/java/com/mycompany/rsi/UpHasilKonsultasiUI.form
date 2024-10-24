@@ -6,9 +6,6 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[976, 528]"/>
     </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[976, 528]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -150,7 +147,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="32" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Esther Howard"/>
+            <Property name="text" type="java.lang.String" value="Ester Howard"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">

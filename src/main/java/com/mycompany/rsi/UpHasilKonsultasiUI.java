@@ -6,6 +6,13 @@ package com.mycompany.rsi;
 
 import java.io.File;
 import javax.swing.JFileChooser;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.awt.Desktop;
 
 /**
  *
@@ -46,7 +53,6 @@ public class UpHasilKonsultasiUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(976, 528));
-        setPreferredSize(new java.awt.Dimension(976, 528));
 
         jPanel2.setBackground(new java.awt.Color(244, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(34, 184, 185)));
@@ -55,7 +61,7 @@ public class UpHasilKonsultasiUI extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-pos-has.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        jLabel2.setText("Esther Howard");
+        jLabel2.setText("Ester Howard");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(120, 120, 135));
@@ -188,24 +194,208 @@ public class UpHasilKonsultasiUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFileChooser fc = new JFileChooser();
-        fc.showOpenDialog(null);
-        File f = fc.getSelectedFile();
-        //String fileName = f.getAbsolutePath();
-        //jButton1.setText(fileName);
+    JFileChooser fc = new JFileChooser();
+    fc.showOpenDialog(null);
+    File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
+
+    if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".pdf")) {
+        jButton1.setText(selectedFile.getAbsolutePath());
+    } else {
+        Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PDF.");
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+//    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
+//    String filePath = jButton1.getText();
+//    
+//    if (filePath.endsWith(".pdf")) {
+//        try {
+//            File myFile = new File(filePath);
+//            Desktop.getDesktop().open(myFile); // Membuka file PDF
+//        } catch (IOException ex) {
+//            Aplikasi.dialogUI.showMessage("Gagal membuka file: " + ex.getMessage());
+//        }
+//    }
+//}
+    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+    String filePath = jButton1.getText();
+    
+    if (filePath.endsWith(".pdf")) {
+        if (jButton3.getText().equals("Simpan")) {
+            File file = new File(filePath);
+            simpanDB(file); // Menyimpan file ke database
+            jButton3.setText("Hapus"); // Ubah teks tombol menjadi "Hapus"
+        } else if (jButton3.getText().equals("Hapus")) {
+            hapusdariDB(); // Menghapus file dari database
+            jButton1.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
+            jButton3.setText("Simpan"); // Kembali ke tombol "Simpan"
+        }
+    } else {
+        Aplikasi.dialogUI.showMessage("Error: Silakan unggah file PDF.");
+    }
     }//GEN-LAST:event_jButton3ActionPerformed
+    
+    private void simpanDB(File file) {
+    Connection con = null;
+    PreparedStatement pstmtCekKlien = null;
+    PreparedStatement pstmtCari = null;
+    PreparedStatement pstmtSimpan = null;
+    ResultSet rsCek = null;
+    ResultSet rs = null;
 
-    public void tampilkan(){
+    try {
+        // Periksa apakah file valid
+        if (file == null || !file.exists() || !file.canRead()) {
+            Aplikasi.dialogUI.showMessage("File hasil konsultasi tidak valid.");
+            return;
+        }
+
+        // Ambil data yang diperlukan
+        String filePath = jButton1.getText(); // Path file hasil konsultasi
+        String namaKlien = jLabel2.getText(); // Nama klien dari label
+
+        // Koneksi ke database
+        Aplikasi.database.databaseConnection();
+        con = Aplikasi.database.getCon();
+
+        // Cek apakah nama klien ada di tabel KLIEN
+        String queryCekKlien = "SELECT * FROM FAMIFY.KLIEN WHERE NAMA_LENGKAP = ?";
+        pstmtCekKlien = con.prepareStatement(queryCekKlien);
+        pstmtCekKlien.setString(1, namaKlien);
+        rsCek = pstmtCekKlien.executeQuery();
+
+        if (!rsCek.next()) {
+            Aplikasi.dialogUI.showMessage("Nama klien tidak ditemukan di database.");
+            return;
+        }
+
+        // Ambil ID_KLIEN
+        int idKlien = rsCek.getInt("ID_KLIEN");
+
+        // Ambil ID_RESERVASI berdasarkan ID_KLIEN
+        String queryCari = "SELECT ID_RESERVASI FROM FAMIFY.RESERVASI WHERE ID_KLIEN = ?";
+        pstmtCari = con.prepareStatement(queryCari);
+        pstmtCari.setInt(1, idKlien);
+        rs = pstmtCari.executeQuery();
+
+        if (!rs.next()) {
+            Aplikasi.dialogUI.showMessage("ID reservasi tidak ditemukan untuk klien ini.");
+            return;
+        }
+
+        // Ambil ID_RESERVASI
+        int idReservasi = rs.getInt("ID_RESERVASI");
+
+        // Simpan hasil konsultasi ke tabel HASIL_KONSULTASI
+        String querySimpan = "INSERT INTO FAMIFY.HASIL_KONSULTASI (ID_RESERVASI, CATATAN_KONSULTASI) VALUES (?, ?)";
+        pstmtSimpan = con.prepareStatement(querySimpan);
+
+        // Baca file menjadi byte array
+        FileInputStream fis = new FileInputStream(file);
+        pstmtSimpan.setInt(1, idReservasi);
+        pstmtSimpan.setBinaryStream(2, fis, (int) file.length());
+
+        // Eksekusi pernyataan
+        int row = pstmtSimpan.executeUpdate();
+        fis.close();
+
+        if (row > 0) {
+            Aplikasi.dialogUI.showMessage("Hasil konsultasi berhasil disimpan.");
+            // Reset UI setelah menyimpan
+            jButton1.setText(jButton1.getText());
+            jButton3.setText("Hapus");
+        } else {
+            Aplikasi.dialogUI.showMessage("Gagal menyimpan hasil konsultasi.");
+        }
+
+    } catch (SQLException sqlEx) {
+        sqlEx.printStackTrace();
+        Aplikasi.dialogUI.showMessage("SQL Error: " + sqlEx.getMessage());
+    } catch (IOException ioEx) {
+        ioEx.printStackTrace();
+        Aplikasi.dialogUI.showMessage("Error membaca file: " + ioEx.getMessage());
+    } catch (Exception e) {
+        e.printStackTrace();
+        Aplikasi.dialogUI.showMessage("Gagal menyimpan hasil konsultasi: " + e.getMessage());
+    } finally {
+        // Tutup resources
+        try {
+            if (rs != null) rs.close();
+            if (rsCek != null) rsCek.close();
+            if (pstmtSimpan != null) pstmtSimpan.close();
+            if (pstmtCari != null) pstmtCari.close();
+            if (pstmtCekKlien != null) pstmtCekKlien.close();
+            if (con != null) con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+
+private void hapusdariDB() {
+    try {
+        //String filePath = jButton1.getText(); // Mengambil nama file dari jButton1
+        String namaKlien = jLabel2.getText();
+
+        // Koneksi ke database
+        Aplikasi.database.databaseConnection();
+        Connection con = Aplikasi.database.getCon();
+
+        // Ambil ID_HASIL yang sesuai dengan klien berdasarkan nama file
+        String queryCari = "SELECT ID_HASIL FROM FAMIFY.HASIL_KONSULTASI H " +
+                           "INNER JOIN FAMIFY.RESERVASI R ON H.ID_RESERVASI = R.ID_RESERVASI " +
+                           "INNER JOIN FAMIFY.KLIEN K ON R.ID_KLIEN = K.ID_KLIEN " +
+                           "WHERE K.NAMA_LENGKAP = ? AND H.CATATAN_KONSULTASI = ?";
+        PreparedStatement pstmtCari = con.prepareStatement(queryCari);
+        pstmtCari.setString(1, namaKlien);
+        //pstmtCari.setString(2, filePath); // Menggunakan filePath untuk mencari ID_HASIL
+        ResultSet rs = pstmtCari.executeQuery();
+
+        if (rs.next()) {
+            int idHasil = rs.getInt("ID_HASIL");
+
+            // Eksekusi DELETE statement
+            String queryHapus = "DELETE FROM FAMIFY.HASIL_KONSULTASI WHERE ID_HASIL = ?";
+            PreparedStatement pstmtHapus = con.prepareStatement(queryHapus);
+            pstmtHapus.setInt(1, idHasil);
+            int row = pstmtHapus.executeUpdate();
+
+            if (row > 0) {
+                Aplikasi.dialogUI.showMessage("File hasil konsultasi berhasil dihapus");
+                jButton1.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
+                jButton3.setText("Simpan"); // Kembali ke tombol "Simpan"
+            } else {
+                Aplikasi.dialogUI.showMessage("File hasil konsultasi tidak ditemukan");
+            }
+
+            pstmtHapus.close();
+        } else {
+            Aplikasi.dialogUI.showMessage("ID hasil konsultasi tidak ditemukan untuk klien ini");
+        }
+
+        // Tutup resources
+        rs.close();
+        pstmtCari.close();
+        con.close();
+    } catch (Exception e) {
+        e.printStackTrace();
+        Aplikasi.dialogUI.showMessage("Gagal menghapus file hasil konsultasi.");
+    }
+}
+
+
+    public void tampilkan() {
         this.setVisible(true);
     }
+    
+    
+
     /**
      * @param args the command line arguments
      */
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
