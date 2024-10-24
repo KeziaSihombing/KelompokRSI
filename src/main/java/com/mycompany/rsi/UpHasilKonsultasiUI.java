@@ -13,13 +13,20 @@ import java.sql.ResultSet;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.awt.Desktop;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author HP
  */
 public class UpHasilKonsultasiUI extends javax.swing.JFrame {
-
+    
+    
     /**
      * Creates new form UpHasilKonsultasiUI
      */
@@ -194,15 +201,24 @@ public class UpHasilKonsultasiUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    JFileChooser fc = new JFileChooser();
-    fc.showOpenDialog(null);
-    File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
+        if(jButton3.getText().equals("Simpan")){
+            JFileChooser fc = new JFileChooser();
+            fc.showOpenDialog(null);
+            File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
 
-    if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".pdf")) {
-        jButton1.setText(selectedFile.getAbsolutePath());
-    } else {
-        Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PDF.");
-    }
+            if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".pdf")) {
+                jButton1.setText(selectedFile.getAbsolutePath());
+            } else {
+                Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PDF.");
+            }
+        }else{  
+            File myFile = new File(jButton1.getText());
+            try {
+                Desktop.getDesktop().open(myFile);
+            } catch (IOException ex) {
+                Logger.getLogger(UpHasilKonsultasiUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
     
 //    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
@@ -294,7 +310,7 @@ public class UpHasilKonsultasiUI extends javax.swing.JFrame {
         // Baca file menjadi byte array
         FileInputStream fis = new FileInputStream(file);
         pstmtSimpan.setInt(1, idReservasi);
-        pstmtSimpan.setBinaryStream(2, fis, (int) file.length());
+        pstmtSimpan.setBinaryStream(2, fis, file.length());
 
         // Eksekusi pernyataan
         int row = pstmtSimpan.executeUpdate();
@@ -335,7 +351,7 @@ public class UpHasilKonsultasiUI extends javax.swing.JFrame {
 
 private void hapusdariDB() {
     try {
-        //String filePath = jButton1.getText(); // Mengambil nama file dari jButton1
+        String filePath = jButton1.getText(); // Mengambil nama file dari jButton1
         String namaKlien = jLabel2.getText();
 
         // Koneksi ke database
@@ -349,7 +365,7 @@ private void hapusdariDB() {
                            "WHERE K.NAMA_LENGKAP = ? AND H.CATATAN_KONSULTASI = ?";
         PreparedStatement pstmtCari = con.prepareStatement(queryCari);
         pstmtCari.setString(1, namaKlien);
-        //pstmtCari.setString(2, filePath); // Menggunakan filePath untuk mencari ID_HASIL
+        pstmtCari.setString(2, filePath); // Menggunakan filePath untuk mencari ID_HASIL
         ResultSet rs = pstmtCari.executeQuery();
 
         if (rs.next()) {
@@ -385,7 +401,69 @@ private void hapusdariDB() {
 }
 
 
-    public void tampilkan() {
+    public void tampilkan(String nama) {
+        String query2 = "SELECT HK.CATATAN_KONSULTASI FROM FAMIFY.HASIL_KONSULTASI HK JOIN FAMIFY.RESERVASI R ON HK.ID_RESERVASI = R.ID_RESERVASI JOIN FAMIFY.KLIEN KLI ON R.ID_KLIEN = KLI.ID_KLIEN JOIN FAMIFY.KONSULTAN KONS ON R.ID_KONSULTAN = KONS.ID_KONSULTAN WHERE KLI.NAMA_LENGKAP = ? OR KONS.NAMA_KONSULTAN = ?";
+        try{
+                Aplikasi.database.databaseConnection();
+                Connection con = Aplikasi.database.getCon();
+                PreparedStatement pStatement = con.prepareStatement(query2);
+                pStatement.setString(1, nama);
+                pStatement.setString(2, nama);
+                ResultSet rs = pStatement.executeQuery(); 
+                while(rs.next()){
+                    jButton1.setText(rs.getString("CATATAN_KONSULTASI"));
+                    jButton3.setText("Hapus");
+                }
+        }catch(Exception ex){
+                Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
+        } 
+        if(Aplikasi.akun.getPerson().equals("konsultan")){  
+            String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE k.NAMA_LENGKAP= ?";
+            try{
+                Aplikasi.database.databaseConnection();
+                Connection con = Aplikasi.database.getCon();
+                PreparedStatement pStatement = con.prepareStatement(query);
+                pStatement.setString(1, nama);
+                ResultSet rs = pStatement.executeQuery(); 
+                while(rs.next()){
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    // Konversi string tanggalKonsul menjadi LocalDate
+                    LocalDate tanggalKonsultasi = LocalDate.parse(rs.getString("TANGGAL"), formatter);
+                    DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                    String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                    jLabel6.setText(formattedTanggal);
+                    jLabel7.setText(rs.getString("WAKTU"));
+                    jLabel2.setText(rs.getString("NAMA_LENGKAP")); 
+                    jLabel3.setText(String.valueOf(rs.getInt("UMUR") + " Tahun")); 
+                    jLabel4.setText("Konsultasi " + rs.getString("TEMPAT"));
+                }
+            }catch(Exception ex){
+                Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
+            } 
+       }else if(Aplikasi.akun.getPerson().equals("klien")){   
+            jButton3.setVisible(false);
+            String query = "SELECT j.TANGGAL, j.WAKTU, kl.NAMA_KONSULTAN, kl.SPESIALISASI ,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE kl.NAMA_KONSULTAN= ?";
+            try{
+                Connection con = Aplikasi.database.getCon();
+                PreparedStatement pStatement = con.prepareStatement(query);
+                pStatement.setString(1, nama);
+                ResultSet rs = pStatement.executeQuery(); 
+                while(rs.next()){
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    // Konversi string tanggalKonsul menjadi LocalDate
+                    LocalDate tanggalKonsultasi = LocalDate.parse(rs.getString("TANGGAL"), formatter);
+                    DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                    String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                    jLabel6.setText(formattedTanggal); 
+                    jLabel7.setText(rs.getString("WAKTU"));
+                    jLabel2.setText(rs.getString("NAMA_KONSULTAN")); 
+                    jLabel3.setText(String.valueOf(rs.getInt("SPESIALISASI")));
+                    jLabel4.setText("Konsultasi " + rs.getString("TEMPAT"));
+                }
+            }catch(Exception ex){
+                Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
+            } 
+        }
         this.setVisible(true);
     }
     

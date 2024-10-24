@@ -20,7 +20,6 @@ public class Aplikasi {
     public static HalamanUtamaUI beranda;
     public static DataDaftarSesi daftar;
     public static DaftarSesiController controllerDaftarSesi;
-    public static EditedbyKATVAN testing;
     
     public static void main(String[] args){
         Aplikasi.dialogUI = new LoginDialogUI();
@@ -34,7 +33,6 @@ public class Aplikasi {
         Aplikasi.beranda = new HalamanUtamaUI();
         Aplikasi.controllerDaftarSesi = new DaftarSesiController();
         Aplikasi.daftar = new DataDaftarSesi();
-        Aplikasi.testing = new EditedbyKATVAN();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }
