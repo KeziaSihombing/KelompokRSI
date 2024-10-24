@@ -23,6 +23,7 @@ public class LoginController {
     public void validateUser(String email, String password){
         validation = Aplikasi.akun.getUser(email, password);
         showBeranda();
+        
     }
     
     public void showBeranda(){

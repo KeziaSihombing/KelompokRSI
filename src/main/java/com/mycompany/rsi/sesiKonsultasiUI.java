@@ -30,12 +30,12 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
@@ -82,9 +82,6 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1446, 1256));
         setPreferredSize(new java.awt.Dimension(1440, 1256));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Property 1=Default.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 17, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(111, 110, 110));
@@ -133,6 +130,9 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jButton5.setContentAreaFilled(false);
         jButton5.setPreferredSize(new java.awt.Dimension(70, 70));
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 12, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Property 1=Default.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 17, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 3.png"))); // NOI18N
         jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.white));
@@ -474,6 +474,79 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         if(Aplikasi.akun.getPerson().equals("klien")){
             //tampilan klien  
             
+            if(daftar.size()>=1){              
+                DataDaftarSesi sesi1 = daftar.get(0);
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                // Konversi string tanggalKonsul menjadi LocalDate
+                LocalDate tanggalKonsultasi = LocalDate.parse(sesi1.getTanggalKonsul(), formatter);
+                DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                
+                jLabel4.setText(formattedTanggal);
+                jLabel13.setText(sesi1.getNama()); // Nama
+                jLabel14.setText(sesi1.getSpesialisasi()); // Spesialisasi
+                jLabel19.setText(formattedTanggal); // Tanggal Konsultasi
+                jLabel21.setText(sesi1.getWaktuKonsul()); // Waktu Konsultasi
+                jLabel20.setText("Konsultasi " + sesi1.getTempat()); // Tempat
+                if(tanggalKonsultasi.isBefore(LocalDate.now())){
+                    jButton12.setVisible(false);
+                    jLabel7.setText("Sudah Berakhir");
+                }else{
+                    jLabel7.setText("Akan Berlangsung");
+                 
+                }
+                
+                jPanel1.setVisible(true);
+            }
+            if(daftar.size()>=2){
+                DataDaftarSesi sesi2 = daftar.get(1);
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                // Konversi string tanggalKonsul menjadi LocalDate
+                LocalDate tanggalKonsultasi = LocalDate.parse(sesi2.getTanggalKonsul(), formatter);
+                DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                
+                jLabel15.setText(sesi2.getNama()); // Nama
+                jLabel16.setText(sesi2.getSpesialisasi()); // Spesialisasi
+                jLabel18.setText(formattedTanggal); // Tanggal Konsultasi
+                jLabel22.setText(sesi2.getWaktuKonsul()); // Waktu Konsultasi
+                jLabel17.setText("Konsultasi " + sesi2.getTempat()); // Tempat
+
+                if(tanggalKonsultasi.isBefore(LocalDate.now())){
+                    jButton14.setVisible(false);
+                    jLabel11.setText("Sudah Berakhir");
+                }else{
+                    jLabel11.setText("Akan Berlangsung");
+                    
+                }
+                jPanel3.setVisible(true);
+            }
+            if(daftar.size()>=3){
+                DataDaftarSesi sesi3 = daftar.get(2);
+                
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                // Konversi string tanggalKonsul menjadi LocalDate
+                LocalDate tanggalKonsultasi = LocalDate.parse(sesi3.getTanggalKonsul(), formatter);
+                DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+                String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
+                
+                jLabel34.setText(sesi3.getNama()); // Nama
+                jLabel36.setText(sesi3.getSpesialisasi()); // Spesialisasi
+                jLabel33.setText(formattedTanggal); // Tanggal Konsultasi
+                jLabel37.setText(sesi3.getWaktuKonsul()); // Waktu Konsultasi
+                jLabel32.setText("Konsultasi " + sesi3.getTempat()); // Tempat
+                
+                if(tanggalKonsultasi.isBefore(LocalDate.now())){
+                    jButton15.setVisible(false);
+                    jLabel35.setText("Sudah Berakhir");
+                }else{        
+                    jLabel35.setText("Akan Berlangsung");
+                }                 
+                    
+                jPanel4.setVisible(true);
+            
+           
+            }
             
         }else{
             //tampulan konsultan
@@ -551,8 +624,9 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
             
            
             }
-            this.setVisible(true);
+           
         }
+         this.setVisible(true);
     }
     
     

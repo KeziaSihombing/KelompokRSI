@@ -24,6 +24,7 @@ public class DataDaftarSesi {
     private String tanggalKonsul;
     private String waktuKonsul;
     private String tempat;
+    private String spesialisasi;
     
     //untuk mendapatkan list Klien konsultan
     public List<DataDaftarSesi> getDaftarSesiKlien(){
@@ -50,16 +51,37 @@ public class DataDaftarSesi {
                 Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
             } 
             return daftarSesiKlien;
-       }else{
+       }else if(Aplikasi.akun.getPerson().equals("klien")){
            //tolong carry....
+            String email = Aplikasi.akun.getEmail();
+            String query = "SELECT j.TANGGAL, j.WAKTU, kl.NAMA_KONSULTAN, kl.SPESIALISASI, r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE k.EMAIL = ?";
+            List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
+            try{
+                Aplikasi.database.databaseConnection();
+                Connection con = Aplikasi.database.getCon();
+                PreparedStatement pStatement = con.prepareStatement(query);
+                pStatement.setString(1, email);
+                ResultSet rs = pStatement.executeQuery(); 
+                while(rs.next()){
+                    DataDaftarSesi sesi = new DataDaftarSesi();
+                    sesi.tanggalKonsul = rs.getString("TANGGAL");
+                    sesi.waktuKonsul = rs.getString("WAKTU");
+                    sesi.nama = rs.getString("NAMA_KONSULTAN");
+                    sesi.spesialisasi = rs.getString("SPESIALISASI");
+                    sesi.tempat = rs.getString("TEMPAT");
+                    daftarSesiKlien.add(sesi);
+                }
+            }catch(Exception ex){
+                Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
+            } 
+            return daftarSesiKlien;
+       }else{
+            return null;
        }
-       return null;
     }
    
 
-    public List<DataDaftarSesi> getDaftarSesiKonsultan() {
-        return daftarSesiKonsultan;
-    }
+
 
     public String getNama() {
         return nama;
@@ -80,6 +102,15 @@ public class DataDaftarSesi {
     public String getTempat() {
         return tempat;
     }
+
+    public List<DataDaftarSesi> getDaftarSesiKonsultan() {
+        return daftarSesiKonsultan;
+    }
+
+    public String getSpesialisasi() {
+        return spesialisasi;
+    }
+    
     
     
     
