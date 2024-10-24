@@ -20,7 +20,7 @@ public class EditedbyKATVAN extends javax.swing.JFrame {
     /**
      * Creates new form UpHasilKonsultasiUI
      */
-    public UpHasilKonsultasiUI() {
+    public void UpHasilKonsultasiUI() {
         initComponents();
     }
 

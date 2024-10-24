@@ -9,17 +9,23 @@ package com.mycompany.rsi;
  * @author ASUS
  */
 public class LoginController {
+    
+    private boolean validation;
         
     public LoginController(){
      
-    }    
-    
+    }  
+ 
     public void showLoginForm(){
         Aplikasi.loginUI.tampilkan();
-    }
-        
+    }           
+    
     public void validateUser(String email, String password){
-        boolean validation = Aplikasi.akun.getUser(email, password);
+        validation = Aplikasi.akun.getUser(email, password);
+        showBeranda();
+    }
+    
+    public void showBeranda(){
         if(validation == true){
             Aplikasi.beranda.tampilkan();
             Aplikasi.loginUI.dispose();
@@ -29,6 +35,11 @@ public class LoginController {
             Aplikasi.loginUI.getjPasswordField1().setText("Ketik kata sandi..");   
         }
     }
+    
+    
+    
+    
+    
     
 
     

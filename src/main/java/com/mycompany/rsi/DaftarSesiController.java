@@ -34,6 +34,6 @@ public class DaftarSesiController {
     public void showDaftarSesiKonsultasi(List<DataDaftarSesi> daftarKonsultasi){
         Aplikasi.sesiKonsultasiUI.tampilkan(daftarKonsultasi);
         
-    }
-    
+    }    
+     
 }

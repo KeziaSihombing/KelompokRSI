@@ -27,37 +27,35 @@ public class DataDaftarSesi {
     
     //untuk mendapatkan list Klien konsultan
     public List<DataDaftarSesi> getDaftarSesiKlien(){
-       String email = Aplikasi.akun.getEmail();
-       String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE kl.EMAIL = ?";
-        List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
-       try{
-            Aplikasi.database.databaseConnection();
-            Connection con = Aplikasi.database.getCon();
-            PreparedStatement pStatement = con.prepareStatement(query);
-            pStatement.setString(1, email);
-            ResultSet rs = pStatement.executeQuery(); 
-            while(rs.next()){
-                DataDaftarSesi sesi = new DataDaftarSesi();
-                sesi.tanggalKonsul = rs.getString("TANGGAL");
-                sesi.waktuKonsul = rs.getString("WAKTU");
-                sesi.nama = rs.getString("NAMA_LENGKAP");
-                sesi.umur = rs.getInt("UMUR");
-                sesi.tempat = rs.getString("TEMPAT");
-                daftarSesiKlien.add(sesi);
-            }
-       }catch(Exception ex){
-           Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
-       } 
-       return daftarSesiKlien;        
+       if(Aplikasi.akun.getPerson().equals("konsultan")){
+            String email = Aplikasi.akun.getEmail();
+            String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE kl.EMAIL = ?";
+            List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
+            try{
+                Aplikasi.database.databaseConnection();
+                Connection con = Aplikasi.database.getCon();
+                PreparedStatement pStatement = con.prepareStatement(query);
+                pStatement.setString(1, email);
+                ResultSet rs = pStatement.executeQuery(); 
+                while(rs.next()){
+                    DataDaftarSesi sesi = new DataDaftarSesi();
+                    sesi.tanggalKonsul = rs.getString("TANGGAL");
+                    sesi.waktuKonsul = rs.getString("WAKTU");
+                    sesi.nama = rs.getString("NAMA_LENGKAP");
+                    sesi.umur = rs.getInt("UMUR");
+                    sesi.tempat = rs.getString("TEMPAT");
+                    daftarSesiKlien.add(sesi);
+                }
+            }catch(Exception ex){
+                Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
+            } 
+            return daftarSesiKlien;
+       }else{
+           //tolong carry....
+       }
+       return null;
     }
-    
-    //untuk mendapatkan list Konsultan klien MALES BRO TOLONG CARRY
-    public List<DataDaftarSesi> getDaftarSesiKonsultan(String namaKlien){
-        String query ;
-        
-        
-        return daftarSesiKonsultan;
-    }
+   
 
     public List<DataDaftarSesi> getDaftarSesiKonsultan() {
         return daftarSesiKonsultan;
