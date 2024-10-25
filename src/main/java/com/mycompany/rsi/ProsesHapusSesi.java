@@ -52,7 +52,7 @@ public class ProsesHapusSesi {
                 
             int rs = pstmtCari.executeUpdate();
 
-            if (rs==0) {
+            if (rs!=0) {
                     Aplikasi.dialogUI.showMessage("File hasil konsultasi berhasil dihapus");
                     Aplikasi.upHasil.getjButton1().setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
                     Aplikasi.upHasil.getjButton3().setText("Simpan"); // Kembali ke tombol "Simpan"
