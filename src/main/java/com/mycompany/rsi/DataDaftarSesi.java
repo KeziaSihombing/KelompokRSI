@@ -103,10 +103,6 @@ public class DataDaftarSesi {
         return tempat;
     }
 
-    public List<DataDaftarSesi> getDaftarSesiKonsultan() {
-        return daftarSesiKonsultan;
-    }
-
     public String getSpesialisasi() {
         return spesialisasi;
     }

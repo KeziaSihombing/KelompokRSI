@@ -236,7 +236,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
             Aplikasi.unggah.simpanDB(file); // Menyimpan file ke database
             jButton3.setText("Hapus"); // Ubah teks tombol menjadi "Hapus"
         } else if (jButton3.getText().equals("Hapus")) {
-            hapusdariDB(); // Menghapus file dari database
+            Aplikasi.hapus.hapusdariDB(); // Menghapus file dari database
             jButton1.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
             jButton3.setText("Simpan"); // Kembali ke tombol "Simpan"
         }
@@ -255,56 +255,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
     
     
 
-private void hapusdariDB() {
-    try {
-        String filePath = jButton1.getText(); // Mengambil nama file dari jButton1
-        String namaKlien = jLabel2.getText();
 
-        // Koneksi ke database
-        Aplikasi.database.databaseConnection();
-        Connection con = Aplikasi.database.getCon();
-
-        // Ambil ID_HASIL yang sesuai dengan klien berdasarkan nama file
-        String queryCari = "SELECT ID_HASIL FROM FAMIFY.HASIL_KONSULTASI H " +
-                           "INNER JOIN FAMIFY.RESERVASI R ON H.ID_RESERVASI = R.ID_RESERVASI " +
-                           "INNER JOIN FAMIFY.KLIEN K ON R.ID_KLIEN = K.ID_KLIEN " +
-                           "WHERE K.NAMA_LENGKAP = ? AND H.CATATAN_KONSULTASI = ?";
-        PreparedStatement pstmtCari = con.prepareStatement(queryCari);
-        pstmtCari.setString(1, namaKlien);
-        pstmtCari.setString(2, filePath); // Menggunakan filePath untuk mencari ID_HASIL
-        ResultSet rs = pstmtCari.executeQuery();
-
-        if (rs.next()) {
-            int idHasil = rs.getInt("ID_HASIL");
-
-            // Eksekusi DELETE statement
-            String queryHapus = "DELETE FROM FAMIFY.HASIL_KONSULTASI WHERE ID_HASIL = ?";
-            PreparedStatement pstmtHapus = con.prepareStatement(queryHapus);
-            pstmtHapus.setInt(1, idHasil);
-            int row = pstmtHapus.executeUpdate();
-
-            if (row > 0) {
-                Aplikasi.dialogUI.showMessage("File hasil konsultasi berhasil dihapus");
-                jButton1.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
-                jButton3.setText("Simpan"); // Kembali ke tombol "Simpan"
-            } else {
-                Aplikasi.dialogUI.showMessage("File hasil konsultasi tidak ditemukan");
-            }
-
-            pstmtHapus.close();
-        } else {
-            Aplikasi.dialogUI.showMessage("ID hasil konsultasi tidak ditemukan untuk klien ini");
-        }
-
-        // Tutup resources
-        rs.close();
-        pstmtCari.close();
-        con.close();
-    } catch (Exception e) {
-        e.printStackTrace();
-        Aplikasi.dialogUI.showMessage("Gagal menghapus file hasil konsultasi.");
-    }
-}
 
 
     public void tampilkan(String nama) {
