@@ -14,9 +14,8 @@ import java.util.List;
  */
 public class DaftarSesiController {
     private List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
-    private List<DataDaftarSesi> daftarSesiKonsultan = new ArrayList<>();
     
-    public void load(){
+   public void load(){
         daftarSesiKlien = Aplikasi.daftar.getDaftarSesiKlien();
         //daftarSesiKonsultan = Aplikasi.daftar.getDaftarSesiKonsultan();
         if(!daftarSesiKlien.isEmpty()){
