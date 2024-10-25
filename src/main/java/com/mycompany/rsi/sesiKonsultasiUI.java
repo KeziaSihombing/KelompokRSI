@@ -439,7 +439,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.upHasil.tampilkan(jLabel13.getText());
+        Aplikasi.pilihSesi.load(jLabel13.getText());        
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -449,7 +449,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.upHasil.tampilkan(jLabel15.getText());
+        Aplikasi.pilihSesi.load(jLabel15.getText());
         
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -459,7 +459,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.upHasil.tampilkan(jLabel34.getText());
+        Aplikasi.pilihSesi.load(jLabel34.getText());
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
