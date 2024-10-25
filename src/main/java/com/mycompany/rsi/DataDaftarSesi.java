@@ -52,7 +52,7 @@ public class DataDaftarSesi {
             } 
             return daftarSesiKlien;
        }else if(Aplikasi.akun.getPerson().equals("klien")){
-           //tolong carry....
+           
             String email = Aplikasi.akun.getEmail();
             String query = "SELECT j.TANGGAL, j.WAKTU, kl.NAMA_KONSULTAN, kl.SPESIALISASI, r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE k.EMAIL = ?";
             List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();

@@ -22,7 +22,7 @@ public class DaftarSesiController {
             showDaftarSesiKonsultasi(daftarSesiKlien);
         }
         else {
-            Aplikasi.dialogUI.showMessage("Anda tidak memiliki sesi konsultasi");
+            Aplikasi.dialogUI.showMessage("Hasil konsultasi belum tersedia");
             Aplikasi.beranda.tampilkan();
         }
         
