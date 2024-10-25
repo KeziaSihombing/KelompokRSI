@@ -45,7 +45,7 @@ public class ProsesUnggahHasil {
         if (file == null || !file.exists() || !file.canRead()) {
             Aplikasi.dialogUI.showMessage("File hasil konsultasi tidak valid.");
             return;
-        }
+        }        
 
         // Ambil data yang diperlukan
         String filePath = Aplikasi.upHasil.getjButton1().getText(); // Path file hasil konsultasi
