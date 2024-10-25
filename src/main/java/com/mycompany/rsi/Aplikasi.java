@@ -23,6 +23,7 @@ public class Aplikasi {
     public static PilihSesi pilihSesi;
     public static ProsesUnggahHasil unggah;
     public static ProsesHapusSesi hapus;
+    public static MembukaHasilKonsultasi buka;
    
     
     public static void main(String[] args){
@@ -40,6 +41,7 @@ public class Aplikasi {
         Aplikasi.pilihSesi = new PilihSesi();
         Aplikasi.hapus = new ProsesHapusSesi();
         Aplikasi.unggah = new ProsesUnggahHasil();
+        Aplikasi.buka  = new MembukaHasilKonsultasi();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }

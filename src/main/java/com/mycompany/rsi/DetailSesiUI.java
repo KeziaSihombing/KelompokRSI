@@ -210,12 +210,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
         if(jButton3.getText().equals("Simpan")){
             Aplikasi.unggah.Load();
         }else{  
-            File myFile = new File(jButton1.getText());
-            try {
-                Desktop.getDesktop().open(myFile);
-            } catch (IOException ex) {
-                Logger.getLogger(DetailSesiUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            Aplikasi.buka.Load();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     
