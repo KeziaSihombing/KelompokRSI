@@ -19,6 +19,7 @@ import javax.swing.JFileChooser;
  * @author ASUS
  */
 public class ProsesUnggahHasil {
+    private String path;
     
     public void Load(){
         JFileChooser fc = new JFileChooser();
@@ -26,7 +27,8 @@ public class ProsesUnggahHasil {
             File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
 
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".pdf")) {
-                Aplikasi.upHasil.getjButton1().setText(selectedFile.getAbsolutePath());
+                setPath(selectedFile.getAbsolutePath());
+                Aplikasi.upHasil.getjButton1().setText("Catatan Konsultasi " + Aplikasi.upHasil.getjLabel2().getText()+".pdf");
             } else {
                 Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PDF.");
             }
@@ -48,7 +50,7 @@ public class ProsesUnggahHasil {
         }        
 
         // Ambil data yang diperlukan
-        String filePath = Aplikasi.upHasil.getjButton1().getText(); // Path file hasil konsultasi
+        String filePath = getPath(); // Path file hasil konsultasi
         String namaKlien = Aplikasi.upHasil.getjLabel2().getText(); // Nama klien dari label
 
         // Koneksi ke database
@@ -128,5 +130,14 @@ public class ProsesUnggahHasil {
         }
     }
 }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+    
 
 }

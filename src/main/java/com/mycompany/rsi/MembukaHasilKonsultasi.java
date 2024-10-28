@@ -15,9 +15,9 @@ import java.util.logging.Logger;
  *
  * @author ASUS
  */
-public class MembukaHasilKonsultasi {
-    public void Load(){
-        File myFile = new File(Aplikasi.upHasil.getjButton1().getText());
+public class MembukaHasilKonsultasi {    
+    public void Load(String path){
+        File myFile = new File(path);
             try {
                 Desktop.getDesktop().open(myFile);
             } catch (IOException ex) {

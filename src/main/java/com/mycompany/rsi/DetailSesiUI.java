@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.awt.Desktop;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -210,25 +212,12 @@ public class DetailSesiUI extends javax.swing.JFrame {
         if(jButton3.getText().equals("Simpan")){
             Aplikasi.unggah.Load();
         }else{  
-            Aplikasi.buka.Load();
+            Aplikasi.buka.Load(Aplikasi.unggah.getPath());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     
-//    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
-//    String filePath = jButton1.getText();
-//    
-//    if (filePath.endsWith(".pdf")) {
-//        try {
-//            File myFile = new File(filePath);
-//            Desktop.getDesktop().open(myFile); // Membuka file PDF
-//        } catch (IOException ex) {
-//            Aplikasi.dialogUI.showMessage("Gagal membuka file: " + ex.getMessage());
-//        }
-//    }
-//}
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    String filePath = jButton1.getText();
+    String filePath = Aplikasi.unggah.getPath();
     
     if (filePath.endsWith(".pdf")) {
         if (jButton3.getText().equals("Simpan")) {
@@ -253,11 +242,6 @@ public class DetailSesiUI extends javax.swing.JFrame {
         return jButton3;
     }
     
-    
-
-
-
-
     public void tampilkan(String nama) {
         jButton1.setText("+ Unggah Hasil Konsultasi");
         jButton3.setText("Simpan");  
@@ -269,8 +253,19 @@ public class DetailSesiUI extends javax.swing.JFrame {
                 pStatement.setString(1, nama);
                 pStatement.setString(2, nama);
                 ResultSet rs = pStatement.executeQuery(); 
-                while(rs.next()){
-                    jButton1.setText(rs.getString("CATATAN_KONSULTASI"));
+                File file = new File("catatan_konsultasi_db.pdf");
+                FileOutputStream outputStream = new FileOutputStream(file);
+
+                while(rs.next()){                   
+                    InputStream inputStream = rs.getBinaryStream("CATATAN_KONSULTASI");
+                    
+                    byte[] buffer = new byte[4096];
+                    while (inputStream.read(buffer) > 0) {
+                        outputStream.write(buffer);
+                    }
+                    Aplikasi.unggah.setPath(file.getAbsolutePath());
+                    jButton1.setText("Catatan Konsultasi " + jLabel2.getText()+ ".pdf");
+                    
                     jButton3.setText("Hapus");
                 }
         }catch(Exception ex){
@@ -316,7 +311,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
                     jLabel6.setText(formattedTanggal); 
                     jLabel7.setText(rs.getString("WAKTU"));
                     jLabel2.setText(rs.getString("NAMA_KONSULTAN")); 
-                    jLabel3.setText(String.valueOf(rs.getInt("SPESIALISASI")));
+                    jLabel3.setText(String.valueOf(rs.getString("SPESIALISASI")));
                     jLabel4.setText("Konsultasi " + rs.getString("TEMPAT"));
                 }
             }catch(Exception ex){

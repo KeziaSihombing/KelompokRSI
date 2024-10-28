@@ -26,6 +26,7 @@ public class DataDaftarSesi {
     private String tempat;
     private String spesialisasi;
     
+    
     //untuk mendapatkan list Klien konsultan
     public List<DataDaftarSesi> getDaftarSesiKlien(){
        if(Aplikasi.akun.getPerson().equals("konsultan")){
@@ -79,10 +80,8 @@ public class DataDaftarSesi {
             return null;
        }
     }
+
    
-
-
-
     public String getNama() {
         return nama;
     }
