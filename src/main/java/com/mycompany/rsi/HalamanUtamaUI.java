@@ -26,7 +26,6 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel18 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -47,10 +46,13 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
@@ -66,8 +68,6 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1446, 1256));
@@ -134,6 +134,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(4, 63, 73));
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setDoubleBuffered(true);
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(1451, 2627));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1451, 2627));
 
         jPanel1.setBackground(new java.awt.Color(4, 63, 73));
@@ -217,10 +218,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel5.setVerifyInputWhenFocusTarget(false);
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(11, 177, 203));
+        jLabel18.setText("Lihat Artikel");
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 430, 360));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1590, 470, 370));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1580, 470, 370));
 
         jPanel6.setDoubleBuffered(false);
         jPanel6.setEnabled(false);
@@ -230,10 +236,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel6.setVerifyInputWhenFocusTarget(false);
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(11, 177, 203));
+        jLabel10.setText("Lihat Artikel");
+        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel6.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1590, 470, 370));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1580, 470, 370));
 
         jPanel7.setDoubleBuffered(false);
         jPanel7.setEnabled(false);
@@ -243,10 +254,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel7.setVerifyInputWhenFocusTarget(false);
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(11, 177, 203));
+        jLabel25.setText("Lihat Artikel");
+        jPanel7.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel7.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 1590, 470, 370));
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 1580, 470, 370));
 
         jLabel21.setBackground(new java.awt.Color(255, 204, 153));
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 63 (1).png"))); // NOI18N
@@ -332,7 +348,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 1.png"))); // NOI18N
         jLabel11.setText("jLabel11");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, 1280));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -344,7 +360,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1440, 1330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -396,6 +412,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -411,6 +428,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
