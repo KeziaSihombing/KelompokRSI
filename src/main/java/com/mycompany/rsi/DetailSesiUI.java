@@ -207,7 +207,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
     }
 //mengunggah dan melihat file hasil konsultasi
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(jButton3.getText().equals("Simpan")){
+        if(jButton3.getText().equals("Simpan") && Aplikasi.akun.getPerson().equals("konsultan")){
             Aplikasi.unggah.Load();
         }else{  
             Aplikasi.buka.Load();
@@ -276,7 +276,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
         }catch(Exception ex){
                 Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
         } 
-        if(Aplikasi.akun.getPerson().equals("konsultan")){  
+        
             String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE k.NAMA_LENGKAP= ?";
             try{
                 Aplikasi.database.databaseConnection();
@@ -298,30 +298,9 @@ public class DetailSesiUI extends javax.swing.JFrame {
                 }
             }catch(Exception ex){
                 Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
-            } 
-       }else if(Aplikasi.akun.getPerson().equals("klien")){   
+            }      
+        if(Aplikasi.akun.getPerson().equals("klien")){
             jButton3.setVisible(false);
-            String query = "SELECT j.TANGGAL, j.WAKTU, kl.NAMA_KONSULTAN, kl.SPESIALISASI ,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE kl.NAMA_KONSULTAN= ?";
-            try{
-                Connection con = Aplikasi.database.getCon();
-                PreparedStatement pStatement = con.prepareStatement(query);
-                pStatement.setString(1, nama);
-                ResultSet rs = pStatement.executeQuery(); 
-                while(rs.next()){
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                    // Konversi string tanggalKonsul menjadi LocalDate
-                    LocalDate tanggalKonsultasi = LocalDate.parse(rs.getString("TANGGAL"), formatter);
-                    DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
-                    String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
-                    jLabel6.setText(formattedTanggal); 
-                    jLabel7.setText(rs.getString("WAKTU"));
-                    jLabel2.setText(rs.getString("NAMA_KONSULTAN")); 
-                    jLabel3.setText(String.valueOf(rs.getInt("SPESIALISASI")));
-                    jLabel4.setText("Konsultasi " + rs.getString("TEMPAT"));
-                }
-            }catch(Exception ex){
-                Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
-            } 
         }
         this.setVisible(true);
     }
