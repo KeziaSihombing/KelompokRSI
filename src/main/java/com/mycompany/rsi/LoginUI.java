@@ -163,7 +163,7 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-            // TODO add your handling code here:
+        Aplikasi.dialogUI.showMessage("UNDER PROGRESS\n" + "Fitur ini masih dikembangkan");// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
