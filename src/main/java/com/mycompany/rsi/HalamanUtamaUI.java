@@ -396,6 +396,13 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public void tampilkan(){
+        if(Aplikasi.akun.getPerson().equals("klien")){
+            
+        }else if(Aplikasi.akun.getPerson().equals("konsultan")){
+            
+        }else{
+            
+        }
         this.setVisible(true);        
     }
     

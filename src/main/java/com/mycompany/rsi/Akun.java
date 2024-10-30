@@ -27,10 +27,14 @@ public class Akun {
    public boolean getUser(String email, String password){
        String query = "SELECT * FROM FAMIFY.KLIEN WHERE EMAIL = ? AND PASSWORD = ?";
        String query2 = "SELECT * FROM FAMIFY.KONSULTAN WHERE EMAIL = ? AND PASSWORD = ?";
+       String query3 ="SELECT * FROM FAMIFY.ADMINISTRATOR WHERE EMAIL = ? AND PASSWORD = ?";
+       
        PreparedStatement pStatement = null;
        PreparedStatement pStatement2 = null;
+       PreparedStatement pStatement3 = null;
        ResultSet rs;
        ResultSet rs2;
+       ResultSet rs3;
        try{
             Aplikasi.database.databaseConnection();
             Connection con = Aplikasi.database.getCon();
@@ -45,12 +49,22 @@ public class Akun {
             pStatement2.setString(2, password);
             rs2 = pStatement2.executeQuery(); //apabila yang login merupakan konsultan 
             
+            pStatement3 = con.prepareStatement(query3);
+            pStatement3.setString(1, email);
+            pStatement3.setString(2, password);
+            rs3 = pStatement3.executeQuery(); //apabila yang login merupakan admin
+            
             if (rs.next()) {
                 person = "klien";
                 this.email = email;
                 this.password = password;
                 return true;
             }else if(rs2.next()){
+                person = "konsultan";
+                this.email = email;
+                this.password = password;
+                return true;
+            }else if(rs3.next()){
                 person = "konsultan";
                 this.email = email;
                 this.password = password;
