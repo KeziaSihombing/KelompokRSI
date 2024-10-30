@@ -228,11 +228,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane2.setFocusable(false);
         jScrollPane2.setOpaque(false);
 
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea1.setAutoscrolls(false);
         jTextArea1.setBorder(null);
+        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextArea1.setFocusable(false);
         jScrollPane2.setViewportView(jTextArea1);
 
@@ -276,11 +280,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane4.setFocusable(false);
         jScrollPane4.setOpaque(false);
 
+        jTextArea3.setEditable(false);
+        jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
         jTextArea3.setRows(5);
         jTextArea3.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea3.setAutoscrolls(false);
         jTextArea3.setBorder(null);
+        jTextArea3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextArea3.setFocusable(false);
         jScrollPane4.setViewportView(jTextArea3);
 
@@ -324,11 +332,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane6.setFocusable(false);
         jScrollPane6.setOpaque(false);
 
+        jTextArea5.setEditable(false);
+        jTextArea5.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea5.setColumns(20);
         jTextArea5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
         jTextArea5.setRows(5);
         jTextArea5.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea5.setAutoscrolls(false);
         jTextArea5.setBorder(null);
+        jTextArea5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextArea5.setFocusable(false);
         jScrollPane6.setViewportView(jTextArea5);
 
@@ -376,11 +388,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane8.setFocusable(false);
         jScrollPane8.setOpaque(false);
 
+        jTextArea7.setEditable(false);
+        jTextArea7.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea7.setColumns(20);
         jTextArea7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
         jTextArea7.setForeground(new java.awt.Color(28, 53, 84));
         jTextArea7.setRows(5);
         jTextArea7.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea7.setAutoscrolls(false);
         jTextArea7.setBorder(null);
         jTextArea7.setFocusable(false);
         jScrollPane8.setViewportView(jTextArea7);
@@ -444,11 +459,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane10.setFocusable(false);
         jScrollPane10.setOpaque(false);
 
+        jTextArea9.setEditable(false);
+        jTextArea9.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea9.setColumns(20);
         jTextArea9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
         jTextArea9.setForeground(new java.awt.Color(28, 53, 84));
         jTextArea9.setRows(5);
         jTextArea9.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea9.setAutoscrolls(false);
         jTextArea9.setBorder(null);
         jTextArea9.setFocusable(false);
         jScrollPane10.setViewportView(jTextArea9);
@@ -512,11 +530,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane12.setFocusable(false);
         jScrollPane12.setOpaque(false);
 
+        jTextArea11.setEditable(false);
+        jTextArea11.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea11.setColumns(20);
         jTextArea11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
         jTextArea11.setForeground(new java.awt.Color(28, 53, 84));
         jTextArea11.setRows(5);
         jTextArea11.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea11.setAutoscrolls(false);
         jTextArea11.setBorder(null);
         jTextArea11.setFocusable(false);
         jScrollPane12.setViewportView(jTextArea11);
@@ -658,7 +679,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 710));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 95, -1, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -711,6 +732,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         Aplikasi.lihatMateri.tampilkan();
+        this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed

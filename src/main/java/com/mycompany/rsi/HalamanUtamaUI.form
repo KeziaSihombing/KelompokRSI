@@ -200,7 +200,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="90" width="-1" height="710"/>
+          <AbsoluteConstraints x="0" y="95" width="-1" height="700"/>
         </Constraint>
       </Constraints>
 
@@ -338,14 +338,22 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="jTextArea1">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI Semibold" size="23" style="0"/>
                         </Property>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Membangun Kesehatan Mental&#xa;Bayi"/>
+                        <Property name="autoscrolls" type="boolean" value="false"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
+                        </Property>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
@@ -457,14 +465,22 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="jTextArea3">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI Semibold" size="23" style="0"/>
                         </Property>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Membangun Kesehatan Mental&#xa;Bayi"/>
+                        <Property name="autoscrolls" type="boolean" value="false"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
+                        </Property>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
@@ -576,14 +592,22 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="jTextArea5">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI Semibold" size="23" style="0"/>
                         </Property>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Membangun Kesehatan Mental&#xa;Bayi"/>
+                        <Property name="autoscrolls" type="boolean" value="false"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
+                        </Property>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
@@ -708,6 +732,10 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="jTextArea7">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI Semibold" size="23" style="0"/>
@@ -717,6 +745,7 @@
                         </Property>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Membangun Kesehatan Mental&#xa;Bayi"/>
+                        <Property name="autoscrolls" type="boolean" value="false"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
                         </Property>
@@ -871,6 +900,10 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="jTextArea9">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI Semibold" size="23" style="0"/>
@@ -880,6 +913,7 @@
                         </Property>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Membangun Kesehatan Mental&#xa;Bayi"/>
+                        <Property name="autoscrolls" type="boolean" value="false"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
                         </Property>
@@ -1034,6 +1068,10 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="jTextArea11">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI Semibold" size="23" style="0"/>
@@ -1043,6 +1081,7 @@
                         </Property>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Membangun Kesehatan Mental&#xa;Bayi"/>
+                        <Property name="autoscrolls" type="boolean" value="false"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
                         </Property>
