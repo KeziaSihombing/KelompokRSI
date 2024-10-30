@@ -135,12 +135,12 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setDoubleBuffered(true);
         jScrollPane1.setMinimumSize(new java.awt.Dimension(1451, 2627));
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(1451, 2627));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1439, 19670));
 
         jPanel1.setBackground(new java.awt.Color(4, 63, 73));
-        jPanel1.setMaximumSize(new java.awt.Dimension(1439, 7525));
-        jPanel1.setMinimumSize(new java.awt.Dimension(1439, 7525));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1439, 2627));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1439, 1000));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1439, 1964));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1439, 1946));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
@@ -348,7 +348,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 1.png"))); // NOI18N
         jLabel11.setText("jLabel11");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, 1280));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, 1250));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -360,7 +360,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 730));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
