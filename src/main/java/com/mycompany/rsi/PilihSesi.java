@@ -10,8 +10,8 @@ package com.mycompany.rsi;
  * @author ASUS
  */
 public class PilihSesi {
-    public void load(String nama){        
-        Aplikasi.upHasil.tampilkan(nama);              
+    public void load(String nama, String tanggal, String waktu){        
+        Aplikasi.upHasil.tampilkan(nama, tanggal, waktu);              
     }
 
 }

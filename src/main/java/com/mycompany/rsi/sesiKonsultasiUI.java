@@ -440,6 +440,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Aplikasi.beranda.tampilkan();
+        this.dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -450,7 +451,19 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.pilihSesi.load(jLabel13.getText());        
+        String tanggalText = jLabel4.getText();
+        DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+        LocalDate tanggal = LocalDate.parse(tanggalText, formatterAsal);
+
+        // Format ulang ke yyyy-MM-dd
+        DateTimeFormatter formatterTujuan = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedTanggal = tanggal.format(formatterTujuan);
+        
+        if(Aplikasi.akun.getPerson().equals("konsultan")){
+            Aplikasi.pilihSesi.load(jLabel13.getText(), formattedTanggal, jLabel21.getText());
+        }else if(Aplikasi.akun.getPerson().equals("klien")){
+            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, jLabel21.getText());
+        }        
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -460,7 +473,20 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.pilihSesi.load(jLabel15.getText());
+        String tanggalText = jLabel4.getText();
+        DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+        LocalDate tanggal = LocalDate.parse(tanggalText, formatterAsal);
+
+        // Format ulang ke yyyy-MM-dd
+        DateTimeFormatter formatterTujuan = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedTanggal = tanggal.format(formatterTujuan);
+        
+        if(Aplikasi.akun.getPerson().equals("konsultan")){
+            Aplikasi.pilihSesi.load(jLabel15.getText(),formattedTanggal, jLabel22.getText());
+        }else if(Aplikasi.akun.getPerson().equals("klien")){
+            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, jLabel22.getText());
+        }        
+        
         
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -469,8 +495,20 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-        Aplikasi.pilihSesi.load(jLabel34.getText());
+       // TODO add your handling code here:
+        String tanggalText = jLabel4.getText();
+        DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+        LocalDate tanggal = LocalDate.parse(tanggalText, formatterAsal);
+
+        // Format ulang ke yyyy-MM-dd
+        DateTimeFormatter formatterTujuan = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedTanggal = tanggal.format(formatterTujuan);
+        
+        if(Aplikasi.akun.getPerson().equals("konsultan")){
+             Aplikasi.pilihSesi.load(jLabel34.getText(),formattedTanggal, jLabel37.getText());
+        }else if(Aplikasi.akun.getPerson().equals("klien")){
+            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, jLabel37.getText());
+        }    
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed

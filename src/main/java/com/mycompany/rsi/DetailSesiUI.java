@@ -61,7 +61,9 @@ public class DetailSesiUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setLocation(new java.awt.Point(200, 180));
         setMinimumSize(new java.awt.Dimension(976, 528));
+        setType(java.awt.Window.Type.POPUP);
 
         jPanel2.setBackground(new java.awt.Color(244, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(34, 184, 185)));
@@ -236,7 +238,13 @@ public class DetailSesiUI extends javax.swing.JFrame {
             Aplikasi.unggah.simpanDB(file); // Menyimpan file ke database
             jButton3.setText("Hapus"); // Ubah teks tombol menjadi "Hapus"
         } else if (jButton3.getText().equals("Hapus")) {
-            Aplikasi.hapus.hapusdariDB(); // Menghapus file dari database
+            DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
+            LocalDate tanggal = LocalDate.parse(jLabel6.getText(), formatterAsal);
+
+            // Format ulang ke yyyy-MM-dd
+            DateTimeFormatter formatterTujuan = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String formattedTanggal = tanggal.format(formatterTujuan);
+            Aplikasi.hapus.hapusdariDB(jLabel2.getText(), formattedTanggal, jLabel7.getText()); // Menghapus file dari database
             jButton1.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
             jButton3.setText("Simpan"); // Kembali ke tombol "Simpan"
         }
@@ -258,16 +266,18 @@ public class DetailSesiUI extends javax.swing.JFrame {
 
 
 
-    public void tampilkan(String nama) {
+    public void tampilkan(String nama, String tanggal, String waktu) {     
         jButton1.setText("+ Unggah Hasil Konsultasi");
         jButton3.setText("Simpan");  
-        String query2 = "SELECT HK.CATATAN_KONSULTASI FROM FAMIFY.HASIL_KONSULTASI HK JOIN FAMIFY.RESERVASI R ON HK.ID_RESERVASI = R.ID_RESERVASI JOIN FAMIFY.KLIEN KLI ON R.ID_KLIEN = KLI.ID_KLIEN JOIN FAMIFY.KONSULTAN KONS ON R.ID_KONSULTAN = KONS.ID_KONSULTAN WHERE KLI.NAMA_LENGKAP = ? OR KONS.NAMA_KONSULTAN = ?";
+        String query2 = "SELECT HK.CATATAN_KONSULTASI FROM FAMIFY.HASIL_KONSULTASI HK JOIN FAMIFY.RESERVASI R ON HK.ID_RESERVASI = R.ID_RESERVASI JOIN FAMIFY.KLIEN KLI ON R.ID_KLIEN = KLI.ID_KLIEN JOIN FAMIFY.KONSULTAN KONS ON R.ID_KONSULTAN = KONS.ID_KONSULTAN JOIN FAMIFY.JADWAL_KONSULTASI J ON R.ID_JADWAL = J.ID_JADWAL  WHERE (KLI.NAMA_LENGKAP = ? OR KONS.NAMA_KONSULTAN = ?) AND J.TANGGAL = ? AND J.WAKTU = ? ";
         try{
                 Aplikasi.database.databaseConnection();
                 Connection con = Aplikasi.database.getCon();
                 PreparedStatement pStatement = con.prepareStatement(query2);
                 pStatement.setString(1, nama);
                 pStatement.setString(2, nama);
+                pStatement.setString(3, tanggal);
+                pStatement.setString(4, waktu);
                 ResultSet rs = pStatement.executeQuery(); 
                 while(rs.next()){
                     jButton1.setText(rs.getString("CATATAN_KONSULTASI"));
@@ -275,19 +285,21 @@ public class DetailSesiUI extends javax.swing.JFrame {
                 }
         }catch(Exception ex){
                 Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
-        } 
+        }     
         
-            String query = "SELECT j.TANGGAL, j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE k.NAMA_LENGKAP= ?";
+            String query = "SELECT j.WAKTU, k.NAMA_LENGKAP, k.UMUR,r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE (k.NAMA_LENGKAP= ? OR k.EMAIL = ?) AND j.TANGGAL = ?";
             try{
                 Aplikasi.database.databaseConnection();
                 Connection con = Aplikasi.database.getCon();
                 PreparedStatement pStatement = con.prepareStatement(query);
                 pStatement.setString(1, nama);
+                pStatement.setString(2, nama);
+                pStatement.setString(3, tanggal);
                 ResultSet rs = pStatement.executeQuery(); 
                 while(rs.next()){
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                     // Konversi string tanggalKonsul menjadi LocalDate
-                    LocalDate tanggalKonsultasi = LocalDate.parse(rs.getString("TANGGAL"), formatter);
+                    LocalDate tanggalKonsultasi = LocalDate.parse(tanggal, formatter);
                     DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
                     String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                     jLabel6.setText(formattedTanggal);
@@ -302,7 +314,14 @@ public class DetailSesiUI extends javax.swing.JFrame {
         if(Aplikasi.akun.getPerson().equals("klien")){
             jButton3.setVisible(false);
         }
-        this.setVisible(true);
+        if(Aplikasi.akun.getPerson().equals("klien") && jButton1.getText().equals("+ Unggah Hasil Konsultasi")){
+            jButton1.setText("");                
+            this.setVisible(true);            
+            Aplikasi.dialogUI.showMessage("Hasil Konsultasi Belum Tersedia\n Silakan Coba Lain Waktu");
+        }else{
+            this.setVisible(true);
+        }
+        
     }
     
     

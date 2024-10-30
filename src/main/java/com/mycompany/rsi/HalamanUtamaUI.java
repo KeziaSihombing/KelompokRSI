@@ -40,20 +40,53 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel26 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jLabel27 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea6 = new javax.swing.JTextArea();
+        jLabel28 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextArea8 = new javax.swing.JTextArea();
+        jLabel29 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTextArea9 = new javax.swing.JTextArea();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jTextArea10 = new javax.swing.JTextArea();
+        jLabel30 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jTextArea11 = new javax.swing.JTextArea();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jTextArea12 = new javax.swing.JTextArea();
+        jLabel31 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
@@ -148,9 +181,9 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1439, 19670));
 
         jPanel1.setBackground(new java.awt.Color(4, 63, 73));
-        jPanel1.setMaximumSize(new java.awt.Dimension(1439, 1000));
-        jPanel1.setMinimumSize(new java.awt.Dimension(1439, 1964));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1439, 1946));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1439, 2143));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1439, 2143));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1439, 2143));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
@@ -189,6 +222,41 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel2.setVerifyInputWhenFocusTarget(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane2.setFocusable(false);
+        jScrollPane2.setOpaque(false);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea1.setBorder(null);
+        jTextArea1.setFocusable(false);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 215, 370, 60));
+
+        jScrollPane3.setBorder(null);
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane3.setFocusable(false);
+        jScrollPane3.setOpaque(false);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang \ntua akan merasakan berbagai macam emosi. Bahagia bercampur \ndengan frustrasi, keletihan, dan kecemasan.");
+        jTextArea2.setBorder(null);
+        jTextArea2.setFocusable(false);
+        jScrollPane3.setViewportView(jTextArea2);
+
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 370, 60));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 12, -1, -1));
+
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 430, 360));
 
@@ -201,6 +269,41 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel3.setRequestFocusEnabled(false);
         jPanel3.setVerifyInputWhenFocusTarget(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane4.setBorder(null);
+        jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane4.setFocusable(false);
+        jScrollPane4.setOpaque(false);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea3.setRows(5);
+        jTextArea3.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea3.setBorder(null);
+        jTextArea3.setFocusable(false);
+        jScrollPane4.setViewportView(jTextArea3);
+
+        jPanel3.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 208, 370, 60));
+
+        jScrollPane5.setBorder(null);
+        jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane5.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane5.setFocusable(false);
+        jScrollPane5.setOpaque(false);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea4.setRows(5);
+        jTextArea4.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang \ntua akan merasakan berbagai macam emosi. Bahagia bercampur \ndengan frustrasi, keletihan, dan kecemasan.");
+        jTextArea4.setBorder(null);
+        jTextArea4.setFocusable(false);
+        jScrollPane5.setViewportView(jTextArea4);
+
+        jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 278, 370, 60));
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 10, -1, -1));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
@@ -215,6 +318,41 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel4.setVerifyInputWhenFocusTarget(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane6.setBorder(null);
+        jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane6.setFocusable(false);
+        jScrollPane6.setOpaque(false);
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea5.setRows(5);
+        jTextArea5.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea5.setBorder(null);
+        jTextArea5.setFocusable(false);
+        jScrollPane6.setViewportView(jTextArea5);
+
+        jPanel4.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 208, 370, 60));
+
+        jScrollPane7.setBorder(null);
+        jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane7.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane7.setFocusable(false);
+        jScrollPane7.setOpaque(false);
+
+        jTextArea6.setColumns(20);
+        jTextArea6.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea6.setRows(5);
+        jTextArea6.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang \ntua akan merasakan berbagai macam emosi. Bahagia bercampur \ndengan frustrasi, keletihan, dan kecemasan.");
+        jTextArea6.setBorder(null);
+        jTextArea6.setFocusable(false);
+        jScrollPane7.setViewportView(jTextArea6);
+
+        jPanel4.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 278, 370, 60));
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 10, -1, -1));
+
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
 
@@ -228,15 +366,65 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel5.setVerifyInputWhenFocusTarget(false);
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel18.setText("Lihat Artikel");
-        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+        jLabel32.setForeground(new java.awt.Color(128, 128, 128));
+        jLabel32.setText("30 October 2024");
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
-        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 430, 360));
+        jScrollPane8.setBorder(null);
+        jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane8.setFocusable(false);
+        jScrollPane8.setOpaque(false);
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1580, 470, 370));
+        jTextArea7.setColumns(20);
+        jTextArea7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea7.setForeground(new java.awt.Color(28, 53, 84));
+        jTextArea7.setRows(5);
+        jTextArea7.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea7.setBorder(null);
+        jTextArea7.setFocusable(false);
+        jScrollPane8.setViewportView(jTextArea7);
+
+        jPanel5.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 60));
+
+        jScrollPane9.setBorder(null);
+        jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane9.setToolTipText("");
+        jScrollPane9.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jTextArea8.setColumns(20);
+        jTextArea8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea8.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea8.setRows(6);
+        jTextArea8.setTabSize(10);
+        jTextArea8.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea8.setBorder(null);
+        jScrollPane9.setViewportView(jTextArea8);
+
+        jPanel5.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(11, 177, 203));
+        jButton8.setText("Lihat Artikel");
+        jButton8.setBorder(null);
+        jButton8.setBorderPainted(false);
+        jButton8.setContentAreaFilled(false);
+        jButton8.setFocusPainted(false);
+        jButton8.setRequestFocusEnabled(false);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 475, -1, -1));
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 430, 520));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1580, 470, 530));
 
         jPanel6.setDoubleBuffered(false);
         jPanel6.setEnabled(false);
@@ -246,15 +434,65 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel6.setVerifyInputWhenFocusTarget(false);
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel10.setText("Lihat Artikel");
-        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        jLabel33.setForeground(new java.awt.Color(128, 128, 128));
+        jLabel33.setText("30 October 2024");
+        jPanel6.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
-        jPanel6.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
+        jScrollPane10.setBorder(null);
+        jScrollPane10.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane10.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane10.setFocusable(false);
+        jScrollPane10.setOpaque(false);
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1580, 470, 370));
+        jTextArea9.setColumns(20);
+        jTextArea9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea9.setForeground(new java.awt.Color(28, 53, 84));
+        jTextArea9.setRows(5);
+        jTextArea9.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea9.setBorder(null);
+        jTextArea9.setFocusable(false);
+        jScrollPane10.setViewportView(jTextArea9);
+
+        jPanel6.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 60));
+
+        jScrollPane11.setBorder(null);
+        jScrollPane11.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane11.setToolTipText("");
+        jScrollPane11.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jTextArea10.setColumns(20);
+        jTextArea10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea10.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea10.setRows(6);
+        jTextArea10.setTabSize(10);
+        jTextArea10.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea10.setBorder(null);
+        jScrollPane11.setViewportView(jTextArea10);
+
+        jPanel6.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(11, 177, 203));
+        jButton9.setText("Lihat Artikel");
+        jButton9.setBorder(null);
+        jButton9.setBorderPainted(false);
+        jButton9.setContentAreaFilled(false);
+        jButton9.setFocusPainted(false);
+        jButton9.setRequestFocusEnabled(false);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 474, -1, -1));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
+        jPanel6.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 430, 520));
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 1580, 470, 530));
 
         jPanel7.setDoubleBuffered(false);
         jPanel7.setEnabled(false);
@@ -264,15 +502,65 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel7.setVerifyInputWhenFocusTarget(false);
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel25.setText("Lihat Artikel");
-        jPanel7.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        jLabel34.setForeground(new java.awt.Color(128, 128, 128));
+        jLabel34.setText("30 October 2024");
+        jPanel7.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
-        jPanel7.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
+        jScrollPane12.setBorder(null);
+        jScrollPane12.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane12.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane12.setFocusable(false);
+        jScrollPane12.setOpaque(false);
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 1580, 470, 370));
+        jTextArea11.setColumns(20);
+        jTextArea11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea11.setForeground(new java.awt.Color(28, 53, 84));
+        jTextArea11.setRows(5);
+        jTextArea11.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea11.setBorder(null);
+        jTextArea11.setFocusable(false);
+        jScrollPane12.setViewportView(jTextArea11);
+
+        jPanel7.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 60));
+
+        jScrollPane13.setBorder(null);
+        jScrollPane13.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane13.setToolTipText("");
+        jScrollPane13.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jTextArea12.setColumns(20);
+        jTextArea12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea12.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea12.setRows(6);
+        jTextArea12.setTabSize(10);
+        jTextArea12.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea12.setBorder(null);
+        jScrollPane13.setViewportView(jTextArea12);
+
+        jPanel7.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(11, 177, 203));
+        jButton10.setText("Lihat Artikel");
+        jButton10.setBorder(null);
+        jButton10.setBorderPainted(false);
+        jButton10.setContentAreaFilled(false);
+        jButton10.setFocusPainted(false);
+        jButton10.setRequestFocusEnabled(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 474, -1, -1));
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
+        jPanel7.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 430, 520));
+
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 1580, 470, 530));
 
         jLabel21.setBackground(new java.awt.Color(255, 204, 153));
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 63 (1).png"))); // NOI18N
@@ -358,7 +646,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 1.png"))); // NOI18N
         jLabel11.setText("jLabel11");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, 1250));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, 1430));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -370,7 +658,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 730));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -420,6 +708,18 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         Aplikasi.dialogUI.showMessage("\tUNDER PROGRESS\t\nMasih dalam Pengerjaan");
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -440,6 +740,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
@@ -448,8 +749,9 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -457,16 +759,23 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -481,5 +790,29 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea10;
+    private javax.swing.JTextArea jTextArea11;
+    private javax.swing.JTextArea jTextArea12;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
+    private javax.swing.JTextArea jTextArea6;
+    private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JTextArea jTextArea8;
+    private javax.swing.JTextArea jTextArea9;
     // End of variables declaration//GEN-END:variables
 }
