@@ -96,6 +96,11 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
         jButton3.setPreferredSize(new java.awt.Dimension(180, 15));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, -1, -1));
 
         jButton4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
@@ -117,6 +122,11 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setPreferredSize(new java.awt.Dimension(76, 15));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(928, 40, 110, -1));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png"))); // NOI18N
@@ -372,8 +382,12 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        Aplikasi.controllerDaftarSesi.load();
+        if(Aplikasi.akun.getPerson().contains("k")){
+            this.dispose();
+            Aplikasi.controllerDaftarSesi.load();
+        }else{
+           
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -392,16 +406,32 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        if(Aplikasi.akun.getPerson().contains("k")){
+            Aplikasi.dialogUI.showMessage("\tUNDER PROGRESS\t\nMasih dalam Pengerjaan");
+        }else{
+            //manajemen konten
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Aplikasi.dialogUI.showMessage("\tUNDER PROGRESS\t\nMasih dalam Pengerjaan");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public void tampilkan(){
         if(Aplikasi.akun.getPerson().equals("klien")){
-            
-        }else if(Aplikasi.akun.getPerson().equals("konsultan")){
-            
-        }else{
-            
+            jButton3.setText("Reservasi");
+            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon
+        }else if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton4.setVisible(false);
+            jButton2.setVisible(false);
+            jButton3.setText("Manajemen Konten");       
+            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
         this.setVisible(true);        
     }

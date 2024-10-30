@@ -65,7 +65,7 @@ public class Akun {
                 this.password = password;
                 return true;
             }else if(rs3.next()){
-                person = "konsultan";
+                person = "administrator";
                 this.email = email;
                 this.password = password;
                 return true;
