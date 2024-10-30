@@ -24,6 +24,7 @@ public class Aplikasi {
     public static ProsesUnggahHasil unggah;
     public static ProsesHapusSesi hapus;
     public static MembukaHasilKonsultasi buka;
+    public static ContentUI lihatMateri;
    
     
     public static void main(String[] args){
@@ -42,6 +43,7 @@ public class Aplikasi {
         Aplikasi.hapus = new ProsesHapusSesi();
         Aplikasi.unggah = new ProsesUnggahHasil();
         Aplikasi.buka  = new MembukaHasilKonsultasi();
+        Aplikasi.lihatMateri = new ContentUI();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }
