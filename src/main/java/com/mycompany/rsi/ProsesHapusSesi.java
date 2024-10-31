@@ -40,7 +40,21 @@ public class ProsesHapusSesi {
         int rs = pstmtCari.executeUpdate();
 
         if (rs!=0) {
-                Aplikasi.dialogUI.showMessage("File hasil konsultasi berhasil dihapus");                
+                Aplikasi.dialogUI.showMessage("File hasil konsultasi berhasil dihapus");  
+                File directory = new File(".");
+                String filePattern = "catatan_konsultasi_db_" + nama+".pdf";
+                File[] files = directory.listFiles();
+
+                if (files != null) {
+                    for (File file : files) {
+                        // Cek apakah nama file mengandung pola yang ditentukan
+                        if (file.getName().contains(filePattern)) {
+                            // Coba hapus file tersebut
+                            file.delete();
+                        }
+                    }
+                }
+                        
                 Aplikasi.upHasil.getjButton1().setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
                 Aplikasi.upHasil.getjButton3().setText("Simpan"); // Kembali ke tombol "Simpan"
         } else {
