@@ -451,7 +451,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        String tanggalText = jLabel4.getText();
+        String tanggalText = jLabel19.getText();
         DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
         LocalDate tanggal = LocalDate.parse(tanggalText, formatterAsal);
 

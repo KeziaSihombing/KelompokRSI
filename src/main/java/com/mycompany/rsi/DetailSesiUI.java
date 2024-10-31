@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.awt.Desktop;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -212,7 +214,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
         if(jButton3.getText().equals("Simpan") && Aplikasi.akun.getPerson().equals("konsultan")){
             Aplikasi.unggah.Load();
         }else{  
-            Aplikasi.buka.Load();
+            Aplikasi.buka.Load(Aplikasi.unggah.getPath());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     
@@ -230,7 +232,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
 //}
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    String filePath = jButton1.getText();
+    String filePath = Aplikasi.unggah.getPath();
     
     if (filePath.endsWith(".pdf")) {
         if (jButton3.getText().equals("Simpan")) {
@@ -269,7 +271,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
     public void tampilkan(String nama, String tanggal, String waktu) {     
         jButton1.setText("+ Unggah Hasil Konsultasi");
         jButton3.setText("Simpan");  
-        String query2 = "SELECT HK.CATATAN_KONSULTASI FROM FAMIFY.HASIL_KONSULTASI HK JOIN FAMIFY.RESERVASI R ON HK.ID_RESERVASI = R.ID_RESERVASI JOIN FAMIFY.KLIEN KLI ON R.ID_KLIEN = KLI.ID_KLIEN JOIN FAMIFY.KONSULTAN KONS ON R.ID_KONSULTAN = KONS.ID_KONSULTAN JOIN FAMIFY.JADWAL_KONSULTASI J ON R.ID_JADWAL = J.ID_JADWAL  WHERE (KLI.NAMA_LENGKAP = ? OR KONS.NAMA_KONSULTAN = ?) AND J.TANGGAL = ? AND J.WAKTU = ? ";
+        String query2 = "SELECT HK.CATATAN_KONSULTASI FROM FAMIFY.HASIL_KONSULTASI HK JOIN FAMIFY.RESERVASI R ON HK.ID_RESERVASI = R.ID_RESERVASI JOIN FAMIFY.KLIEN KLI ON R.ID_KLIEN = KLI.ID_KLIEN JOIN FAMIFY.KONSULTAN KONS ON R.ID_KONSULTAN = KONS.ID_KONSULTAN JOIN FAMIFY.JADWAL_KONSULTASI J ON R.ID_JADWAL = J.ID_JADWAL  WHERE (KLI.NAMA_LENGKAP = ? OR KLI.EMAIL = ?) AND J.TANGGAL = ? AND J.WAKTU = ? ";
         try{
                 Aplikasi.database.databaseConnection();
                 Connection con = Aplikasi.database.getCon();
@@ -279,8 +281,19 @@ public class DetailSesiUI extends javax.swing.JFrame {
                 pStatement.setString(3, tanggal);
                 pStatement.setString(4, waktu);
                 ResultSet rs = pStatement.executeQuery(); 
+                File file = new File("catatan_konsultasi_db_" + nama+".pdf");
+                FileOutputStream outputStream = new FileOutputStream(file);
+
                 while(rs.next()){
-                    jButton1.setText(rs.getString("CATATAN_KONSULTASI"));
+                    InputStream inputStream = rs.getBinaryStream("CATATAN_KONSULTASI");
+                    
+                    byte[] buffer = new byte[4096];
+                    while (inputStream.read(buffer) > 0) {
+                        outputStream.write(buffer);
+                    }
+                    Aplikasi.unggah.setPath(file.getAbsolutePath());
+                    jButton1.setText("Catatan Konsultasi " + jLabel2.getText()+ ".pdf");
+                    
                     jButton3.setText("Hapus");
                 }
         }catch(Exception ex){
