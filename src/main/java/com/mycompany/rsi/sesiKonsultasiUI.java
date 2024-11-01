@@ -79,9 +79,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1446, 1256));
         setMinimumSize(new java.awt.Dimension(1446, 1256));
-        setPreferredSize(new java.awt.Dimension(1440, 1256));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
