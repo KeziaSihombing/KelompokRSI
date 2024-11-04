@@ -16,9 +16,6 @@ import java.util.ArrayList;
  * @author ASUS
  */
 public class DataDaftarSesi {
-    
-    private List<DataDaftarSesi> daftarSesiKonsultan = new ArrayList<>();
-    
     private String nama;
     private int umur;
     private String tanggalKonsul;

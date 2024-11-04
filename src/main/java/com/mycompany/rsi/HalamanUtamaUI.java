@@ -4,6 +4,8 @@
  */
 package com.mycompany.rsi;
 
+import java.util.List;
+
 /**
  *
  * @author ASUS
@@ -762,7 +764,17 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             jButton3.setText("Manajemen Konten");       
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
+        
+        
         this.setVisible(true);        
+    }
+    
+    public void tampilkanArtikel(List<Artikel> recentArticles){
+        ////beluummmmm
+    }
+    
+    public void tampilkanVideo(List<Video> recentVideo){
+        ////belummmm
     }
     
     

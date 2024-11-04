@@ -25,7 +25,9 @@ public class Aplikasi {
     public static ProsesHapusSesi hapus;
     public static MembukaHasilKonsultasi buka;
     public static ContentUI lihatMateri;
-   
+    public static Artikel article;
+    public static BerandaController controllerBeranda;
+    public static Video video;
     
     public static void main(String[] args){
         Aplikasi.dialogUI = new DialogUI();
@@ -44,6 +46,9 @@ public class Aplikasi {
         Aplikasi.unggah = new ProsesUnggahHasil();
         Aplikasi.buka  = new MembukaHasilKonsultasi();
         Aplikasi.lihatMateri = new ContentUI();
+        Aplikasi.article = new Artikel();
+        Aplikasi.controllerBeranda = new BerandaController();
+        Aplikasi.video = new Video();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
     }
