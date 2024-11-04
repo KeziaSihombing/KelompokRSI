@@ -18,13 +18,10 @@ import java.util.List;
  *
  * @author ASUS
  */
-public class Video {
-    private String judul;
+public class Video extends Content {
     private String deskripsi;
-    private String tanggalPublikasi;
     private String pengunggah;    
     private File video;
-    private File thumbnail;
     
     public List<Video> getRecentVideos(){
             String query = "SELECT JUDUL_VIDEO, DESKRIPSI, PENGUNGGAH ,VIDEO, TANGGAL_PUBLIKASI, THUMBNAIL FROM FAMIFY.KONTEN_VIDEO ORDER BY TANGGAL_PUBLIKASI DESC LIMIT 3";
@@ -76,6 +73,13 @@ public class Video {
             } 
             return daftarVideoTemp;
     }
+    
+    
+    
+      public String getType(){
+        return "video";
+    }
+    
 
 
 }

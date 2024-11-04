@@ -18,13 +18,11 @@ import java.util.List;
  *
  * @author ASUS
  */
-public class Artikel {
-    private String judul;
+public class Artikel extends Content {
     private String subjudul;
-    private String tanggalPublikasi;
     private String penulis;    
     private String isiArtikel;
-    private File thumbnail;
+
     
     public List<Artikel> getRecentArticles(){
             String query = "SELECT JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL,PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL FROM FAMIFY.KONTEN_ARTIKEL ORDER BY TANGGAL_PUBLIKASI DESC LIMIT 3";
@@ -85,6 +83,10 @@ public class Artikel {
 
     public File getThumbnail() {
         return thumbnail;
+    }
+    
+    public String getType(){
+        return "artikel";
     }
     
     
