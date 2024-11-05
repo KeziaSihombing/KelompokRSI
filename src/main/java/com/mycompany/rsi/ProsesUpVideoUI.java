@@ -171,9 +171,12 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel8.setText("Video*");
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Unggah Video.png"))); // NOI18N
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/UnggahVid.png"))); // NOI18N
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/UnggahArtikel.png"))); // NOI18N
+        jButton18.setBackground(new java.awt.Color(57, 206, 209));
+        jButton18.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(255, 255, 255));
+        jButton18.setText("Unggah");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,7 +212,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -224,7 +227,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
                 .addComponent(jButton17)
                 .addGap(18, 18, 18)
                 .addComponent(jButton18)
-                .addGap(0, 137, Short.MAX_VALUE))
+                .addGap(65, 65, 65))
         );
 
         pack();
