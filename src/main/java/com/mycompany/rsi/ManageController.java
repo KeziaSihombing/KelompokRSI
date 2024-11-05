@@ -34,6 +34,7 @@ public class ManageController {
     public void showVideos(List<Video> Videos) {
         Aplikasi.beranda.tampilkanVideo(Videos);
     }
+    
 
 
 }

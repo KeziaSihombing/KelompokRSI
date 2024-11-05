@@ -18,6 +18,10 @@ import javax.swing.JFileChooser;
 public class ProsesNulisArtikel {
     private String pathThumbnail;
     
+    public void showUpArticle(){
+        Aplikasi.upArtikel.tampilkan();
+    }
+    
     public void LoadThumbnail(){
         JFileChooser fc = new JFileChooser();
             fc.showOpenDialog(null);

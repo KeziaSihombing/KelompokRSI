@@ -4,6 +4,9 @@
  */
 package com.mycompany.rsi;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
 /**
  *
  * @author ASUS
@@ -854,7 +857,16 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        JButton temp = new javax.swing.JButton();
+        temp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); // NOI18N
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+            Aplikasi.addArticle.showUpArticle();
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
