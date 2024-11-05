@@ -182,8 +182,8 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel6.setText("Thumbnail/Foto Sampul*");
 
-        jButton1.setFont(new java.awt.Font("Satoshi Variable", 1, 12)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 28.png"))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
+        jButton1.setText("+Unggah Thumbnail");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,7 +225,7 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jScrollPane1)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -254,7 +254,7 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();

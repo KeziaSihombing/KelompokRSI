@@ -166,12 +166,14 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel7.setText("Thumbnail/Foto Sampul*");
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 28.png"))); // NOI18N
+        jButton16.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
+        jButton16.setText("+ Unggah Thumbnail");
 
         jLabel8.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel8.setText("Video*");
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/UnggahVid.png"))); // NOI18N
+        jButton17.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
+        jButton17.setText("+Unggah Video");
 
         jButton18.setBackground(new java.awt.Color(57, 206, 209));
         jButton18.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
@@ -186,10 +188,8 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(343, 343, 343)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton16)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton17)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jButton18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -198,7 +198,10 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField2)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE))))
+                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -212,7 +215,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
