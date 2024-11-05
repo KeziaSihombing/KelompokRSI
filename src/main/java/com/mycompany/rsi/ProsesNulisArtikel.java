@@ -25,7 +25,8 @@ public class ProsesNulisArtikel {
 
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
                 setPathThumbnail(selectedFile.getAbsolutePath());
-                //Aplikasi.upArtikel.getjButton1();
+                //ini masih error, help puh sepuh
+                //Aplikasi.upArtikel.getjButton1().setText("+Unggah Thumbnail");
             } else {
                 Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
             }
@@ -47,7 +48,7 @@ public class ProsesNulisArtikel {
             con = Aplikasi.database.getCon();
 
             // Query untuk menyimpan artikel ke database
-            String querySimpan = "INSERT INTO FAMIFY.ARTIKEL (JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, THUMBNAIL) VALUES (?, ?, ?, ?, ?)";
+            String querySimpan = "INSERT INTO FAMIFY.KONTEN_ARTIKEL (JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, THUMBNAIL) VALUES (?, ?, ?, ?, ?)";
             pstmtSimpanArtikel = con.prepareStatement(querySimpan);
 
             pstmtSimpanArtikel.setString(1, judul);
@@ -66,6 +67,7 @@ public class ProsesNulisArtikel {
             if (row > 0) {
                 Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
                 // Reset form setelah penyimpanan
+                // disini juga keknya ada yang janggal cuman gw bego salah dimananya
               //Aplikasi.upArtikel.resetForm();
             } else {
                 Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");

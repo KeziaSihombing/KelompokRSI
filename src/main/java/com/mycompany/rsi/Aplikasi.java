@@ -30,6 +30,7 @@ public class Aplikasi {
     public static Video video;
     public static ManajemenKontenUI manage;
     public static ProsesUpArtikelGUI upArtikel;
+    public static ProsesUpVideoUI upVideo;
     
     public static void main(String[] args){
         Aplikasi.dialogUI = new DialogUI();
@@ -55,6 +56,7 @@ public class Aplikasi {
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
         Aplikasi.upArtikel = new ProsesUpArtikelGUI();
+        Aplikasi.upVideo = new ProsesUpVideoUI();
     }
             
     
