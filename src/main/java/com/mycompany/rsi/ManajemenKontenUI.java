@@ -71,17 +71,17 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton24 = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -476,8 +476,6 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel17.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel9.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-next.png"))); // NOI18N
-
         jButton7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton7.setForeground(new java.awt.Color(34, 184, 185));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); // NOI18N
@@ -539,38 +537,91 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-prev.png"))); // NOI18N
-        jLabel1.setEnabled(false);
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-prev.png"))); // NOI18N
+        jButton2.setToolTipText("");
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setFocusPainted(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-hover.png"))); // NOI18N
-        jLabel4.setText("2");
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-active.png"))); // NOI18N
+        jButton11.setText("1");
+        jButton11.setToolTipText("");
+        jButton11.setBorder(null);
+        jButton11.setBorderPainted(false);
+        jButton11.setContentAreaFilled(false);
+        jButton11.setFocusPainted(false);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-active.png"))); // NOI18N
-        jLabel3.setText("1");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton12.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(11, 177, 203));
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-hover.png"))); // NOI18N
+        jButton12.setText("2");
+        jButton12.setToolTipText("");
+        jButton12.setBorder(null);
+        jButton12.setBorderPainted(false);
+        jButton12.setContentAreaFilled(false);
+        jButton12.setFocusPainted(false);
+        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jLabel5.setText("3");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton25.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jButton25.setForeground(new java.awt.Color(11, 177, 203));
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
+        jButton25.setText("3");
+        jButton25.setToolTipText("");
+        jButton25.setBorder(null);
+        jButton25.setBorderPainted(false);
+        jButton25.setContentAreaFilled(false);
+        jButton25.setFocusPainted(false);
+        jButton25.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jLabel6.setText("...");
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton26.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jButton26.setForeground(new java.awt.Color(11, 177, 203));
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
+        jButton26.setText("4");
+        jButton26.setToolTipText("");
+        jButton26.setBorder(null);
+        jButton26.setBorderPainted(false);
+        jButton26.setContentAreaFilled(false);
+        jButton26.setFocusPainted(false);
+        jButton26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(11, 177, 203));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jLabel7.setText("9");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton27.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jButton27.setForeground(new java.awt.Color(11, 177, 203));
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
+        jButton27.setText("5");
+        jButton27.setToolTipText("");
+        jButton27.setBorder(null);
+        jButton27.setBorderPainted(false);
+        jButton27.setContentAreaFilled(false);
+        jButton27.setFocusPainted(false);
+        jButton27.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+
+        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-next.png"))); // NOI18N
+        jButton28.setToolTipText("");
+        jButton28.setBorder(null);
+        jButton28.setBorderPainted(false);
+        jButton28.setContentAreaFilled(false);
+        jButton28.setFocusPainted(false);
+        jButton28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -594,20 +645,20 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                             .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(517, 517, 517)
-                        .addComponent(jLabel1)
+                        .addGap(474, 474, 474)
+                        .addComponent(jButton2)
                         .addGap(24, 24, 24)
-                        .addComponent(jLabel3)
+                        .addComponent(jButton11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
+                        .addComponent(jButton12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
+                        .addComponent(jButton25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)
+                        .addComponent(jButton26)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)
+                        .addComponent(jButton27)
                         .addGap(24, 24, 24)
-                        .addComponent(jLabel8)))
+                        .addComponent(jButton28)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -632,21 +683,20 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7))))
+                                .addComponent(jButton11)
+                                .addComponent(jButton12))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton25)
+                                .addComponent(jButton26)
+                                .addComponent(jButton27))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel1))))
+                            .addComponent(jButton2)
+                            .addComponent(jButton28))))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
-
-        jLabel3.getAccessibleContext().setAccessibleName("1");
 
         jScrollPane2.setViewportView(jPanel2);
 
@@ -744,13 +794,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 .addGap(38, 38, 38))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(12, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(17, 17, Short.MAX_VALUE)
-                            .addComponent(jLabel2))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(12, 12, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(0, 12, Short.MAX_VALUE)))
         );
 
@@ -889,8 +936,27 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    public void tampilkan(String jenis){
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        if(jButton11.getText().equals("1")){
+            jButton2.setEnabled(false);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        // TODO add your handling code here:
+        if(jButton27.getText().equals(Aplikasi.article.getTotalPages())){
+            jButton28.setEnabled(false);
+        }
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    public void tampilkan(String jenis){        
         if(jenis.equals("video")){
+            //menampilkan video
             jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
             jButton9.setForeground(new java.awt.Color(34, 184, 185));
             jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -900,6 +966,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jButton10.setVisible(true);
             this.setVisible(true);
         }else{
+            //menampilkan artikel
+            int totalPages = Aplikasi.article.getTotalPages();
+            if(totalPages>5){
+                jButton26.setText("...");
+                jButton27.setText(String.valueOf(totalPages));
+            }
             jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
             jButton8.setForeground(new java.awt.Color(34, 184, 185));
             jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -910,6 +982,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             this.setVisible(true);
         }
     }
+    
     /**
      * @param args the command line arguments
      */
@@ -918,6 +991,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
@@ -925,11 +1000,16 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -937,7 +1017,6 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -945,14 +1024,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;

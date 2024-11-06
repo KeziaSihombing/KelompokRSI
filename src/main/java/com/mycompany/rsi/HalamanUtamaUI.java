@@ -4,6 +4,7 @@
  */
 package com.mycompany.rsi;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -48,6 +49,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea2 = new javax.swing.JTextArea();
         jLabel26 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
@@ -55,6 +57,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea4 = new javax.swing.JTextArea();
         jLabel27 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
@@ -62,6 +65,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea6 = new javax.swing.JTextArea();
         jLabel28 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -267,6 +271,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 430, 360));
 
+        jButton11.setBorderPainted(false);
+        jButton11.setContentAreaFilled(false);
+        jButton11.setFocusPainted(false);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 390, 350));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1090, 470, 370));
 
         jPanel3.setDoubleBuffered(false);
@@ -320,6 +334,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
 
+        jButton14.setBorderPainted(false);
+        jButton14.setContentAreaFilled(false);
+        jButton14.setFocusPainted(false);
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
+
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1090, 470, 370));
 
         jPanel4.setDoubleBuffered(false);
@@ -372,6 +396,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
+
+        jButton15.setBorderPainted(false);
+        jButton15.setContentAreaFilled(false);
+        jButton15.setFocusPainted(false);
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 1090, 470, 370));
 
@@ -755,6 +789,18 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton15ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -775,10 +821,64 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     
     public void tampilkanArtikel(List<Artikel> recentArticles){
         ////beluummmmm
+        jPanel2.setVisible(false);
+        jPanel3.setVisible(false);
+        jPanel4.setVisible(false);
+        
+        if(recentArticles.size()>=1){
+            Artikel article = recentArticles.get(0);
+            String pathThumbnail = article.getPath();
+            jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jTextArea1.setText(article.getJudul());
+            String deskripsi = article.getIsiArtikel().substring(0, 500) + "...";
+            jTextArea2.setText(deskripsi);         
+            
+            jPanel2.setVisible(true);
+        }
+        if(recentArticles.size()>=2){
+            Artikel article = recentArticles.get(1);
+            String pathThumbnail = article.getPath();
+            jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jTextArea3.setText(article.getJudul());
+            String deskripsi = article.getIsiArtikel().substring(0, 500) + "...";
+            jTextArea4.setText(deskripsi);    
+            
+            jPanel3.setVisible(true);
+        }
+        if(recentArticles.size()>=3){
+            Artikel article = recentArticles.get(2);
+            String pathThumbnail = article.getPath();
+            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jTextArea5.setText(article.getJudul());
+            String deskripsi = article.getIsiArtikel().substring(0, 500) + "...";
+            jTextArea6.setText(deskripsi);       
+            
+            jPanel4.setVisible(true);
+        }
+        
     }
     
     public void tampilkanVideo(List<Video> recentVideo){
         ////belummmm
+        jPanel5.setVisible(false);
+        jPanel6.setVisible(false);
+        jPanel7.setVisible(false);
+        
+        if(recentVideo.size() >=1){
+            Video video = recentVideo.get(0);
+            String pathThumbnail = video.getPath();
+            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+        }
+        if(recentVideo.size() >=2){
+            Video video = recentVideo.get(1);
+            String pathThumbnail = video.getPath();
+            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+        }
+        if(recentVideo.size() >=3){
+            Video video = recentVideo.get(2);
+            String pathThumbnail = video.getPath();
+            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+        }
     }
     
     
@@ -786,8 +886,11 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

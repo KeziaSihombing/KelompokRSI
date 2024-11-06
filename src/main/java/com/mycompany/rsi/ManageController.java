@@ -16,6 +16,8 @@ public class ManageController {
     private List<Artikel> Articles = new ArrayList<>();
     private List<Video> Videos = new ArrayList<>();
     
+    
+    
 
     public void Articles() {
         Articles = Aplikasi.article.getRecentArticles();

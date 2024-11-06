@@ -22,6 +22,7 @@ public class Video extends Content {
     private String deskripsi;
     private String pengunggah;    
     private File video;
+    private String path;
     
     public List<Video> getRecentVideos(){
             String query = "SELECT JUDUL_VIDEO, DESKRIPSI, PENGUNGGAH ,VIDEO, TANGGAL_PUBLIKASI, THUMBNAIL FROM FAMIFY.KONTEN_VIDEO ORDER BY TANGGAL_PUBLIKASI DESC LIMIT 3";
@@ -50,6 +51,7 @@ public class Video extends Content {
                         }   
 
                         video.thumbnail = fileThumbnail;
+                        video.path =  fileThumbnail.getAbsolutePath();
                         
                     }
                     
@@ -79,6 +81,39 @@ public class Video extends Content {
       public String getType(){
         return "video";
     }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public String getPengunggah() {
+        return pengunggah;
+    }
+
+    public File getVideo() {
+        return video;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public String getTanggalPublikasi() {
+        return tanggalPublikasi;
+    }
+
+    public File getThumbnail() {
+        return thumbnail;
+    }
+    
     
 
 
