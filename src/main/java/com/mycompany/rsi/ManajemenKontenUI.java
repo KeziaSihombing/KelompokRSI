@@ -4,6 +4,9 @@
  */
 package com.mycompany.rsi;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -99,6 +102,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setMinimumSize(new java.awt.Dimension(1379, 995));
         jPanel2.setPreferredSize(new java.awt.Dimension(1379, 995));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
         jPanel6.setDoubleBuffered(false);
@@ -137,11 +141,13 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane7.setEnabled(false);
         jScrollPane7.setFocusable(false);
         jScrollPane7.setOpaque(false);
+        jScrollPane7.setWheelScrollingEnabled(false);
 
         jTextArea5.setEditable(false);
         jTextArea5.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea5.setColumns(20);
         jTextArea5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea5.setLineWrap(true);
         jTextArea5.setRows(2);
         jTextArea5.setText("Membangun Kesehatan Mental Bayi");
         jTextArea5.setAutoscrolls(false);
@@ -157,12 +163,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane8.setFocusable(false);
         jScrollPane8.setOpaque(false);
+        jScrollPane8.setWheelScrollingEnabled(false);
 
         jTextArea6.setColumns(20);
         jTextArea6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea6.setForeground(new java.awt.Color(111, 110, 110));
         jTextArea6.setRows(5);
         jTextArea6.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea6.setAutoscrolls(false);
         jTextArea6.setBorder(null);
         jTextArea6.setFocusable(false);
         jScrollPane8.setViewportView(jTextArea6);
@@ -193,6 +201,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel14.setPreferredSize(new java.awt.Dimension(1319, 197));
         jLabel14.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel6.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 107, -1, -1));
 
         jPanel7.setForeground(new java.awt.Color(255, 255, 255));
         jPanel7.setDoubleBuffered(false);
@@ -231,6 +241,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane9.setEnabled(false);
         jScrollPane9.setFocusable(false);
         jScrollPane9.setOpaque(false);
+        jScrollPane9.setWheelScrollingEnabled(false);
 
         jTextArea7.setEditable(false);
         jTextArea7.setBackground(new java.awt.Color(255, 255, 255));
@@ -251,12 +262,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane10.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane10.setFocusable(false);
         jScrollPane10.setOpaque(false);
+        jScrollPane10.setWheelScrollingEnabled(false);
 
         jTextArea8.setColumns(20);
         jTextArea8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea8.setForeground(new java.awt.Color(111, 110, 110));
         jTextArea8.setRows(5);
         jTextArea8.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea8.setAutoscrolls(false);
         jTextArea8.setBorder(null);
         jTextArea8.setFocusable(false);
         jScrollPane10.setViewportView(jTextArea8);
@@ -287,6 +300,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel15.setPreferredSize(new java.awt.Dimension(1319, 197));
         jLabel15.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel7.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 307, -1, -1));
 
         jPanel8.setForeground(new java.awt.Color(255, 255, 255));
         jPanel8.setDoubleBuffered(false);
@@ -325,6 +340,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane11.setEnabled(false);
         jScrollPane11.setFocusable(false);
         jScrollPane11.setOpaque(false);
+        jScrollPane11.setWheelScrollingEnabled(false);
 
         jTextArea9.setEditable(false);
         jTextArea9.setBackground(new java.awt.Color(255, 255, 255));
@@ -345,12 +361,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane12.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane12.setFocusable(false);
         jScrollPane12.setOpaque(false);
+        jScrollPane12.setWheelScrollingEnabled(false);
 
         jTextArea10.setColumns(20);
         jTextArea10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea10.setForeground(new java.awt.Color(111, 110, 110));
         jTextArea10.setRows(5);
         jTextArea10.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea10.setAutoscrolls(false);
         jTextArea10.setBorder(null);
         jTextArea10.setFocusable(false);
         jScrollPane12.setViewportView(jTextArea10);
@@ -381,6 +399,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel16.setPreferredSize(new java.awt.Dimension(1319, 197));
         jLabel16.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 507, -1, -1));
 
         jPanel9.setForeground(new java.awt.Color(255, 255, 255));
         jPanel9.setDoubleBuffered(false);
@@ -419,6 +439,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane13.setEnabled(false);
         jScrollPane13.setFocusable(false);
         jScrollPane13.setOpaque(false);
+        jScrollPane13.setWheelScrollingEnabled(false);
 
         jTextArea11.setEditable(false);
         jTextArea11.setBackground(new java.awt.Color(255, 255, 255));
@@ -439,12 +460,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane14.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane14.setFocusable(false);
         jScrollPane14.setOpaque(false);
+        jScrollPane14.setWheelScrollingEnabled(false);
 
         jTextArea12.setColumns(20);
         jTextArea12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea12.setForeground(new java.awt.Color(111, 110, 110));
         jTextArea12.setRows(5);
         jTextArea12.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea12.setAutoscrolls(false);
         jTextArea12.setBorder(null);
         jTextArea12.setFocusable(false);
         jScrollPane14.setViewportView(jTextArea12);
@@ -476,6 +499,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel17.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel9.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 707, -1, -1));
+
         jButton7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton7.setForeground(new java.awt.Color(34, 184, 185));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); // NOI18N
@@ -493,6 +518,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 180, -1));
 
         jButton8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton8.setForeground(new java.awt.Color(120, 120, 135));
@@ -508,6 +534,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 40, 174, -1));
 
         jButton9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
@@ -523,6 +550,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 40, 178, -1));
 
         jButton10.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton10.setForeground(new java.awt.Color(34, 184, 185));
@@ -536,6 +564,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1213, 40, 176, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-prev.png"))); // NOI18N
         jButton2.setToolTipText("");
@@ -549,6 +578,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 912, -1, -1));
 
         jButton11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
@@ -560,6 +590,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton11.setContentAreaFilled(false);
         jButton11.setFocusPainted(false);
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 920, -1, -1));
 
         jButton12.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton12.setForeground(new java.awt.Color(11, 177, 203));
@@ -571,6 +602,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton12.setContentAreaFilled(false);
         jButton12.setFocusPainted(false);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 920, -1, -1));
 
         jButton25.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton25.setForeground(new java.awt.Color(11, 177, 203));
@@ -582,6 +614,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton25.setContentAreaFilled(false);
         jButton25.setFocusPainted(false);
         jButton25.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 920, -1, -1));
 
         jButton26.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton26.setForeground(new java.awt.Color(11, 177, 203));
@@ -593,6 +631,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton26.setContentAreaFilled(false);
         jButton26.setFocusPainted(false);
         jButton26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(788, 920, -1, -1));
 
         jButton27.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton27.setForeground(new java.awt.Color(11, 177, 203));
@@ -609,6 +648,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton27ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(826, 920, -1, -1));
 
         jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-next.png"))); // NOI18N
         jButton28.setToolTipText("");
@@ -622,81 +662,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton28ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(474, 474, 474)
-                        .addComponent(jButton2)
-                        .addGap(24, 24, 24)
-                        .addComponent(jButton11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton27)
-                        .addGap(24, 24, 24)
-                        .addComponent(jButton28)))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton8)
-                    .addComponent(jButton7)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton9)
-                        .addComponent(jButton10)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton11)
-                                .addComponent(jButton12))
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton25)
-                                .addComponent(jButton26)
-                                .addComponent(jButton27))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addComponent(jButton28))))
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
+        jPanel2.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(882, 912, -1, -1));
 
         jScrollPane2.setViewportView(jPanel2);
 
@@ -872,25 +838,36 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png")));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton8.setForeground(new java.awt.Color(120, 120, 135));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
         jButton7.setForeground(new java.awt.Color(34, 184, 185));
+               
+        //menampilkan semua
         jButton10.setVisible(false);
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton8.setForeground(new java.awt.Color(34, 184, 185));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton7.setForeground(new java.awt.Color(120, 120, 135));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
-        jButton10.setVisible(true);
+      
+        //memanggil tampilkanHanya artikel
+        if(Aplikasi.akun.getPerson().equals("admin")){
+            jButton10.setVisible(true);
+        }else{
+            jButton10.setVisible(false);
+        }
+        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle();
+        Aplikasi.controllerManajemen.showArticle(artikels);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -900,10 +877,20 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton8.setForeground(new java.awt.Color(120, 120, 135));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton7.setForeground(new java.awt.Color(120, 120, 135));
-        jButton10.setVisible(true);
+        
+        //memanggil tampilkan hanyaa video
+        if(Aplikasi.akun.getPerson().equals("admin")){
+            jButton10.setVisible(true);
+        }else{
+            jButton10.setVisible(false);
+        }
+        List<Video> videos = Aplikasi.controllerManajemen.loadVideo();
+        Aplikasi.controllerManajemen.showVideo(videos);
+        this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        
         JButton temp = new javax.swing.JButton();
         temp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); // NOI18N
         ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
@@ -954,34 +941,127 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton27ActionPerformed
 
-    public void tampilkan(String jenis){        
-        if(jenis.equals("video")){
-            //menampilkan video
-            jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
-            jButton9.setForeground(new java.awt.Color(34, 184, 185));
-            jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
-            jButton8.setForeground(new java.awt.Color(120, 120, 135));
-            jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
-            jButton7.setForeground(new java.awt.Color(120, 120, 135));
-            jButton10.setVisible(true);
-            this.setVisible(true);
-        }else{
-            //menampilkan artikel
-            int totalPages = Aplikasi.article.getTotalPages();
-            if(totalPages>5){
-                jButton26.setText("...");
-                jButton27.setText(String.valueOf(totalPages));
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    public void tampilkanArticle(List<Artikel> Articles){
+        int totalPages = Aplikasi.article.getTotalPages();
+        List <Artikel> articles = Articles;
+        if(totalPages<5){
+            jButton27.setVisible(false);
+            if(totalPages<4){
+                jButton26.setVisible(false);
+                if(totalPages<3){
+                    jButton25.setVisible(false);
+                    if(totalPages<2){
+                        jButton12.setVisible(false);                      
+                    }
+                }
             }
-            jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
-            jButton8.setForeground(new java.awt.Color(34, 184, 185));
-            jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
-            jButton7.setForeground(new java.awt.Color(120, 120, 135));
-            jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
-            jButton9.setForeground(new java.awt.Color(120, 120, 135));
-            jButton10.setVisible(true);
-            this.setVisible(true);
+        }else{
+            jButton26.setText("..");
+            jButton27.setText(String.valueOf(totalPages));
+        }
+        
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
+        jButton8.setForeground(new java.awt.Color(34, 184, 185));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton7.setForeground(new java.awt.Color(120, 120, 135));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton9.setForeground(new java.awt.Color(120, 120, 135));
+        if(Aplikasi.akun.getPerson().equals("administrator"))jButton10.setVisible(true);
+        tampilkan();
+        
+        jPanel6.setVisible(false);
+        jPanel7.setVisible(false);
+        jPanel8.setVisible(false);
+        jPanel9.setVisible(false);
+        
+        if(articles.size() >=1){
+            Artikel artikel = articles.get(0);
+            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));          
+            jTextArea5.setText(artikel.getJudul());
+            jTextArea6.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jPanel6.setVisible(true);
+        }
+        if(articles.size() >=2){
+            Artikel artikel = articles.get(1);
+            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            jTextArea7.setText(artikel.getJudul());
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jPanel7.setVisible(true);
+        }
+        if(articles.size() >=3){
+            Artikel artikel = articles.get(2);            
+            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            jTextArea9.setText(artikel.getJudul());
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jPanel8.setVisible(true);
+        }
+        if(articles.size() >=4){
+            Artikel artikel = articles.get(3);            
+            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            jTextArea11.setText(artikel.getJudul());
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jPanel9.setVisible(true);
+        }
+        
+        this.setVisible(true);
+    }
+           
+    
+    public void tampilkanVideo(List<Video> Videos){
+        int totalPages = Aplikasi.video.getTotalPages();
+        List <Video> videos = Videos;
+        if(totalPages<5){
+            jButton27.setVisible(false);
+            if(totalPages<4){
+                jButton26.setVisible(false);
+                if(totalPages<3){
+                    jButton25.setVisible(false);
+                    if(totalPages<2){
+                        jButton12.setVisible(false);                      
+                    }
+                }
+            }
+        }else{
+            jButton26.setText("..");
+            jButton27.setText(String.valueOf(totalPages));
+        }
+        
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
+        jButton8.setForeground(new java.awt.Color(34, 184, 185));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton7.setForeground(new java.awt.Color(120, 120, 135));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton9.setForeground(new java.awt.Color(120, 120, 135));
+        if(Aplikasi.akun.getPerson().equals("administrator"))jButton10.setVisible(true);
+        tampilkan();
+        
+        this.setVisible(true);
+    }
+    
+    public void tampilkanSemua(){
+        this.setVisible(true);
+    }
+    
+    public void tampilkan(){
+        if(Aplikasi.akun.getPerson().equals("klien")){
+            jButton3.setText("Reservasi");
+            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon
+        }else if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton4.setVisible(false);
+            jButton2.setVisible(false);
+            jButton3.setText("Manajemen Konten");       
+            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
     }
+    
+   
+    
+    
     
     /**
      * @param args the command line arguments

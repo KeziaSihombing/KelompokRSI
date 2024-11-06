@@ -766,13 +766,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.manage.tampilkan("artikel");
+        //Aplikasi.manage.tampilkan("artikel");
+        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle();
+        Aplikasi.controllerManajemen.showArticle(artikels);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.manage.tampilkan("video");
+        List<Video> videos = Aplikasi.controllerManajemen.loadVideo();
+        Aplikasi.controllerManajemen.showVideo(videos);
         this.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -843,8 +846,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         
         if(recentVideo.size()>=1){
             Video video = recentVideo.get(0);
-            String pathThumbnail = video.getPath();
-            jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
             jTextArea1.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea2.setText(deskripsi);         
@@ -853,8 +855,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         }
         if(recentVideo.size()>=2){
             Video video = recentVideo.get(1);
-            String pathThumbnail = video.getPath();
-            jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
             jTextArea3.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea4.setText(deskripsi);    
@@ -862,9 +863,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             jPanel3.setVisible(true);
         }
         if(recentVideo.size()>=3){
-            Video video = recentVideo.get(2);
-            String pathThumbnail = video.getPath();
-            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            Video video = recentVideo.get(2);            
+            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
             jTextArea5.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea6.setText(deskripsi);       

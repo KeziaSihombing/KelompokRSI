@@ -27,6 +27,7 @@ public class Aplikasi {
     public static ContentUI lihatMateri;
     public static Artikel article;
     public static BerandaController controllerBeranda;
+    public static ManageController controllerManajemen;
     public static Video video;
     public static ManajemenKontenUI manage;
     public static ProsesUpArtikelGUI upArtikel;
@@ -57,6 +58,7 @@ public class Aplikasi {
         Aplikasi.upArtikel = new ProsesUpArtikelGUI();
         Aplikasi.upVideo = new ProsesUpVideoUI();
         Aplikasi.addArticle = new ProsesNulisArtikel();
+        Aplikasi.controllerManajemen = new ManageController();
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
        

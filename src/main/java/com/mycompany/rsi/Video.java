@@ -25,7 +25,6 @@ public class Video extends Content {
     private String deskripsi;
     private String pengunggah;    
     private File video;
-    private String path;
     
     public List<Video> getVideosByPages(int page){
             String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";
@@ -70,7 +69,7 @@ public class Video extends Content {
                         }   
 
                         video.thumbnail = fileThumbnail;
-                        video.path =  fileThumbnail.getAbsolutePath();
+                     
                         
                     }
                     
@@ -141,7 +140,7 @@ public class Video extends Content {
                         }   
 
                         video.thumbnail = fileThumbnail;
-                        video.path =  fileThumbnail.getAbsolutePath();
+                       
                         
                     }
                     
@@ -185,18 +184,30 @@ public class Video extends Content {
             return daftarVideoTemp;
     }
     
+    public int getTotalPages() {
+        String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_VIDEO";
+        int totalPages = 1;
+
+        try {
+            Aplikasi.database.databaseConnection();
+            try (Connection con = Aplikasi.database.getCon(); Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(countQuery)) {
+
+                if (rs.next()) {
+                    int totalVideo = rs.getInt(1);
+                    totalPages = (int) Math.ceil((double) totalVideo / 4);
+                }
+            }
+        } catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+
+        return totalPages;
+    }
+    
     
     
       public String getType(){
         return "video";
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
     }
 
     public String getDeskripsi() {
