@@ -32,9 +32,9 @@ public class ProsesUploadVideo {
         fc.showOpenDialog(null);
         File selectedFile = fc.getSelectedFile();
 
-        if (selectedFile != null && (selectedFile.getAbsolutePath().endsWith(".png") || selectedFile.getAbsolutePath().endsWith(".jpg"))) {
+        if (selectedFile != null && (selectedFile.getAbsolutePath().endsWith(".png"))) {
             setThumbnailPath(selectedFile.getAbsolutePath());
-            Aplikasi.upVideo.getjButton16().setText("+ Unggah Thumbnail");
+            Aplikasi.upVideo.getjButton16().setText("Thumbnail Tersimpan");
         } else {
             Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
         }
@@ -47,7 +47,7 @@ public class ProsesUploadVideo {
 
         if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".mp4")) {
             setVideoPath(selectedFile.getAbsolutePath());
-            Aplikasi.upVideo.getjButton17().setText("+Unggah Video");
+            Aplikasi.upVideo.getjButton17().setText("Video Tersimpan");
         } else {
             Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus MP4.");
         }

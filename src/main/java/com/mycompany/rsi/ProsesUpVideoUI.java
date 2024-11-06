@@ -4,6 +4,7 @@
  */
 package com.mycompany.rsi;
 
+import java.io.File;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -263,6 +264,40 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    Aplikasi.addVideo.loadThumbnail();
+}
+
+private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    Aplikasi.addVideo.loadVideo();
+}
+
+private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    String judul = Aplikasi.upVideo.getjTextField1().getText();
+    String deskripsi = Aplikasi.upVideo.getjTextField2().getText();
+    String pengunggah = Aplikasi.upVideo.getjTextField3().getText();
+
+    // Validasi thumbnail dan video path
+    String thumbnailPath = Aplikasi.addVideo.getThumbnailPath();
+    String videoPath = Aplikasi.addVideo.getVideoPath();
+    
+    if (thumbnailPath == null || thumbnailPath.isEmpty()) {
+        Aplikasi.dialogUI.showMessage("Error: Thumbnail belum dipilih.");
+        return;
+    }
+    
+    if (videoPath == null || videoPath.isEmpty()) {
+        Aplikasi.dialogUI.showMessage("Error: Video belum dipilih.");
+        return;
+    }
+
+    File thumbnailFile = new File(thumbnailPath);
+    File videoFile = new File(videoPath);
+
+    // Simpan video ke database
+    Aplikasi.addVideo.simpanVideoDB(videoFile, thumbnailFile, judul, deskripsi, pengunggah);
+}
+    
     public void tampilkan(){
         this.setVisible(true);
     }

@@ -896,9 +896,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         temp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); // NOI18N
         ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
         ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
 
         if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
             Aplikasi.addArticle.showUpArticle();
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.addVideo.showUpVideo();
         } else {
            Aplikasi.dialogUI.showMessage("");
         }
