@@ -4,6 +4,11 @@
  */
 package com.mycompany.rsi;
 
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.io.File;
+
 /**
  *
  * @author ASUS
@@ -294,15 +299,61 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.addArticle.LoadThumbnail();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        // Mengambil input dari UI
+    String judul = Aplikasi.upArtikel.getjTextField1().getText();
+    String subJudul = Aplikasi.upArtikel.getjTextField2().getText();
+    String isiArtikel = Aplikasi.upArtikel.getjTextArea1().getText();
+    String diisiOleh = Aplikasi.upArtikel.getjTextField3().getText();
+
+    // Pastikan path thumbnail sudah di-load dari ProsesNulisArtikel
+    String thumbnailPath = Aplikasi.addArticle.getPathThumbnail();
+    
+    // Cek apakah path thumbnail tersedia
+    if (thumbnailPath == null || thumbnailPath.isEmpty()) {
+        Aplikasi.dialogUI.showMessage("Error: Thumbnail belum dipilih. Harap pilih thumbnail terlebih dahulu.");
+        return;
+    }
+
+    File thumbnailFile = new File(thumbnailPath);
+
+    // Panggil metode simpanArtikelDB
+    Aplikasi.addArticle.simpanArtikelDB(judul, subJudul, isiArtikel, diisiOleh, thumbnailFile);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public void tampilkan(){
         this.setVisible(true);
     }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    } 
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

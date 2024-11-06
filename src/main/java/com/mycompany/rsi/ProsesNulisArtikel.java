@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JFileChooser;
+import java.sql.Date;
 /**
  *
  * @author ASUS
@@ -30,68 +31,72 @@ public class ProsesNulisArtikel {
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
                 setPathThumbnail(selectedFile.getAbsolutePath());
                 //ini masih error, help puh sepuh
-                //Aplikasi.upArtikel.getjButton1().setText("+Unggah Thumbnail");
+                 Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
             } else {
                 Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
             }
     }
     
     public void simpanArtikelDB(String judul, String subJudul, String isiArtikel, String diisiOleh, File thumbnailFile) {
-        Connection con = null;
-        PreparedStatement pstmtSimpanArtikel = null;
-        
-        try {
-            // Validasi input
-            if (judul.isEmpty() || subJudul.isEmpty() || diisiOleh.isEmpty() || isiArtikel.isEmpty() || thumbnailFile == null) {
-                Aplikasi.dialogUI.showMessage("Semua kolom harus diisi.");
-                return;
-            }
+    Connection con = null;
+    PreparedStatement pstmtSimpanArtikel = null;
 
-            // Koneksi ke database
-            Aplikasi.database.databaseConnection();
-            con = Aplikasi.database.getCon();
-
-            // Query untuk menyimpan artikel ke database
-            String querySimpan = "INSERT INTO FAMIFY.KONTEN_ARTIKEL (JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, THUMBNAIL) VALUES (?, ?, ?, ?, ?)";
-            pstmtSimpanArtikel = con.prepareStatement(querySimpan);
-
-            pstmtSimpanArtikel.setString(1, judul);
-            pstmtSimpanArtikel.setString(2, subJudul);
-            pstmtSimpanArtikel.setString(3, isiArtikel);
-            pstmtSimpanArtikel.setString(4, diisiOleh);
-
-            // Menyimpan thumbnail sebagai byte array
-            FileInputStream fis = new FileInputStream(thumbnailFile);
-            pstmtSimpanArtikel.setBinaryStream(5, fis, (int) thumbnailFile.length());
-
-            // Eksekusi penyimpanan
-            int row = pstmtSimpanArtikel.executeUpdate();
-            fis.close();
-
-            if (row > 0) {
-                Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
-                // Reset form setelah penyimpanan
-                // disini juga keknya ada yang janggal cuman gw bego salah dimananya
-              //Aplikasi.upArtikel.resetForm();
-            } else {
-                Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");
-            }
-
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
-            Aplikasi.dialogUI.showMessage("SQL Error: " + sqlEx.getMessage());
-        } catch (IOException ioEx) {
-            ioEx.printStackTrace();
-            Aplikasi.dialogUI.showMessage("Error membaca file: " + ioEx.getMessage());
-        } finally {
-            // Tutup resources
-            try {
-                if (pstmtSimpanArtikel != null) pstmtSimpanArtikel.close();
-                if (con != null) con.close();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
+    try {
+        // Validasi input
+        if (judul.isEmpty() || subJudul.isEmpty() || diisiOleh.isEmpty() || isiArtikel.isEmpty() || thumbnailFile == null) {
+            Aplikasi.dialogUI.showMessage("Semua kolom harus diisi.");
+            return;
         }
+
+        // Koneksi ke database
+        Aplikasi.database.databaseConnection();
+        con = Aplikasi.database.getCon();
+
+        // Query untuk menyimpan artikel ke database dengan TANGGAL_PUBLIKASI
+        String querySimpan = "INSERT INTO FAMIFY.KONTEN_ARTIKEL (JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL) VALUES (?, ?, ?, ?, ?, ?)";
+        pstmtSimpanArtikel = con.prepareStatement(querySimpan);
+
+        // Set nilai kolom sesuai dengan parameter
+        pstmtSimpanArtikel.setString(1, judul);
+        pstmtSimpanArtikel.setString(2, subJudul);
+        pstmtSimpanArtikel.setString(3, isiArtikel);
+        pstmtSimpanArtikel.setString(4, diisiOleh);
+
+        // Set tanggal publikasi dengan tanggal saat ini
+        Date currentDate = new Date(System.currentTimeMillis());
+        pstmtSimpanArtikel.setDate(5, currentDate);
+
+        // Simpan thumbnail sebagai byte array
+        FileInputStream fis = new FileInputStream(thumbnailFile);
+        pstmtSimpanArtikel.setBinaryStream(6, fis, (int) thumbnailFile.length());
+
+        // Eksekusi penyimpanan
+        int row = pstmtSimpanArtikel.executeUpdate();
+        fis.close();
+
+        if (row > 0) {
+            Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
+            // Reset form setelah penyimpanan
+            Aplikasi.upArtikel.getjButton3().setText("Edit Artikel");
+        } else {
+            Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");
+        }
+
+    } catch (SQLException sqlEx) {
+        sqlEx.printStackTrace();
+        Aplikasi.dialogUI.showMessage("SQL Error: " + sqlEx.getMessage());
+    } catch (IOException ioEx) {
+        ioEx.printStackTrace();
+        Aplikasi.dialogUI.showMessage("Error membaca file: " + ioEx.getMessage());
+    } finally {
+        // Tutup resources
+        try {
+            if (pstmtSimpanArtikel != null) pstmtSimpanArtikel.close();
+            if (con != null) con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
     }
 
     public String getPathThumbnail() {

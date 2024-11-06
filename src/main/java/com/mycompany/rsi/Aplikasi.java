@@ -57,8 +57,6 @@ public class Aplikasi {
         Aplikasi.upArtikel = new ProsesUpArtikelGUI();
         Aplikasi.upVideo = new ProsesUpVideoUI();
         Aplikasi.addArticle = new ProsesNulisArtikel();
-                
-                
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
        
