@@ -869,19 +869,19 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         
         if(recentArticles.size() >=1){
             Artikel artikel = recentArticles.get(0);
-            String pathThumbnail = artikel.getPath();
-            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             // Konversi string tanggalKonsul menjadi LocalDate
             LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
             DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
             String formattedTanggal = tanggal.format(formatter2);
             jLabel32.setText(formattedTanggal);
+            
+            jPanel5.setVisible(true);
         }
         if(recentArticles.size() >=2){
             Artikel artikel = recentArticles.get(1);
-            String pathThumbnail = artikel.getPath();
-            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             // Konversi string tanggalKonsul menjadi LocalDate
             LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
@@ -890,9 +890,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             jLabel33.setText(formattedTanggal);
         }
         if(recentArticles.size() >=3){
-            Artikel artikel = recentArticles.get(2);
-            String pathThumbnail = artikel.getPath();
-            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            Artikel artikel = recentArticles.get(2);            
+            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             // Konversi string tanggalKonsul menjadi LocalDate
             LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);

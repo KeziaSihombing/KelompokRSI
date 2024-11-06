@@ -8,6 +8,9 @@ package com.mycompany.rsi;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,7 +26,6 @@ public class Artikel extends Content {
     private String subjudul;
     private String penulis;    
     private String isiArtikel;
-    private String path;
     
     public List<Artikel> getArticlesByPage(int page) {
 
@@ -60,6 +62,16 @@ public class Artikel extends Content {
                         artikel.isiArtikel = rs.getString("ISI_ARTIKEL");
 
                         File file = new File("Thumbnail_db_" + artikel.judul + ".png");
+                        
+                        File destDir = new File("src/main/resources/images");
+                        File destFile = new File(destDir, file.getName());
+
+                        try {
+                            Files.move(file.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                            
+                        }catch (Exception ex) {
+                            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+                        }
 
                         try (FileOutputStream outputStream = new FileOutputStream(file); InputStream inputStream = rs.getBinaryStream("THUMBNAIL")) {
 
@@ -118,9 +130,8 @@ public class Artikel extends Content {
                     artikel.subjudul = rs.getString("SUBJUDUL");
                     artikel.tanggalPublikasi = rs.getString("TANGGAL_PUBLIKASI");
                     artikel.penulis = rs.getString("PENULIS");
-                    artikel.isiArtikel = rs.getString("ISI_ARTIKEL");
-                    
-                    File file = new File("Thumbnail_db_" + artikel.judul+".png");
+                    artikel.isiArtikel = rs.getString("ISI_ARTIKEL");                    
+                    File file = new File("Thumbnail_db_" + artikel.judul + ".png");
                     
                     try (FileOutputStream outputStream = new FileOutputStream(file);
                     InputStream inputStream = rs.getBinaryStream("THUMBNAIL")) {
@@ -131,9 +142,20 @@ public class Artikel extends Content {
                             outputStream.write(buffer, 0, bytesRead);
                         }   
 
-                        artikel.thumbnail = file;
-                        artikel.path =  file.getAbsolutePath();
+                        artikel.thumbnail = file;                        
                     }
+                        
+                    File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png");
+
+                    try {
+                        Files.move(file.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                        
+                    }catch (Exception ex) {
+                        Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+                    }
+
+                    
+                    
                     daftarArtikelTemp.add(artikel);
                 }
             }catch(Exception ex){
@@ -170,13 +192,7 @@ public class Artikel extends Content {
         return "artikel";
     }
 
-    public String getPath() {
-        return path;
-    }
 
-    public void setPath(String path) {
-        this.path = path;
-    }
     
     
     
