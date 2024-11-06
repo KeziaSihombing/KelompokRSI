@@ -563,7 +563,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
         jButton12.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton12.setForeground(new java.awt.Color(11, 177, 203));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-hover.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
         jButton12.setText("2");
         jButton12.setToolTipText("");
         jButton12.setBorder(null);

@@ -5,6 +5,8 @@
 package com.mycompany.rsi;
 
 import java.io.File;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -791,6 +793,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+        //MELIHAT VIDEONYAAAAA
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -814,43 +817,43 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             jButton3.setText("Manajemen Konten");       
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
-        
-        
+        Aplikasi.controllerBeranda.showRecentArticle(Aplikasi.controllerBeranda.loadRecentArticle());
+        Aplikasi.controllerBeranda.showRecentVideo(Aplikasi.controllerBeranda.loadRecentVideo());
         this.setVisible(true);        
     }
     
-    public void tampilkanArtikel(List<Artikel> recentArticles){
+    public void tampilkanVideo(List<Video> recentVideo){
         ////beluummmmm
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         jPanel4.setVisible(false);
         
-        if(recentArticles.size()>=1){
-            Artikel article = recentArticles.get(0);
-            String pathThumbnail = article.getPath();
+        if(recentVideo.size()>=1){
+            Video video = recentVideo.get(0);
+            String pathThumbnail = video.getPath();
             jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
-            jTextArea1.setText(article.getJudul());
-            String deskripsi = article.getIsiArtikel().substring(0, 500) + "...";
+            jTextArea1.setText(video.getJudul());
+            String deskripsi = video.getDeskripsi();
             jTextArea2.setText(deskripsi);         
             
             jPanel2.setVisible(true);
         }
-        if(recentArticles.size()>=2){
-            Artikel article = recentArticles.get(1);
-            String pathThumbnail = article.getPath();
+        if(recentVideo.size()>=2){
+            Video video = recentVideo.get(1);
+            String pathThumbnail = video.getPath();
             jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
-            jTextArea3.setText(article.getJudul());
-            String deskripsi = article.getIsiArtikel().substring(0, 500) + "...";
+            jTextArea3.setText(video.getJudul());
+            String deskripsi = video.getDeskripsi();
             jTextArea4.setText(deskripsi);    
             
             jPanel3.setVisible(true);
         }
-        if(recentArticles.size()>=3){
-            Artikel article = recentArticles.get(2);
-            String pathThumbnail = article.getPath();
+        if(recentVideo.size()>=3){
+            Video video = recentVideo.get(2);
+            String pathThumbnail = video.getPath();
             jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
-            jTextArea5.setText(article.getJudul());
-            String deskripsi = article.getIsiArtikel().substring(0, 500) + "...";
+            jTextArea5.setText(video.getJudul());
+            String deskripsi = video.getDeskripsi();
             jTextArea6.setText(deskripsi);       
             
             jPanel4.setVisible(true);
@@ -858,26 +861,44 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         
     }
     
-    public void tampilkanVideo(List<Video> recentVideo){
+    public void tampilkanArtikel(List<Artikel> recentArticles){
         ////belummmm
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         
-        if(recentVideo.size() >=1){
-            Video video = recentVideo.get(0);
-            String pathThumbnail = video.getPath();
+        if(recentArticles.size() >=1){
+            Artikel artikel = recentArticles.get(0);
+            String pathThumbnail = artikel.getPath();
             jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            // Konversi string tanggalKonsul menjadi LocalDate
+            LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
+            DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+            String formattedTanggal = tanggal.format(formatter2);
+            jLabel32.setText(formattedTanggal);
         }
-        if(recentVideo.size() >=2){
-            Video video = recentVideo.get(1);
-            String pathThumbnail = video.getPath();
+        if(recentArticles.size() >=2){
+            Artikel artikel = recentArticles.get(1);
+            String pathThumbnail = artikel.getPath();
             jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            // Konversi string tanggalKonsul menjadi LocalDate
+            LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
+            DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+            String formattedTanggal = tanggal.format(formatter2);
+            jLabel33.setText(formattedTanggal);
         }
-        if(recentVideo.size() >=3){
-            Video video = recentVideo.get(2);
-            String pathThumbnail = video.getPath();
+        if(recentArticles.size() >=3){
+            Artikel artikel = recentArticles.get(2);
+            String pathThumbnail = artikel.getPath();
             jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource(pathThumbnail)));
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            // Konversi string tanggalKonsul menjadi LocalDate
+            LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
+            DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+            String formattedTanggal = tanggal.format(formatter2);
+            jLabel34.setText(formattedTanggal);
         }
     }
     

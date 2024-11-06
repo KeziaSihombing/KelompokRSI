@@ -16,18 +16,16 @@ public class BerandaController {
     private List<Artikel> recentArticle = new ArrayList<>();
     private List<Video> recentVideo = new ArrayList<>();
         
-    public void loadRecentArticle(){
-        recentArticle = Aplikasi.article.getRecentArticles();
-        showRecentArticle(recentArticle);
+    public List<Artikel> loadRecentArticle(){
+        return recentArticle = Aplikasi.article.getRecentArticles();        
     }
     
     public void showRecentArticle(List<Artikel> recentArticles){
         Aplikasi.beranda.tampilkanArtikel(recentArticles);
     }    
     
-    public void loadRecentVideo(){
-        recentVideo = Aplikasi.video.getRecentVideos();
-        showRecentVideo(recentVideo);
+    public List<Video> loadRecentVideo(){
+        return recentVideo = Aplikasi.video.getRecentVideos();
     }
     
     public void showRecentVideo(List<Video> recentVideos){

@@ -16,27 +16,7 @@ public class ManageController {
     private List<Artikel> Articles = new ArrayList<>();
     private List<Video> Videos = new ArrayList<>();
     
-    
-    
-
-    public void Articles() {
-        Articles = Aplikasi.article.getRecentArticles();
-        showArticles(Articles);
-    }
-
-    public void showArticles(List<Artikel> Articles) {
-        Aplikasi.beranda.tampilkanArtikel(Articles);
-    }
-
-    public void loadVideos() {
-        Videos = Aplikasi.video.getRecentVideos();
-        showVideos(Videos);
-    }
-
-    public void showVideos(List<Video> Videos) {
-        Aplikasi.beranda.tampilkanVideo(Videos);
-    }
-    
+  
 
 
 }
