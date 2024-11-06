@@ -1070,7 +1070,27 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jButton27.setText(String.valueOf(totalPages));
         }
         
-        jButton10.setVisible(false);
+        jButton10.setVisible(false);        
+        if(all.size()>=1){
+            if(all.getClass().getName().equals("Video")){
+                Content content = (Video)all.get(0);
+                jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+content.judul+".png")));
+                jTextArea5.setText(content.getJudul());
+                String deskripsi = ((Video)content).getDeskripsi();
+                jTextArea6.setText(deskripsi);        
+
+                jPanel6.setVisible(true);
+                }
+            }else{           
+                Content content = (Artikel)all.get(0);
+                jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+content.judul+".png"))); 
+                jTextArea5.setText(content.getJudul());
+                String isi_Artikel = ((Artikel)content).getIsiArtikel().substring(0,1)+ "....";
+                jTextArea6.setText(isi_Artikel);
+                jPanel6.setVisible(true);                      
+            }      
+        
+        
         
         
         tampilkan();    
