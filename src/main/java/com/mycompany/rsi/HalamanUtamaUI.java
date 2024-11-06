@@ -267,7 +267,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 370, 60));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (3).png"))); // NOI18N
         jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 12, -1, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
@@ -464,7 +464,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jPanel5.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (3).png"))); // NOI18N
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -514,7 +514,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea9.setForeground(new java.awt.Color(28, 53, 84));
         jTextArea9.setLineWrap(true);
         jTextArea9.setRows(2);
-        jTextArea9.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea9.setText("Membesarkan Anak yang \nSangat sensitif");
         jTextArea9.setAutoscrolls(false);
         jTextArea9.setBorder(null);
         jTextArea9.setFocusable(false);
@@ -541,7 +541,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jPanel6.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Image Placeholder (1).png"))); // NOI18N
         jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -591,7 +591,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea11.setForeground(new java.awt.Color(28, 53, 84));
         jTextArea11.setLineWrap(true);
         jTextArea11.setRows(2);
-        jTextArea11.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea11.setText("Validasi Emosi Membuat Anak Manja?");
         jTextArea11.setAutoscrolls(false);
         jTextArea11.setBorder(null);
         jTextArea11.setFocusable(false);
@@ -617,7 +617,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jPanel7.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Image Placeholder (2).png"))); // NOI18N
         jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

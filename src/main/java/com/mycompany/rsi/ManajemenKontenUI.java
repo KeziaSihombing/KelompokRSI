@@ -192,7 +192,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         });
         jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 130, 220, -1));
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (2).png"))); // NOI18N
         jPanel6.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 270, 150));
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
