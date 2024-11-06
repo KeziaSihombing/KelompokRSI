@@ -20,8 +20,8 @@ public class ManageController {
         return Articles = Aplikasi.article.getArticlesByPage(1);        
     }
     
-    public void showArticle(List<Artikel> recentArticles){
-        Aplikasi.manage.tampilkanArticle(recentArticles);
+    public void showArticle(List<Artikel> Articles){
+        Aplikasi.manage.tampilkanArticle(Articles);
     }    
     
     public List<Video> loadVideo(){
@@ -30,6 +30,19 @@ public class ManageController {
     
     public void showVideo(List<Video> Videos){
         Aplikasi.manage.tampilkanVideo(Videos);
+    }
+    
+    public List<Content> loadAll(){
+        List<Content> all = new ArrayList<>();
+        List<Artikel> listArtikel = loadArticle();
+        List<Video> listVideo = loadVideo();
+        all.addAll(listArtikel);
+        all.addAll(listVideo);
+        return all;
+    }
+    
+    public void showAll(List<Content> all){
+        Aplikasi.manage.tampilkanSemua(all);
     }
     
     

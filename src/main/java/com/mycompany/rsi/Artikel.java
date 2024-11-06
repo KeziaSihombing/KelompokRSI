@@ -35,20 +35,9 @@ public class Artikel extends Content {
                 + "FROM FAMIFY.KONTEN_ARTIKEL ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
         List<Artikel> daftarArtikelTemp = new ArrayList<>();
         int offset = (page - 1) * 4;
-        try{
-                Aplikasi.database.databaseConnection();
-                Connection con = Aplikasi.database.getCon();
-                Statement stmt = con.createStatement();
-                ResultSet rs1 = stmt.executeQuery(countQuery);
-                if (rs1.next()) {
-                    totalArticles = rs1.getInt(1);
-                }
-            }catch (Exception ex) {
-                Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
-        }       
-        if(totalArticles!=0){
+
             try {
-                Aplikasi.database.databaseConnection();               
+                Aplikasi.database.databaseConnection();
                 Connection con = Aplikasi.database.getCon();
                 Statement stmt = con.createStatement();
                 ResultSet rs1 = stmt.executeQuery(countQuery);
@@ -56,11 +45,11 @@ public class Artikel extends Content {
                 if (rs1.next()) {
                     totalArticles = rs1.getInt(1);
                 }
-                if(totalArticles-offset<4){
-                    pstmt.setInt(1,totalArticles-offset);
-                }else{
-                    pstmt.setInt(1, 4);
-                }
+            
+                if(totalArticles>=0){                    
+                
+                int limit = (totalArticles - offset < 4) ? totalArticles - offset : 4;
+                pstmt.setInt(1, limit);
                 pstmt.setInt(2, offset);
 
                 try (ResultSet rs = pstmt.executeQuery()) {
@@ -98,15 +87,13 @@ public class Artikel extends Content {
                         daftarArtikelTemp.add(artikel);
                     }
                 }
-            } catch (Exception ex) {
-                Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
-            }
-
+                }
+                }catch (Exception ex) {
+                            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+                        }
             return daftarArtikelTemp;
-        }else{
-            return null;
         }
-    }
+    
     
     
     public int getTotalPages() {
@@ -167,9 +154,6 @@ public class Artikel extends Content {
                     }catch (Exception ex) {
                         Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
                     }
-
-                    
-                    
                     daftarArtikelTemp.add(artikel);
                 }
             }catch(Exception ex){

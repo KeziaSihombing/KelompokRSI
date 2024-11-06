@@ -758,15 +758,18 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
+        List<Content> all = Aplikasi.controllerManajemen.loadAll();
+        Aplikasi.controllerManajemen.showAll(all);
+        this.dispose();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        //Aplikasi.manage.tampilkan("artikel");
+
         List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle();
         Aplikasi.controllerManajemen.showArticle(artikels);
         this.dispose();
@@ -785,6 +788,9 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         }else{
             //manajemen konten
+            List<Content> all = Aplikasi.controllerManajemen.loadAll();
+            Aplikasi.controllerManajemen.showAll(all);
+            this.dispose();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -834,8 +840,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
         Aplikasi.controllerBeranda.showRecentArticle(Aplikasi.controllerBeranda.loadRecentArticle());
-        Aplikasi.controllerBeranda.showRecentVideo(Aplikasi.controllerBeranda.loadRecentVideo());
-        this.setVisible(true);        
+        Aplikasi.controllerBeranda.showRecentVideo(Aplikasi.controllerBeranda.loadRecentVideo());   
+        this.setVisible(true);
     }
     
     public void tampilkanVideo(List<Video> recentVideo){
@@ -876,11 +882,12 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     
     public void tampilkanArtikel(List<Artikel> recentArticles){
         ////belummmm
+        
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
-        
-        if(recentArticles.size() >=1){
+       
+        if(recentArticles.size() >= 1){
             Artikel artikel = recentArticles.get(0);
             jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -918,7 +925,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             jTextArea11.setText(artikel.getJudul());
             jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel7.setVisible(true);
-        }
+        }        
     }
     
     

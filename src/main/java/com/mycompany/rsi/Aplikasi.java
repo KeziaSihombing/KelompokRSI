@@ -61,6 +61,7 @@ public class Aplikasi {
         Aplikasi.addArticle = new ProsesNulisArtikel();
         Aplikasi.addVideo = new ProsesUploadVideo();
         Aplikasi.controllerManajemen = new ManageController();
+        
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();
        

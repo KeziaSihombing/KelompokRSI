@@ -25,9 +25,9 @@ public class Akun {
    }
       
    public boolean getUser(String email, String password){
-       String query = "SELECT * FROM FAMIFY.KLIEN WHERE EMAIL = ? AND PASSWORD = ?";
-       String query2 = "SELECT * FROM FAMIFY.KONSULTAN WHERE EMAIL = ? AND PASSWORD = ?";
-       String query3 ="SELECT * FROM FAMIFY.ADMINISTRATOR WHERE EMAIL = ? AND PASSWORD = ?";
+       String query = "SELECT * FROM FAMIFY.KLIEN WHERE BINARY EMAIL = ? AND BINARY PASSWORD = ?";
+       String query2 = "SELECT * FROM FAMIFY.KONSULTAN WHERE BINARY EMAIL = ? AND BINARY PASSWORD = ?";
+       String query3 ="SELECT * FROM FAMIFY.ADMINISTRATOR WHERE BINARY EMAIL = ? AND BINARY PASSWORD = ?";
        
        PreparedStatement pStatement = null;
        PreparedStatement pStatement2 = null;

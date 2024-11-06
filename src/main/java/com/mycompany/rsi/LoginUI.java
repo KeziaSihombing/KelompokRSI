@@ -124,19 +124,20 @@ public class LoginUI extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(11, 177, 203));
-        jButton2.setText("                                                                 Daftar");
+        jButton2.setText("Daftar");
         jButton2.setActionCommand("Daftar");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setFocusPainted(false);
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         jButton2.setPreferredSize(new java.awt.Dimension(655, 21));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 623, 600, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 623, 80, -1));
         jButton2.getAccessibleContext().setAccessibleName("RegisterButton");
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
@@ -163,7 +164,7 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Aplikasi.dialogUI.showMessage("UNDER PROGRESS\n" + "Fitur ini masih dikembangkan");// TODO add your handling code here:
+        Aplikasi.dialogUI.showMessage("Fitur ini tidak dikembangkan");// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
