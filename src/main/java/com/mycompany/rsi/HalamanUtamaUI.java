@@ -429,25 +429,28 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane8.setEnabled(false);
         jScrollPane8.setFocusable(false);
         jScrollPane8.setOpaque(false);
+        jScrollPane8.setWheelScrollingEnabled(false);
 
         jTextArea7.setEditable(false);
         jTextArea7.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea7.setColumns(20);
-        jTextArea7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
         jTextArea7.setForeground(new java.awt.Color(28, 53, 84));
+        jTextArea7.setLineWrap(true);
         jTextArea7.setRows(2);
-        jTextArea7.setText("Membangun Kesehatan Mental\nBayi");
+        jTextArea7.setText("Membangun Kesehatan Mental Bayi");
         jTextArea7.setAutoscrolls(false);
         jTextArea7.setBorder(null);
         jTextArea7.setFocusable(false);
         jScrollPane8.setViewportView(jTextArea7);
 
-        jPanel5.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 60));
+        jPanel5.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 70));
 
         jScrollPane9.setBorder(null);
         jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane9.setToolTipText("");
         jScrollPane9.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane9.setWheelScrollingEnabled(false);
 
         jTextArea8.setColumns(20);
         jTextArea8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -455,6 +458,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea8.setRows(6);
         jTextArea8.setTabSize(10);
         jTextArea8.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea8.setAutoscrolls(false);
         jTextArea8.setBorder(null);
         jScrollPane9.setViewportView(jTextArea8);
 
@@ -501,12 +505,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane10.setEnabled(false);
         jScrollPane10.setFocusable(false);
         jScrollPane10.setOpaque(false);
+        jScrollPane10.setWheelScrollingEnabled(false);
 
         jTextArea9.setEditable(false);
         jTextArea9.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea9.setColumns(20);
-        jTextArea9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
         jTextArea9.setForeground(new java.awt.Color(28, 53, 84));
+        jTextArea9.setLineWrap(true);
         jTextArea9.setRows(2);
         jTextArea9.setText("Membangun Kesehatan Mental\nBayi");
         jTextArea9.setAutoscrolls(false);
@@ -514,19 +520,22 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea9.setFocusable(false);
         jScrollPane10.setViewportView(jTextArea9);
 
-        jPanel6.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 60));
+        jPanel6.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 70));
 
         jScrollPane11.setBorder(null);
         jScrollPane11.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane11.setToolTipText("");
         jScrollPane11.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane11.setWheelScrollingEnabled(false);
 
         jTextArea10.setColumns(20);
         jTextArea10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea10.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea10.setLineWrap(true);
         jTextArea10.setRows(6);
         jTextArea10.setTabSize(10);
         jTextArea10.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea10.setAutoscrolls(false);
         jTextArea10.setBorder(null);
         jScrollPane11.setViewportView(jTextArea10);
 
@@ -573,12 +582,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane12.setEnabled(false);
         jScrollPane12.setFocusable(false);
         jScrollPane12.setOpaque(false);
+        jScrollPane12.setWheelScrollingEnabled(false);
 
         jTextArea11.setEditable(false);
         jTextArea11.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea11.setColumns(20);
-        jTextArea11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 23)); // NOI18N
+        jTextArea11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
         jTextArea11.setForeground(new java.awt.Color(28, 53, 84));
+        jTextArea11.setLineWrap(true);
         jTextArea11.setRows(2);
         jTextArea11.setText("Membangun Kesehatan Mental\nBayi");
         jTextArea11.setAutoscrolls(false);
@@ -586,12 +597,13 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea11.setFocusable(false);
         jScrollPane12.setViewportView(jTextArea11);
 
-        jPanel7.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 60));
+        jPanel7.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 70));
 
         jScrollPane13.setBorder(null);
         jScrollPane13.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane13.setToolTipText("");
         jScrollPane13.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane13.setWheelScrollingEnabled(false);
 
         jTextArea12.setColumns(20);
         jTextArea12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -599,6 +611,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea12.setRows(6);
         jTextArea12.setTabSize(10);
         jTextArea12.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
+        jTextArea12.setAutoscrolls(false);
         jTextArea12.setBorder(null);
         jScrollPane13.setViewportView(jTextArea12);
 
@@ -876,7 +889,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
             String formattedTanggal = tanggal.format(formatter2);
             jLabel32.setText(formattedTanggal);
-            
+            jTextArea7.setText(artikel.getJudul());
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel5.setVisible(true);
         }
         if(recentArticles.size() >=2){
@@ -888,6 +902,9 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
             String formattedTanggal = tanggal.format(formatter2);
             jLabel33.setText(formattedTanggal);
+            jTextArea9.setText(artikel.getJudul());
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jPanel6.setVisible(true);
         }
         if(recentArticles.size() >=3){
             Artikel artikel = recentArticles.get(2);            
@@ -898,6 +915,9 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
             String formattedTanggal = tanggal.format(formatter2);
             jLabel34.setText(formattedTanggal);
+            jTextArea11.setText(artikel.getJudul());
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jPanel7.setVisible(true);
         }
     }
     

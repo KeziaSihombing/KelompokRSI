@@ -63,16 +63,6 @@ public class Artikel extends Content {
 
                         File file = new File("Thumbnail_db_" + artikel.judul + ".png");
                         
-                        File destDir = new File("src/main/resources/images");
-                        File destFile = new File(destDir, file.getName());
-
-                        try {
-                            Files.move(file.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                            
-                        }catch (Exception ex) {
-                            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
-                        }
-
                         try (FileOutputStream outputStream = new FileOutputStream(file); InputStream inputStream = rs.getBinaryStream("THUMBNAIL")) {
 
                             byte[] buffer = new byte[4096];
@@ -83,6 +73,16 @@ public class Artikel extends Content {
 
                             artikel.thumbnail = file;
                         }
+                        
+                        File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png");
+
+                        try {
+                            Files.move(file.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
+                        }catch (Exception ex) {
+                            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+                        }
+                        
 
                         daftarArtikelTemp.add(artikel);
                     }
