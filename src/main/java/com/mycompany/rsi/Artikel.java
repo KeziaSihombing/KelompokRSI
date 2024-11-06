@@ -29,13 +29,24 @@ public class Artikel extends Content {
     
     public List<Artikel> getArticlesByPage(int page) {
 
-            String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";
-            int totalArticles = 0;
-            String query = "SELECT JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
-                    + "FROM FAMIFY.KONTEN_ARTIKEL ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
-            List<Artikel> daftarArtikelTemp = new ArrayList<>();
-            int offset = (page - 1) * 4;
-
+        String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";
+        int totalArticles = 0;
+        String query = "SELECT JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
+                + "FROM FAMIFY.KONTEN_ARTIKEL ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
+        List<Artikel> daftarArtikelTemp = new ArrayList<>();
+        int offset = (page - 1) * 4;
+        try{
+                Aplikasi.database.databaseConnection();
+                Connection con = Aplikasi.database.getCon();
+                Statement stmt = con.createStatement();
+                ResultSet rs1 = stmt.executeQuery(countQuery);
+                if (rs1.next()) {
+                    totalArticles = rs1.getInt(1);
+                }
+            }catch (Exception ex) {
+                Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }       
+        if(totalArticles!=0){
             try {
                 Aplikasi.database.databaseConnection();               
                 Connection con = Aplikasi.database.getCon();
@@ -62,7 +73,7 @@ public class Artikel extends Content {
                         artikel.isiArtikel = rs.getString("ISI_ARTIKEL");
 
                         File file = new File("Thumbnail_db_" + artikel.judul + ".png");
-                        
+
                         try (FileOutputStream outputStream = new FileOutputStream(file); InputStream inputStream = rs.getBinaryStream("THUMBNAIL")) {
 
                             byte[] buffer = new byte[4096];
@@ -73,7 +84,7 @@ public class Artikel extends Content {
 
                             artikel.thumbnail = file;
                         }
-                        
+
                         File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png");
 
                         try {
@@ -82,16 +93,19 @@ public class Artikel extends Content {
                         }catch (Exception ex) {
                             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
                         }
-                        
+
 
                         daftarArtikelTemp.add(artikel);
                     }
                 }
-        } catch (Exception ex) {
-            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
-        }
+            } catch (Exception ex) {
+                Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+            }
 
-        return daftarArtikelTemp;
+            return daftarArtikelTemp;
+        }else{
+            return null;
+        }
     }
     
     

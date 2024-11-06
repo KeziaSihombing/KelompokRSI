@@ -847,6 +847,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                
         //menampilkan semua
         jButton10.setVisible(false);
+        tampilkanSemua();
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -859,14 +860,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
       
         //memanggil tampilkanHanya artikel
-        if(Aplikasi.akun.getPerson().equals("admin")){
+        if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton10.setVisible(true);
         }else{
             jButton10.setVisible(false);
         }
         List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle();
         Aplikasi.controllerManajemen.showArticle(artikels);
-        this.dispose();
+        //this.dispose();
         
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -879,14 +880,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(120, 120, 135));
         
         //memanggil tampilkan hanyaa video
-        if(Aplikasi.akun.getPerson().equals("admin")){
+        if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton10.setVisible(true);
         }else{
             jButton10.setVisible(false);
         }
-        List<Video> videos = Aplikasi.controllerManajemen.loadVideo();
-        Aplikasi.controllerManajemen.showVideo(videos);
-        this.dispose();
+        //List<Video> videos = Aplikasi.controllerManajemen.loadVideo();
+        //Aplikasi.controllerManajemen.showVideo(videos);
+        //this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -924,15 +925,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        if(jButton11.getText().equals("1")){
-            jButton2.setEnabled(false);
-        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-        if(jButton27.getText().equals(Aplikasi.article.getTotalPages())){
+        if(jButton27.getText().equals(Aplikasi.article.getTotalPages()-1)){
             jButton28.setEnabled(false);
         }
     }//GEN-LAST:event_jButton28ActionPerformed
@@ -946,7 +944,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton25ActionPerformed
 
-    public void tampilkanArticle(List<Artikel> Articles){
+    public void tampilkanArticle(List<Artikel> Articles){        
         int totalPages = Aplikasi.article.getTotalPages();
         List <Artikel> articles = Articles;
         if(totalPages<5){
@@ -971,7 +969,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(120, 120, 135));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
-        if(Aplikasi.akun.getPerson().equals("administrator"))jButton10.setVisible(true);
+        if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton10.setVisible(true);
+        }else{
+            jButton10.setVisible(false);
+        }
         tampilkan();
         
         jPanel6.setVisible(false);
@@ -1037,13 +1039,22 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(120, 120, 135));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
-        if(Aplikasi.akun.getPerson().equals("administrator"))jButton10.setVisible(true);
+        if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton10.setVisible(true);
+        }else{
+            jButton10.setVisible(false);
+        }
         tampilkan();
         
         this.setVisible(true);
     }
     
     public void tampilkanSemua(){
+        jPanel6.setVisible(false);
+        jPanel7.setVisible(false);
+        jPanel8.setVisible(false);
+        jPanel9.setVisible(false);
+        
         this.setVisible(true);
     }
     
