@@ -13,7 +13,7 @@ import java.sql.*;
 public class Database {
     private Connection con;
     private String user = "root";
-    private String passwordSQL = "rahasia";
+    private String passwordSQL = "Rizka610_";
     
     public void databaseConnection(){
          try{
