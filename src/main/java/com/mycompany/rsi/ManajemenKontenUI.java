@@ -939,33 +939,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
     }//GEN-LAST:event_jButton29ActionPerformed
 
-    public void loadThumbnail(String judul, JLabel label) {
-    String filePath = "/images/Thumbnail_db_" + judul + ".png";
-    File thumbnailFile = new File(filePath);
-    
-    // Background process to check for file availability
-    new SwingWorker<Void, Void>() {
-        @Override
-        protected Void doInBackground() throws Exception {
-            int attempts = 0;
-            while (!thumbnailFile.exists() && attempts < 10) { // 10 attempts max
-                TimeUnit.MILLISECONDS.sleep(500); // wait 0.5 second
-                attempts++;
-            }
-            return null;
-        }
-        
-        @Override
-        protected void done() {
-            if (thumbnailFile.exists()) {
-                label.setIcon(new javax.swing.ImageIcon(thumbnailFile.getPath()));
-            } else {
-                // Handle case when file is not available
-                System.out.println("Thumbnail not found after multiple attempts.");
-            }
-        }
-    }.execute();
-}
+   
     public void tampilkanArticle(List<Artikel> Articles){        
         int totalPages = Aplikasi.article.getTotalPages();
         List <Artikel> articles = Articles;
@@ -1002,24 +976,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         
         if(articles.size() >=1){
             Artikel artikel = articles.get(0);
-            loadThumbnail(artikel.judul,jLabel28);
-            //jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));          
+            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));          
             jTextArea5.setText(artikel.getJudul());
             jTextArea6.setText(artikel.getIsiArtikel().substring(0,250)+"...");
             jPanel6.setVisible(true);
         }
         if(articles.size() >=2){
             Artikel artikel = articles.get(1);
-            loadThumbnail(artikel.judul,jLabel29);
-            //jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
             jTextArea7.setText(artikel.getJudul());
             jTextArea8.setText(artikel.getIsiArtikel().substring(0,250)+"...");
             jPanel7.setVisible(true);
         }
         if(articles.size() >=3){
-            Artikel artikel = articles.get(2);    
-            loadThumbnail(artikel.judul,jLabel30);
-            //jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            Artikel artikel = articles.get(2); 
+            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
             jTextArea9.setText(artikel.getJudul());
             jTextArea10.setText(artikel.getIsiArtikel().substring(0,250)+"...");
             jPanel8.setVisible(true);

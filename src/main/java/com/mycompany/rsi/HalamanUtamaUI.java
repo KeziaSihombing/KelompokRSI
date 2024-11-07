@@ -858,7 +858,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         
         if(recentVideo.size()>=1){
             Video video = recentVideo.get(0);
-            jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea1.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea2.setText(deskripsi);         
@@ -867,7 +867,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         }
         if(recentVideo.size()>=2){
             Video video = recentVideo.get(1);
-            jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea3.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea4.setText(deskripsi);    
@@ -876,7 +876,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         }
         if(recentVideo.size()>=3){
             Video video = recentVideo.get(2);            
-            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea5.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea6.setText(deskripsi);       
