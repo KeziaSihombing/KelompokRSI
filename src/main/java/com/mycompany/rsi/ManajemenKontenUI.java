@@ -761,6 +761,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -1179,6 +1180,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+
+    public JButton getjButton13() {
+        return jButton13;
+    }
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
