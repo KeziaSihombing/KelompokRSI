@@ -7,6 +7,8 @@ package com.mycompany.rsi;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -29,8 +31,7 @@ public class ProsesNulisArtikel {
             File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
 
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
-                setPathThumbnail(selectedFile.getAbsolutePath());
-                //ini masih error, help puh sepuh
+                 setPathThumbnail(selectedFile.getAbsolutePath());                
                  Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
             } else {
                 Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
@@ -78,6 +79,9 @@ public class ProsesNulisArtikel {
             Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
             // Reset form setelah penyimpanan
             Aplikasi.upArtikel.getjButton3().setText("Edit Artikel");
+            
+            File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + judul + ".png");
+            Files.copy(thumbnailFile.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
         } else {
             Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");
         }
