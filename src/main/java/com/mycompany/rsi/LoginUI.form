@@ -216,7 +216,6 @@
           <Color blue="cb" green="b1" red="b" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Daftar"/>
-        <Property name="actionCommand" type="java.lang.String" value="Daftar"/>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="focusPainted" type="boolean" value="false"/>

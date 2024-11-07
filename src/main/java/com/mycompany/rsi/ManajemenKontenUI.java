@@ -896,6 +896,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Aplikasi.beranda.tampilkan();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -950,7 +951,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             jButton10.setVisible(false);
         }
-        tampilkan();        
+        tampilkan();  
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
+        jButton8.setForeground(new java.awt.Color(34, 184, 185));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton7.setForeground(new java.awt.Color(120, 120, 135));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton9.setForeground(new java.awt.Color(120, 120, 135));
+        
         if(articles.size() >=1){
             Artikel artikel = articles.get(0);
             jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));          
@@ -1008,6 +1016,13 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             jButton10.setVisible(false);
         }
+        
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
+        jButton9.setForeground(new java.awt.Color(34, 184, 185));
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton8.setForeground(new java.awt.Color(120, 120, 135));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton7.setForeground(new java.awt.Color(120, 120, 135));
         
         if(Videos.size()>=1){
             Video video = Videos.get(0);
@@ -1079,8 +1094,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 String deskripsi = ((Video)content).getDeskripsi();
                 jTextArea6.setText(deskripsi);        
 
-                jPanel6.setVisible(true);
-                }
+                jPanel6.setVisible(true);                
             }else{           
                 Content content = (Artikel)all.get(0);
                 jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+content.judul+".png"))); 
@@ -1088,7 +1102,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 String isi_Artikel = ((Artikel)content).getIsiArtikel().substring(0,1)+ "....";
                 jTextArea6.setText(isi_Artikel);
                 jPanel6.setVisible(true);                      
-            }      
+            }     
+        }
         
         
         

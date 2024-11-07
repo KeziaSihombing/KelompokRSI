@@ -835,6 +835,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="6e" green="6e" red="6f" type="rgb"/>
                         </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="6"/>
                         <Property name="tabSize" type="int" value="10"/>
                         <Property name="text" type="java.lang.String" value="Mengasuh bayi yang baru lahir adalah tugas yang berat &#xa;dan orang tua akan merasakan berbagai macam emosi. &#xa;Bahagia bercampur dengan frustrasi, keletihan, dan kece-&#xa;masan. Emosi yang bercampur-aduk ini sama sekali tak &#xa;perlu ditakuti..."/>

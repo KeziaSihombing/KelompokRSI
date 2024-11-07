@@ -125,7 +125,6 @@ public class LoginUI extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(11, 177, 203));
         jButton2.setText("Daftar");
-        jButton2.setActionCommand("Daftar");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setFocusPainted(false);

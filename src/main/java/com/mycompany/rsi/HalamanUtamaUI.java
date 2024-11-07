@@ -455,6 +455,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea8.setColumns(20);
         jTextArea8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea8.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea8.setLineWrap(true);
         jTextArea8.setRows(6);
         jTextArea8.setTabSize(10);
         jTextArea8.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
@@ -801,7 +802,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatMateri.tampilkan();
+        Aplikasi.lihatArtikel.showArticle(jTextArea7.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -897,7 +898,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel32.setText(formattedTanggal);
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,250)+"...");
             jPanel5.setVisible(true);
         }
         if(recentArticles.size() >=2){
@@ -910,7 +911,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel33.setText(formattedTanggal);
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,250)+"...");
             jPanel6.setVisible(true);
         }
         if(recentArticles.size() >=3){
@@ -923,7 +924,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel34.setText(formattedTanggal);
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,250)+"...");
             jPanel7.setVisible(true);
         }        
     }

@@ -4,6 +4,13 @@
  */
 package com.mycompany.rsi;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ASUS
@@ -47,7 +54,9 @@ public class ContentUI extends javax.swing.JFrame {
         jTextArea8 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1446, 1256));
+        setMinimumSize(new java.awt.Dimension(1446, 3000));
+        setPreferredSize(new java.awt.Dimension(1440, 3000));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Property 1=Default.png"))); // NOI18N
@@ -162,6 +171,7 @@ public class ContentUI extends javax.swing.JFrame {
         jTextArea8.setColumns(20);
         jTextArea8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jTextArea8.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea8.setLineWrap(true);
         jTextArea8.setRows(6);
         jTextArea8.setTabSize(10);
         jTextArea8.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan merasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak perlu ditakuti.\n\nLalu, kapan sebaiknya orang tua mulai memikirkan tentang kesehatan mental bayinya? Dan bagaimana orang tua dapat membangun kesehatan mental\ndi dalam keluarga? Simak jawaban pertanyaan-pertanyaan ini dan beberapa pertanyaan lain dari Dr. Lisa Damour, psikolog dan pakar perkembangan \nanak.\n\nSebentar lagi saya akan menjadi orang tua. Emosi dan stres seperti apa yang perlu diantisipasi? Menjadi orang tua baru adalah transisi kehidupan yang\nbesar. Kelahiran seorang anak akan mengubah keseharian kita. Setiap aspek kehidupan akan berbeda.Salah satu hal yang diketahui tentang stres adalah\nstres terjadi setiap kali kita harus menyesuaikan diri dengan kondisi baru. Kehadiran seorang bayi adalah contoh kondisi baru. Dengan demikian, stres \nakan muncul. Tapi, stres tidak berarti ada sesuatu yang salah. Artinya, orang tua sedang membiasakan diri dengan perannya yang baru. Peran ini pun \nakan makin mudah dijalani seiring dengan waktu. \n\nPada usia berapa saya perlu mulai mempertimbangkan kesehatan mental anak?\nKesehatan mental anak perlu diperhatikan begitu ia lahir. Sejak hari pertamanya di dunia, anak membutuhkan orang tua untuk mendapatkan cinta, \nbimbingan, dan rasa aman. Saat orang tua memberikan interaksi yang hangat dan lembut, membantu anak merasa terlindung, menghibur saat anak \nsedih dan membantu mereka menghadapi dunia, maka saat itu pula orang tua sedang membangun landasan kesehatan mental anak untuk \nkehidupannya kelak.\n\nBagaimana stres berdampak terhadap perkembangan emosional anak? \nRespons stres pada bayi aktif ketika bayi merasa takut atau khawatir dilupakan, atau ada kebutuhannya yang tidak terpenuhi. Tugas orang tua adalah\nmembantu bayi untuk menenangkan respons tersebut. Setelah tenang, maka situasi akan kembali seperti semula  dan bayi akan belajar bahwa dunia \nadalah tempat yang aman dan dapat diandalkan. Pengalaman belajar ini tidak dialami semua bayi. Ada bayi yang berada pada situasi stres dan tidak \nmendapatkan dukungan emosional yang diperlukannya agar tenang kembali. Situasi  ketika anak mengalami stres, tetapi tidak memiliki orang dewasa\nyang menyayangi dan dapat membantu menghibur mereka dapat menjadi sumber kesulitan emosional kelak.\n\nBagaimana saya dapat belajar menunjukkan kasih sayang dan cinta kepada anak jika saya sendiri tidak mengalaminya saat kecil?\nMenjadi orang tua adalah hal yang sulit. Semua orang pun belajar menjadi orang tua. Dan kita bisa menjadi orang tua yang baik asalkan kita punya \ntekad yang kuat. Ada begitu banyak hal yang harus diperhatikan saat menjadi orang tua baru. Berikut adalah beberapa hal yang dapat menciptakan \nperbedaan besar dan akan membantu seseorang menjadi sosok orang tua yang mungkin tidak dimilikinya saat ia sendiri kecil:  Berikan perhatian \nkepada bayi, perhatikan kebutuhan mereka, penuhi kebutuhannya, dan pastikan orang tua senantiasa hadir dengan kasih sayang. Inilah yang \ndibutuhkan seorang bayi untuk dapat menapaki kehidupan yang luar biasa nantinya.\n\n");
@@ -173,7 +183,7 @@ public class ContentUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
+                .addContainerGap(190, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,7 +198,7 @@ public class ContentUI extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jSeparator3)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addGap(194, 194, 194))
+                .addContainerGap(197, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,13 +219,13 @@ public class ContentUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1845, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 95, -1, 1630));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 95, -1, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -223,6 +233,7 @@ public class ContentUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Aplikasi.beranda.tampilkan();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -252,7 +263,26 @@ public class ContentUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void tampilkan(){        
+    public void tampilkan(String judul){
+        String query = "SELECT SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
+                + "FROM FAMIFY.KONTEN_ARTIKEL WHERE JUDUL_ARTIKEL = ?";
+        
+        try {
+            Aplikasi.database.databaseConnection();
+            Connection con = Aplikasi.database.getCon();            
+            PreparedStatement pstmt = con.prepareStatement(query); 
+            pstmt.setString(1, judul);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                jLabel6.setText(judul);
+                jLabel4.setText(rs.getString("SUBJUDUL"));
+                jLabel5.setText(rs.getString("PENULIS")+" admin");
+                jLabel7.setText(rs.getString("TANGGAL_PUBLIKASI"));
+                jTextArea8.setText(rs.getString("ISI_ARTIKEL"));
+            }
+        }catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
         this.setVisible(true);        
     }
     

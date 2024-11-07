@@ -4,8 +4,12 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1446, 1256]"/>
+      <Dimension value="[1446, 3000]"/>
     </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1440, 3000]"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -21,7 +25,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,9,-15,0,0,5,-97"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,6,14,0,0,5,-97"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -197,7 +201,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="95" width="-1" height="1630"/>
+          <AbsoluteConstraints x="0" y="95" width="-1" height="710"/>
         </Constraint>
       </Constraints>
 
@@ -226,7 +230,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="193" max="32767" attributes="0"/>
+                      <EmptySpace pref="190" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane9" alignment="1" min="-2" pref="1052" max="-2" attributes="0"/>
                           <Component id="jLabel8" alignment="1" min="-2" pref="1052" max="-2" attributes="0"/>
@@ -244,7 +248,7 @@
                               <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
+                      <EmptySpace pref="197" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -268,7 +272,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" pref="391" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane9" min="-2" pref="1456" max="-2" attributes="0"/>
+                      <Component id="jScrollPane9" min="-2" pref="1845" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -375,6 +379,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="6e" green="6e" red="6f" type="rgb"/>
                     </Property>
+                    <Property name="lineWrap" type="boolean" value="true"/>
                     <Property name="rows" type="int" value="6"/>
                     <Property name="tabSize" type="int" value="10"/>
                     <Property name="text" type="java.lang.String" value="Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan merasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, &#xa;keletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak perlu ditakuti.&#xa;&#xa;Lalu, kapan sebaiknya orang tua mulai memikirkan tentang kesehatan mental bayinya? Dan bagaimana orang tua dapat membangun kesehatan mental&#xa;di dalam keluarga? Simak jawaban pertanyaan-pertanyaan ini dan beberapa pertanyaan lain dari Dr. Lisa Damour, psikolog dan pakar perkembangan &#xa;anak.&#xa;&#xa;Sebentar lagi saya akan menjadi orang tua. Emosi dan stres seperti apa yang perlu diantisipasi? Menjadi orang tua baru adalah transisi kehidupan yang&#xa;besar. Kelahiran seorang anak akan mengubah keseharian kita. Setiap aspek kehidupan akan berbeda.Salah satu hal yang diketahui tentang stres adalah&#xa;stres terjadi setiap kali kita harus menyesuaikan diri dengan kondisi baru. Kehadiran seorang bayi adalah contoh kondisi baru. Dengan demikian, stres &#xa;akan muncul. Tapi, stres tidak berarti ada sesuatu yang salah. Artinya, orang tua sedang membiasakan diri dengan perannya yang baru. Peran ini pun &#xa;akan makin mudah dijalani seiring dengan waktu. &#xa;&#xa;Pada usia berapa saya perlu mulai mempertimbangkan kesehatan mental anak?&#xa;Kesehatan mental anak perlu diperhatikan begitu ia lahir. Sejak hari pertamanya di dunia, anak membutuhkan orang tua untuk mendapatkan cinta, &#xa;bimbingan, dan rasa aman. Saat orang tua memberikan interaksi yang hangat dan lembut, membantu anak merasa terlindung, menghibur saat anak &#xa;sedih dan membantu mereka menghadapi dunia, maka saat itu pula orang tua sedang membangun landasan kesehatan mental anak untuk &#xa;kehidupannya kelak.&#xa;&#xa;Bagaimana stres berdampak terhadap perkembangan emosional anak? &#xa;Respons stres pada bayi aktif ketika bayi merasa takut atau khawatir dilupakan, atau ada kebutuhannya yang tidak terpenuhi. Tugas orang tua adalah&#xa;membantu bayi untuk menenangkan respons tersebut. Setelah tenang, maka situasi akan kembali seperti semula  dan bayi akan belajar bahwa dunia &#xa;adalah tempat yang aman dan dapat diandalkan. Pengalaman belajar ini tidak dialami semua bayi. Ada bayi yang berada pada situasi stres dan tidak &#xa;mendapatkan dukungan emosional yang diperlukannya agar tenang kembali. Situasi  ketika anak mengalami stres, tetapi tidak memiliki orang dewasa&#xa;yang menyayangi dan dapat membantu menghibur mereka dapat menjadi sumber kesulitan emosional kelak.&#xa;&#xa;Bagaimana saya dapat belajar menunjukkan kasih sayang dan cinta kepada anak jika saya sendiri tidak mengalaminya saat kecil?&#xa;Menjadi orang tua adalah hal yang sulit. Semua orang pun belajar menjadi orang tua. Dan kita bisa menjadi orang tua yang baik asalkan kita punya &#xa;tekad yang kuat. Ada begitu banyak hal yang harus diperhatikan saat menjadi orang tua baru. Berikut adalah beberapa hal yang dapat menciptakan &#xa;perbedaan besar dan akan membantu seseorang menjadi sosok orang tua yang mungkin tidak dimilikinya saat ia sendiri kecil:  Berikan perhatian &#xa;kepada bayi, perhatikan kebutuhan mereka, penuhi kebutuhannya, dan pastikan orang tua senantiasa hadir dengan kasih sayang. Inilah yang &#xa;dibutuhkan seorang bayi untuk dapat menapaki kehidupan yang luar biasa nantinya.&#xa;&#xa;"/>

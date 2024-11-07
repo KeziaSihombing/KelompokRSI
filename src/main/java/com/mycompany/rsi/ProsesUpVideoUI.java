@@ -172,17 +172,32 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
 
         jButton16.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jButton16.setText("+ Unggah Thumbnail");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel8.setText("Video*");
 
         jButton17.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jButton17.setText("+Unggah Video");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
         jButton18.setBackground(new java.awt.Color(57, 206, 209));
         jButton18.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
         jButton18.setForeground(new java.awt.Color(255, 255, 255));
         jButton18.setText("Unggah");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -264,39 +279,46 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {                                            
-    Aplikasi.addVideo.loadThumbnail();
-}
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        String judul = Aplikasi.upVideo.getjTextField1().getText();
+        String deskripsi = Aplikasi.upVideo.getjTextField2().getText();
+        String pengunggah = Aplikasi.upVideo.getjTextField3().getText();
 
-private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {                                            
-    Aplikasi.addVideo.loadVideo();
-}
+        // Validasi thumbnail dan video path
+        String thumbnailPath = Aplikasi.addVideo.getThumbnailPath();
+        String videoPath = Aplikasi.addVideo.getVideoPath();
 
-private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {                                            
-    String judul = Aplikasi.upVideo.getjTextField1().getText();
-    String deskripsi = Aplikasi.upVideo.getjTextField2().getText();
-    String pengunggah = Aplikasi.upVideo.getjTextField3().getText();
+        if (thumbnailPath == null || thumbnailPath.isEmpty()) {
+            Aplikasi.dialogUI.showMessage("Error: Thumbnail belum dipilih.");
+            return;
+        }
 
-    // Validasi thumbnail dan video path
-    String thumbnailPath = Aplikasi.addVideo.getThumbnailPath();
-    String videoPath = Aplikasi.addVideo.getVideoPath();
+        if (videoPath == null || videoPath.isEmpty()) {
+            Aplikasi.dialogUI.showMessage("Error: Video belum dipilih.");
+            return;
+        }
+
+        File thumbnailFile = new File(thumbnailPath);
+        File videoFile = new File(videoPath);
+
+        // Simpan video ke database
+        Aplikasi.addVideo.simpanVideoDB(videoFile, thumbnailFile, judul, deskripsi, pengunggah);
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        Aplikasi.addVideo.loadThumbnail();
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        Aplikasi.addVideo.loadVideo();
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+                                 
     
-    if (thumbnailPath == null || thumbnailPath.isEmpty()) {
-        Aplikasi.dialogUI.showMessage("Error: Thumbnail belum dipilih.");
-        return;
-    }
-    
-    if (videoPath == null || videoPath.isEmpty()) {
-        Aplikasi.dialogUI.showMessage("Error: Video belum dipilih.");
-        return;
-    }
 
-    File thumbnailFile = new File(thumbnailPath);
-    File videoFile = new File(videoPath);
-
-    // Simpan video ke database
-    Aplikasi.addVideo.simpanVideoDB(videoFile, thumbnailFile, judul, deskripsi, pengunggah);
-}
     
     public void tampilkan(){
         this.setVisible(true);
