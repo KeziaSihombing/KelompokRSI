@@ -609,6 +609,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jTextArea12.setColumns(20);
         jTextArea12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea12.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea12.setLineWrap(true);
         jTextArea12.setRows(6);
         jTextArea12.setTabSize(10);
         jTextArea12.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat \ndan orang tua akan merasakan berbagai macam emosi. \nBahagia bercampur dengan frustrasi, keletihan, dan kece-\nmasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
@@ -737,7 +738,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 95, -1, 700));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 100, -1, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -808,10 +809,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.lihatArtikel.showArticle(jTextArea9.getText());        
+        this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.lihatArtikel.showArticle(jTextArea11.getText());        
+        this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed

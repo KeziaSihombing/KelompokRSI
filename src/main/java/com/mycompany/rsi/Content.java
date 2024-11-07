@@ -11,7 +11,7 @@ import java.io.File;
  *
  * @author ASUS
  */
-abstract class Content {
+public class Content {
     String judul;
     String tanggalPublikasi;
     File thumbnail;
@@ -26,9 +26,7 @@ abstract class Content {
 
     public File getThumbnail() {
         return thumbnail;
-    }
-    
-    public abstract String getType();
+    }  
     
     
 }

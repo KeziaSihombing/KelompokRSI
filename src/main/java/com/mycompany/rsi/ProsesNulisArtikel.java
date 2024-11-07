@@ -73,14 +73,14 @@ public class ProsesNulisArtikel {
 
         // Eksekusi penyimpanan
         int row = pstmtSimpanArtikel.executeUpdate();
-        fis.close();
+        
 
         if (row > 0) {
             Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
             // Reset form setelah penyimpanan
             Aplikasi.upArtikel.getjButton3().setText("Edit Artikel");
             
-            File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + judul + ".png");
+            File pathTarget = new File("/images/Thumbnail_db_" + judul + ".png");
             Files.copy(thumbnailFile.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
         } else {
             Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");
