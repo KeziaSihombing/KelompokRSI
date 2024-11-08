@@ -903,7 +903,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel32.setText(formattedTanggal);
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel5.setVisible(true);
         }
         if(recentArticles.size() >=2){
@@ -916,7 +916,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel33.setText(formattedTanggal);
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel6.setVisible(true);
         }
         if(recentArticles.size() >=3){
@@ -929,7 +929,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel34.setText(formattedTanggal);
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel7.setVisible(true);
         }        
     }

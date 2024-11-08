@@ -766,6 +766,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.editArtikel.tampilkan(jTextArea5.getText());
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -979,28 +980,28 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             Artikel artikel = articles.get(0);
             jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));          
             jTextArea5.setText(artikel.getJudul());
-            jTextArea6.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea6.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel6.setVisible(true);
         }
         if(articles.size() >=2){
             Artikel artikel = articles.get(1);
             jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel7.setVisible(true);
         }
         if(articles.size() >=3){
             Artikel artikel = articles.get(2); 
             jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel8.setVisible(true);
         }
         if(articles.size() >=4){
             Artikel artikel = articles.get(3);            
             jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel9.setVisible(true);
         }
         
@@ -1043,7 +1044,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         
         if(Videos.size()>=1){
             Video video = Videos.get(0);
-            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea5.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea6.setText(deskripsi);         
@@ -1052,7 +1053,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
         if(Videos.size()>=2){
             Video video = Videos.get(1);
-            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea7.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea8.setText(deskripsi);    
@@ -1061,7 +1062,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
         if(Videos.size()>=3){
             Video video = Videos.get(2);            
-            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea9.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea10.setText(deskripsi);       
@@ -1070,7 +1071,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
         if(Videos.size()>=4){
             Video video = Videos.get(3);            
-            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
             jTextArea11.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea12.setText(deskripsi);       
