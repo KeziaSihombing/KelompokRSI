@@ -6,7 +6,9 @@ package com.mycompany.rsi;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
@@ -66,25 +68,30 @@ public class ProsesNulisArtikel {
         // Set tanggal publikasi dengan tanggal saat ini
         Date currentDate = new Date(System.currentTimeMillis());
         pstmtSimpanArtikel.setDate(5, currentDate);
-
-        // Simpan thumbnail sebagai byte array
-        FileInputStream fis = new FileInputStream(thumbnailFile);
-        pstmtSimpanArtikel.setBinaryStream(6, fis, (int) thumbnailFile.length());
-
-        // Eksekusi penyimpanan
-        int row = pstmtSimpanArtikel.executeUpdate();
         
+       try (FileInputStream fis = new FileInputStream(thumbnailFile)) {
+            pstmtSimpanArtikel.setBinaryStream(6, fis, thumbnailFile.length());
+            
+            //Eksekusi penyimpanan 
+                int row = pstmtSimpanArtikel.executeUpdate();
+       
 
         if (row > 0) {
             Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
             // Reset form setelah penyimpanan
             Aplikasi.upArtikel.getjButton3().setText("Edit Artikel");
             
-            File pathTarget = new File("/images/Thumbnail_db_" + judul + ".png");
-            Files.copy(thumbnailFile.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + judul + ".png"); 
+            
+            try(FileChannel sourceChannel = new FileInputStream((thumbnailFile.toPath().toFile())).getChannel();
+                FileChannel targetChannel = new FileOutputStream((pathTarget.toPath().toFile())).getChannel();){
+                    sourceChannel.transferTo(0, sourceChannel.size(), targetChannel);
+            }
+           
         } else {
             Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");
-        }
+        }  
+       }
 
     } catch (SQLException sqlEx) {
         sqlEx.printStackTrace();
@@ -102,6 +109,7 @@ public class ProsesNulisArtikel {
         }
     }
     }
+    
 
     public String getPathThumbnail() {
         return pathThumbnail;

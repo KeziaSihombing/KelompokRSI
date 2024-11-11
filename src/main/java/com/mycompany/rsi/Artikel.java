@@ -48,7 +48,7 @@ public class Artikel extends Content {
             
                 if(totalArticles>=0){                    
                 
-                int limit = (totalArticles - offset < 4) ? totalArticles - offset : 4;
+                int limit = Math.max(4, totalArticles - offset);
                 pstmt.setInt(1, limit);
                 pstmt.setInt(2, offset);
 
@@ -115,6 +115,46 @@ public class Artikel extends Content {
 
         return totalPages;
     }
+    
+    public int totalArticle(){
+       String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";      
+       int totalArticles =0;
+        try {
+            Aplikasi.database.databaseConnection();
+            try (Connection con = Aplikasi.database.getCon(); Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(countQuery)) {
+
+                if (rs.next()) {
+                    totalArticles = rs.getInt(1);                  
+                }
+            }
+        } catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        } 
+        return totalArticles;
+    }   
+    
+    public List<Artikel> getAllArticles() {
+    List<Artikel> allArticles = new ArrayList<>();
+    int currentPage = 1;
+
+    while (true) {
+        List<Artikel> articlesPage = getArticlesByPage(currentPage);
+
+        // Jika tidak ada artikel yang tersisa, hentikan proses
+        if (articlesPage.isEmpty()) {
+            break;
+        }
+
+        // Tambahkan artikel dari halaman saat ini ke daftar utama
+        allArticles.addAll(articlesPage);
+
+        // Pindah ke halaman berikutnya
+        currentPage++;
+    }
+
+    return allArticles;
+}
+
 
     
     public List<Artikel> getRecentArticles(){
