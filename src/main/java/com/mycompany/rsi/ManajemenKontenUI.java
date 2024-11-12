@@ -1030,7 +1030,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jTextArea6.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel6.setVisible(true);
             jLabel3.setText(artikel.getIdArtikel());
-            jLabel3.setVisible(true);
+            jLabel3.setVisible(false);
         }
         if(articles.size() >=2){
             Artikel artikel = articles.get(1);
@@ -1040,7 +1040,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel7.setVisible(true);
             jLabel4.setText(artikel.getIdArtikel());
-            jLabel4.setVisible(true);
+            jLabel4.setVisible(false);
         }
         if(articles.size() >=3){
             Artikel artikel = articles.get(2); 
@@ -1050,7 +1050,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel8.setVisible(true);
             jLabel5.setText(artikel.getIdArtikel());
-            jLabel5.setVisible(true);
+            jLabel5.setVisible(false);
         }
         if(articles.size() >=4){
             Artikel artikel = articles.get(3);            
@@ -1060,7 +1060,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel9.setVisible(true);
             jLabel6.setText(artikel.getIdArtikel());
-            jLabel6.setVisible(true);
+            jLabel6.setVisible(false);
         }
         
         this.setVisible(true);
