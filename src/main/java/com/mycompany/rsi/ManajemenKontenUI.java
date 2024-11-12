@@ -728,6 +728,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
@@ -742,6 +757,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -756,6 +786,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
@@ -1046,7 +1091,16 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
         
-        jButton10.setVisible(false);        
+        jButton10.setVisible(false);
+        jButton13.setVisible(false);
+        jButton14.setVisible(false);
+        jButton16.setVisible(false);
+        jButton17.setVisible(false);
+        jButton19.setVisible(false);
+        jButton20.setVisible(false);
+        jButton22.setVisible(false);
+        jButton23.setVisible(false);
+        
         for (int i = 0; i < Math.min(4, all.size()); i++) {
         Content content = all.get(i);
         String imagePath;
