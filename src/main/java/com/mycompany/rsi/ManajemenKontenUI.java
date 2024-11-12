@@ -132,7 +132,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 20, -1, -1));
+        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, -1, -1));
 
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton14.setBorderPainted(false);
@@ -235,7 +235,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+        jPanel7.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, -1, -1));
 
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton17.setBorderPainted(false);
@@ -246,7 +246,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton17ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 20, -1, -1));
+        jPanel7.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, -1));
 
         jScrollPane9.setBorder(null);
         jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -337,7 +337,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton19ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+        jPanel8.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 10, -1, -1));
 
         jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton20.setBorderPainted(false);
@@ -348,7 +348,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 20, -1, -1));
+        jPanel8.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, -1, -1));
 
         jScrollPane11.setBorder(null);
         jScrollPane11.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -439,7 +439,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton22ActionPerformed(evt);
             }
         });
-        jPanel9.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+        jPanel9.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, -1, -1));
 
         jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton23.setBorderPainted(false);
@@ -450,7 +450,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton23ActionPerformed(evt);
             }
         });
-        jPanel9.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 20, -1, -1));
+        jPanel9.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, -1, -1));
 
         jScrollPane13.setBorder(null);
         jScrollPane13.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -732,6 +732,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        //ini harusnya cek kondisi dulu jenis kontennya artikel atau video?
+        // klu artikel manggil editArtikel, klu video manggil edit video
+        //logicnya mungkin mirip sm tombol unggah
+        //ini blum ada kelas editVideonya sm editVideoController aja
         Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
         
     }//GEN-LAST:event_jButton14ActionPerformed
@@ -840,6 +844,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                
         //menampilkan semua
         jButton10.setVisible(false);
+        jButton14.setVisible(false);
+        jButton17.setVisible(false);
+        jButton20.setVisible(false);
+        jButton23.setVisible(false);
         Aplikasi.controllerManajemen.showAll(pageAll);        
         
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -856,6 +864,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //memanggil tampilkanHanya artikel
         if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton10.setVisible(true);
+            jButton14.setVisible(true);
+            jButton17.setVisible(true);
+            jButton20.setVisible(true);
+            jButton23.setVisible(true);
+            jButton13.setVisible(true);
+            jButton16.setVisible(true);
+            jButton19.setVisible(true);
+            jButton22.setVisible(true);
         }else{
             jButton10.setVisible(false);
         }
@@ -877,6 +893,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //memanggil tampilkan hanyaa video
         if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton10.setVisible(true);
+            jButton14.setVisible(true);
+            jButton17.setVisible(true);
+            jButton20.setVisible(true);
+            jButton23.setVisible(true);
+            jButton13.setVisible(true);
+            jButton16.setVisible(true);
+            jButton19.setVisible(true);
+            jButton22.setVisible(true);
         }else{
             jButton10.setVisible(false);
         }

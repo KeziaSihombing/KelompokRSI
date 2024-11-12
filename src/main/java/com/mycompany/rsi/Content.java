@@ -15,8 +15,6 @@ public class Content {
     String judul;
     String tanggalPublikasi;
     File thumbnail;
-    
-    
 
     public String getJudul() {
         return judul;
