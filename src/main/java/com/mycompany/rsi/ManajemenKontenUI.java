@@ -711,7 +711,23 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
+       
+        
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -728,6 +744,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea7.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea7.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
@@ -742,6 +773,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea9.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea9.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -756,6 +802,21 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
+        ImageIcon iconButton8 = (ImageIcon) jButton8.getIcon();
+        ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
+        ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
+
+        if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea11.getText());
+             List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+            Aplikasi.controllerManajemen.showArticle(artikels);             
+        } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea11.getText());
+            List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+            Aplikasi.controllerManajemen.showVideo(videos);            
+        } else {
+           Aplikasi.dialogUI.showMessage("");
+        }
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
@@ -1046,7 +1107,23 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     public void tampilkanSemua(List<Content> all){       
         tampilkan();
         
-        jButton10.setVisible(false);        
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
+        jButton7.setForeground(new java.awt.Color(34, 184, 185));
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton8.setForeground(new java.awt.Color(120, 120, 135));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
+        jButton9.setForeground(new java.awt.Color(120, 120, 135));
+        
+        jButton10.setVisible(false);
+        jButton13.setVisible(false);
+        jButton14.setVisible(false);
+        jButton16.setVisible(false);
+        jButton17.setVisible(false);
+        jButton19.setVisible(false);
+        jButton20.setVisible(false);
+        jButton22.setVisible(false);
+        jButton23.setVisible(false);
+        
         for (int i = 0; i < Math.min(4, all.size()); i++) {
         Content content = all.get(i);
         String imagePath;
@@ -1054,10 +1131,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
         // Tentukan ikon dan teks berdasarkan tipe konten
         if (content instanceof Video video) {
-            imagePath = "/images/Thumbnail_db_" + video.getJudul() + ".png";
+            imagePath = "src/main/resources/images/Thumbnail_db_" + video.getJudul() + ".png";
             description = video.getDeskripsi();
         } else if (content instanceof Artikel artikel) {
-            imagePath = "/images/Thumbnail_db_" + artikel.getJudul() + ".png";
+            imagePath = "src/main/resources/images/Thumbnail_db_" + artikel.getJudul() + ".png";
             description = artikel.getIsiArtikel().substring(0, Math.min(250, artikel.getIsiArtikel().length())) + "...";
         } else {
             continue; // Jika tipe tidak dikenali, lewati
@@ -1066,25 +1143,25 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // Atur konten ke panel yang sesuai
         switch (i) {
             case 0 -> {
-                jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagePath)));
+                jLabel28.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea5.setText(content.getJudul());
                 jTextArea6.setText(description);
                 jPanel6.setVisible(true);
             }
             case 1 -> {
-                jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagePath)));
+                jLabel29.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea7.setText(content.getJudul());
                 jTextArea8.setText(description);
                 jPanel7.setVisible(true);
             }
             case 2 -> {
-                jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagePath)));
+                jLabel30.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea9.setText(content.getJudul());
                 jTextArea10.setText(description);
                 jPanel8.setVisible(true);
             }
             case 3 -> {
-                jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource(imagePath)));
+                jLabel31.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea11.setText(content.getJudul());
                 jTextArea12.setText(description);
                 jPanel9.setVisible(true);
