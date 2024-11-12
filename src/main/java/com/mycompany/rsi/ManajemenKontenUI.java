@@ -132,7 +132,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, -1, -1));
+        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 10, -1, -1));
 
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton14.setBorderPainted(false);
@@ -143,7 +143,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, -1));
+        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 10, -1, -1));
 
         jScrollPane7.setBorder(null);
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -235,7 +235,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, -1, -1));
+        jPanel7.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 10, -1, -1));
 
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton17.setBorderPainted(false);
@@ -246,7 +246,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton17ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, -1));
+        jPanel7.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 10, -1, -1));
 
         jScrollPane9.setBorder(null);
         jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -337,7 +337,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton19ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 10, -1, -1));
+        jPanel8.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 20, -1, -1));
 
         jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton20.setBorderPainted(false);
@@ -348,7 +348,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, -1, -1));
+        jPanel8.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 20, -1, -1));
 
         jScrollPane11.setBorder(null);
         jScrollPane11.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -439,7 +439,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton22ActionPerformed(evt);
             }
         });
-        jPanel9.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, -1, -1));
+        jPanel9.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 10, -1, -1));
 
         jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton23.setBorderPainted(false);
@@ -450,7 +450,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton23ActionPerformed(evt);
             }
         });
-        jPanel9.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, -1, -1));
+        jPanel9.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 10, -1, -1));
 
         jScrollPane13.setBorder(null);
         jScrollPane13.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -586,7 +586,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 40, 176, -1));
+        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 40, 176, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-prev.png"))); // NOI18N
         jButton2.setToolTipText("");
@@ -703,7 +703,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(299, Short.MAX_VALUE))
         );
 
         pack();
@@ -848,7 +849,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         currentShowing = "all";        
         int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
-        jLabel1.setText("1/"+totalPagesAll);
+        if(totalPagesAll==0){
+            jLabel1.setText("1/1");
+        }else{
+            jLabel1.setText("1/"+totalPagesAll);
+        }
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png")));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton8.setForeground(new java.awt.Color(120, 120, 135));
@@ -862,13 +867,17 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton17.setVisible(false);
         jButton20.setVisible(false);
         jButton23.setVisible(false);
-        Aplikasi.controllerManajemen.showAll(pageAll);        
+        Aplikasi.controllerManajemen.showAll(1);        
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         currentShowing = "artikel";
-        jLabel1.setText("1/"+Aplikasi.video.getTotalPages());
+        if(Aplikasi.article.getTotalPages()==0){
+            jLabel1.setText("1/1");
+        }else{
+            jLabel1.setText("1/"+Aplikasi.article.getTotalPages());
+        }
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton8.setForeground(new java.awt.Color(34, 184, 185));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -890,7 +899,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             jButton10.setVisible(false);
         }
-        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
+        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(1);
         Aplikasi.controllerManajemen.showArticle(artikels);
         //this.dispose();
         
@@ -898,7 +907,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         currentShowing ="video";
-        jLabel1.setText("1/"+Aplikasi.video.getTotalPages());
+        if(Aplikasi.video.getTotalPages()==0){
+            jLabel1.setText("1/1");
+        }else{
+            jLabel1.setText("1/"+Aplikasi.video.getTotalPages());
+        }
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton9.setForeground(new java.awt.Color(34, 184, 185));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -920,7 +933,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             jButton10.setVisible(false);
         }
-        List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+        List<Video> videos = Aplikasi.controllerManajemen.loadVideo(1);
         Aplikasi.controllerManajemen.showVideo(videos);
         //this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -1155,7 +1168,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     
     public void tampilkanSemua(List<Content> all){       
         tampilkan();
-        
+        int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
+        if(totalPagesAll==0){
+            jLabel1.setText("1/1");
+        }else{
+            jLabel1.setText("1/"+totalPagesAll);
+        }
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton7.setForeground(new java.awt.Color(34, 184, 185));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -1163,6 +1181,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton9.setForeground(new java.awt.Color(120, 120, 135));
         
+        jLabel3.setVisible(false);
+        jLabel4.setVisible(false);
+        jLabel5.setVisible(false);
+        jLabel6.setVisible(false);
         jButton10.setVisible(false);
         jButton13.setVisible(false);
         jButton14.setVisible(false);
@@ -1172,7 +1194,6 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton20.setVisible(false);
         jButton22.setVisible(false);
         jButton23.setVisible(false);
-        
         for (int i = 0; i < Math.min(4, all.size()); i++) {
         Content content = all.get(i);
         String imagePath;
@@ -1221,9 +1242,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         this.setVisible(true);
     }
     
-    public void tampilkan(){
-        int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
-        jLabel1.setText("1/"+totalPagesAll);
+    public void tampilkan(){        
         if(Aplikasi.akun.getPerson().equals("klien")){
             jButton3.setText("Reservasi");
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon

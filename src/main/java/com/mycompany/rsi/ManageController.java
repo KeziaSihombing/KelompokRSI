@@ -55,7 +55,7 @@ public class ManageController {
         // Ambil subset konten untuk halaman saat ini
         return allContent.stream()
                 .skip(offset)
-                .limit(4)
+                .limit(Math.min(4, allContent.size() - offset))
                 .collect(Collectors.toList());
     }
 
