@@ -28,8 +28,8 @@ public class HapusArtikel {
             if (rs != 0) {
                 Aplikasi.dialogUI.showMessage("Artikel berhasil dihapus dari database.");
 
-                File directory = new File(".");
-                String filePattern = "THUMBNAIL" + judulArtikel + ".png";
+                File directory = new File("src/main/resources/images");
+                String filePattern = "Thumbnail_db_" + judulArtikel + ".png";
                 File[] files = directory.listFiles();
 
                 if (files != null) {
@@ -40,7 +40,7 @@ public class HapusArtikel {
                     }
                 }
                 
-                Aplikasi.manage.getjButton13();
+//                Aplikasi.manage.getjButton13();
                 
 //                if (Aplikasi.manage instanceof ManajemenKontenUI) {
 //                    ManajemenKontenUI ui = (ManajemenKontenUI) Aplikasi.manage;

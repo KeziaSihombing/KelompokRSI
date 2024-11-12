@@ -36,6 +36,7 @@ public class Aplikasi {
     public static ProsesUploadVideo addVideo;
     public static MelihatArtikel lihatArtikel;
     public static HapusArtikel delArtikel;
+    public static HapusVidio delVidio;
     public static EditArtikel editArtikel;
     public static EditArtikelController updateArtikel;
     
@@ -67,6 +68,7 @@ public class Aplikasi {
         Aplikasi.controllerManajemen = new ManageController();
         Aplikasi.lihatArtikel = new MelihatArtikel();
         Aplikasi.delArtikel = new HapusArtikel();
+        Aplikasi.delVidio = new HapusVidio();
         Aplikasi.editArtikel = new EditArtikel();
         Aplikasi.updateArtikel = new EditArtikelController();
         
