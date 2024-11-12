@@ -733,11 +733,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
 
         if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
-             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea7.getText());
              List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
             Aplikasi.controllerManajemen.showArticle(artikels);             
         } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
-            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea7.getText());
             List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
             Aplikasi.controllerManajemen.showVideo(videos);            
         } else {
@@ -762,11 +762,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
 
         if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
-             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea9.getText());
              List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
             Aplikasi.controllerManajemen.showArticle(artikels);             
         } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
-            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea9.getText());
             List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
             Aplikasi.controllerManajemen.showVideo(videos);            
         } else {
@@ -791,11 +791,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         ImageIcon iconButton9 = (ImageIcon) jButton9.getIcon();
 
         if (iconButton8 != null && iconButton8.getDescription().equals(iconReference.getDescription())) {
-             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea5.getText());
+             Aplikasi.delArtikel.hapusArtikelDariDB(jTextArea11.getText());
              List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
             Aplikasi.controllerManajemen.showArticle(artikels);             
         } else if (iconButton9 != null && iconButton9.getDescription().equals(iconReference.getDescription())){
-            Aplikasi.delVidio.hapusVideoDariDB(jTextArea5.getText());
+            Aplikasi.delVidio.hapusVideoDariDB(jTextArea11.getText());
             List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
             Aplikasi.controllerManajemen.showVideo(videos);            
         } else {
