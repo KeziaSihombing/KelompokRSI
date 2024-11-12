@@ -21,7 +21,7 @@ import javax.swing.SwingWorker;
  */
 public class ManajemenKontenUI extends javax.swing.JFrame {
     
-    private String currentShowing;
+    private String currentShowing = "all";
     private int pageArtikel =1;
     private int pageVideo =1;
     private int pageAll =1;
@@ -815,6 +815,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         currentShowing = "all";        
+        int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
+        jLabel1.setText("1/"+totalPagesAll);
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png")));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton8.setForeground(new java.awt.Color(120, 120, 135));
@@ -830,6 +832,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         currentShowing = "artikel";
+        jLabel1.setText("1/"+Aplikasi.video.getTotalPages());
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton8.setForeground(new java.awt.Color(34, 184, 185));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -851,6 +854,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         currentShowing ="video";
+        jLabel1.setText("1/"+Aplikasi.video.getTotalPages());
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton9.setForeground(new java.awt.Color(34, 184, 185));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -889,18 +893,23 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(currentShowing.equals("all")){
             if(pageAll > 1) {  
-                pageAll--;  
+                pageAll--;
+                int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
+                jLabel1.setText(pageAll + "/" + totalPagesAll );
                 Aplikasi.controllerManajemen.showAll(pageAll);
+                
             }
         } else if(currentShowing.equals("video")){
             if(pageVideo > 1) {  
                 pageVideo--; 
+                jLabel1.setText(pageVideo+"/"+Aplikasi.video.getTotalPages());
                 List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo); // Beri parameter pageVideo
                 Aplikasi.controllerManajemen.showVideo(videos);
             }
         } else if(currentShowing.equals("artikel")){
             if(pageArtikel > 1) {  
                 pageArtikel--;  
+                jLabel1.setText(pageArtikel +"/"+Aplikasi.article.getTotalPages());
                 List<Artikel> articles = Aplikasi.controllerManajemen.loadArticle(pageArtikel); 
                 Aplikasi.controllerManajemen.showArticle(articles);
             }
@@ -910,20 +919,24 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-        if(currentShowing.equals("all")){
-            if(pageAll+1 <= (int)Math.ceil((Aplikasi.article.totalArticle()+Aplikasi.video.totalVideos())/4)){
+        if(currentShowing.equals("all")){           
+            int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
+            if (pageAll < totalPagesAll) { 
                 pageAll++;
+                jLabel1.setText(pageAll + "/" + totalPagesAll );
                 Aplikasi.controllerManajemen.showAll(pageAll);
             }
         } else if(currentShowing.equals("video")){
             if(pageVideo+1 <= Aplikasi.video.getTotalPages()){
                 pageVideo++;
+                jLabel1.setText(pageVideo+"/"+Aplikasi.video.getTotalPages());
                 List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
                 Aplikasi.controllerManajemen.showVideo(videos);
             }
         }else {
             if(pageArtikel+1 <= Aplikasi.article.getTotalPages()){
                 pageArtikel++;
+                jLabel1.setText(pageArtikel +"/"+Aplikasi.article.getTotalPages());
                 List<Artikel> articles = Aplikasi.controllerManajemen.loadArticle(pageArtikel); 
                 Aplikasi.controllerManajemen.showArticle(articles);
             }
@@ -1150,6 +1163,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }
     
     public void tampilkan(){
+        int totalPagesAll = (int) Math.ceil((Aplikasi.article.totalArticle() + Aplikasi.video.totalVideos()) / 4.0);
+        jLabel1.setText("1/"+totalPagesAll);
         if(Aplikasi.akun.getPerson().equals("klien")){
             jButton3.setText("Reservasi");
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon
