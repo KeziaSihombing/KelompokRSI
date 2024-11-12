@@ -23,6 +23,7 @@ import java.util.List;
  * @author ASUS
  */
 public class Artikel extends Content {
+    private String idArtikel;
     private String subjudul;
     private String penulis;    
     private String isiArtikel;
@@ -31,7 +32,7 @@ public class Artikel extends Content {
 
         String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";
         int totalArticles = 0;
-        String query = "SELECT JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
+        String query = "SELECT ID_ARTIKEL, JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
                 + "FROM FAMIFY.KONTEN_ARTIKEL ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
         List<Artikel> daftarArtikelTemp = new ArrayList<>();
         int offset = (page - 1) * 4;
@@ -48,13 +49,14 @@ public class Artikel extends Content {
             
                 if(totalArticles>=0){                    
                 
-                int limit = (totalArticles - offset < 4) ? totalArticles - offset : 4;
+                int limit = Math.max(4, totalArticles - offset);
                 pstmt.setInt(1, limit);
                 pstmt.setInt(2, offset);
 
                 try (ResultSet rs = pstmt.executeQuery()) {
                     while (rs.next()) {
                         Artikel artikel = new Artikel();
+                        artikel.idArtikel = rs.getString("ID_ARTIKEL");
                         artikel.judul = rs.getString("JUDUL_ARTIKEL");
                         artikel.subjudul = rs.getString("SUBJUDUL");
                         artikel.tanggalPublikasi = rs.getString("TANGGAL_PUBLIKASI");
@@ -115,6 +117,46 @@ public class Artikel extends Content {
 
         return totalPages;
     }
+    
+    public int totalArticle(){
+       String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";      
+       int totalArticles =0;
+        try {
+            Aplikasi.database.databaseConnection();
+            try (Connection con = Aplikasi.database.getCon(); Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(countQuery)) {
+
+                if (rs.next()) {
+                    totalArticles = rs.getInt(1);                  
+                }
+            }
+        } catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        } 
+        return totalArticles;
+    }   
+    
+    public List<Artikel> getAllArticles() {
+    List<Artikel> allArticles = new ArrayList<>();
+    int currentPage = 1;
+
+    while (true) {
+        List<Artikel> articlesPage = getArticlesByPage(currentPage);
+
+        // Jika tidak ada artikel yang tersisa, hentikan proses
+        if (articlesPage.isEmpty()) {
+            break;
+        }
+
+        // Tambahkan artikel dari halaman saat ini ke daftar utama
+        allArticles.addAll(articlesPage);
+
+        // Pindah ke halaman berikutnya
+        currentPage++;
+    }
+
+    return allArticles;
+}
+
 
     
     public List<Artikel> getRecentArticles(){
@@ -162,6 +204,10 @@ public class Artikel extends Content {
             return daftarArtikelTemp;
     }
 
+    public String getIdArtikel() {
+        return idArtikel;
+    }
+    
     public String getJudul() {
         return judul;
     }

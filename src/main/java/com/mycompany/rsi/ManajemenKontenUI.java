@@ -20,6 +20,11 @@ import javax.swing.SwingWorker;
  * @author ASUS
  */
 public class ManajemenKontenUI extends javax.swing.JFrame {
+    
+    private String currentShowing;
+    private int pageArtikel =1;
+    private int pageVideo =1;
+    private int pageAll =1;
 
     /**
      * Creates new form ManajemenKontenUI
@@ -48,6 +53,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea6 = new javax.swing.JTextArea();
         jButton15 = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jButton16 = new javax.swing.JButton();
@@ -58,6 +64,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea8 = new javax.swing.JTextArea();
         jButton18 = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jButton19 = new javax.swing.JButton();
@@ -68,6 +75,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea10 = new javax.swing.JTextArea();
         jButton21 = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jButton22 = new javax.swing.JButton();
@@ -78,18 +86,15 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea12 = new javax.swing.JTextArea();
         jButton24 = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -127,7 +132,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 20, -1, -1));
 
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton14.setBorderPainted(false);
@@ -138,7 +143,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 20, -1, -1));
+        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, -1));
 
         jScrollPane7.setBorder(null);
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -199,6 +204,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (2).png"))); // NOI18N
         jPanel6.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 270, 150));
+
+        jLabel3.setText("jLabel3");
+        jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, -1, -1));
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-border-general--bottom.png"))); // NOI18N
@@ -299,6 +307,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
         jPanel7.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 270, 150));
 
+        jLabel4.setText("jLabel4");
+        jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, -1, -1));
+
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-border-general--bottom.png"))); // NOI18N
         jLabel15.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -397,6 +408,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
         jPanel8.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 270, 150));
+
+        jLabel5.setText("jLabel5");
+        jPanel8.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, -1, -1));
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-border-general--bottom.png"))); // NOI18N
@@ -497,6 +511,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
         jPanel9.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 270, 150));
 
+        jLabel6.setText("jLabel6");
+        jPanel9.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 30, -1, -1));
+
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-border-general--bottom.png"))); // NOI18N
         jLabel17.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -569,7 +586,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1213, 40, 176, -1));
+        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 40, 176, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-prev.png"))); // NOI18N
         jButton2.setToolTipText("");
@@ -585,76 +602,6 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 912, -1, -1));
 
-        jButton11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-active.png"))); // NOI18N
-        jButton11.setText("1");
-        jButton11.setToolTipText("");
-        jButton11.setBorder(null);
-        jButton11.setBorderPainted(false);
-        jButton11.setContentAreaFilled(false);
-        jButton11.setFocusPainted(false);
-        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 920, -1, -1));
-
-        jButton12.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(11, 177, 203));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jButton12.setText("2");
-        jButton12.setToolTipText("");
-        jButton12.setBorder(null);
-        jButton12.setBorderPainted(false);
-        jButton12.setContentAreaFilled(false);
-        jButton12.setFocusPainted(false);
-        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 920, -1, -1));
-
-        jButton25.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton25.setForeground(new java.awt.Color(11, 177, 203));
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jButton25.setText("3");
-        jButton25.setToolTipText("");
-        jButton25.setBorder(null);
-        jButton25.setBorderPainted(false);
-        jButton25.setContentAreaFilled(false);
-        jButton25.setFocusPainted(false);
-        jButton25.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 920, -1, -1));
-
-        jButton26.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton26.setForeground(new java.awt.Color(11, 177, 203));
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jButton26.setText("4");
-        jButton26.setToolTipText("");
-        jButton26.setBorder(null);
-        jButton26.setBorderPainted(false);
-        jButton26.setContentAreaFilled(false);
-        jButton26.setFocusPainted(false);
-        jButton26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(788, 920, -1, -1));
-
-        jButton27.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton27.setForeground(new java.awt.Color(11, 177, 203));
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/content-inactive.png"))); // NOI18N
-        jButton27.setText("5");
-        jButton27.setToolTipText("");
-        jButton27.setBorder(null);
-        jButton27.setBorderPainted(false);
-        jButton27.setContentAreaFilled(false);
-        jButton27.setFocusPainted(false);
-        jButton27.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton27ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(826, 920, -1, -1));
-
         jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn-next.png"))); // NOI18N
         jButton28.setToolTipText("");
         jButton28.setBorder(null);
@@ -668,6 +615,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(882, 912, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel1.setText("1 / 5");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 920, -1, -1));
 
         jScrollPane2.setViewportView(jPanel2);
 
@@ -751,9 +702,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2))
         );
 
         pack();
@@ -766,6 +716,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
+        
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -817,6 +769,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        currentShowing = "all";        
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png")));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
         jButton8.setForeground(new java.awt.Color(120, 120, 135));
@@ -825,15 +778,13 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(34, 184, 185));
                
         //menampilkan semua
-        jButton10.setVisible(false);        
-        List<Content> all = Aplikasi.controllerManajemen.loadAll();
-        all.sort(Comparator.comparing(Content::getTanggalPublikasi).reversed());
-        Aplikasi.controllerManajemen.showAll(all);
-        
+        jButton10.setVisible(false);
+        Aplikasi.controllerManajemen.showAll(pageAll);        
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        currentShowing = "artikel";
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton8.setForeground(new java.awt.Color(34, 184, 185));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -847,13 +798,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             jButton10.setVisible(false);
         }
-        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle();
+        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(pageArtikel);
         Aplikasi.controllerManajemen.showArticle(artikels);
         //this.dispose();
         
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        currentShowing ="video";
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 209 (1).png"))); 
         jButton9.setForeground(new java.awt.Color(34, 184, 185));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 210.png"))); 
@@ -867,7 +819,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             jButton10.setVisible(false);
         }
-        List<Video> videos = Aplikasi.controllerManajemen.loadVideo();
+        List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
         Aplikasi.controllerManajemen.showVideo(videos);
         //this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -890,22 +842,48 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        if(currentShowing.equals("all")){
+            if(pageAll > 1) {  
+                pageAll--;  
+                Aplikasi.controllerManajemen.showAll(pageAll);
+            }
+        } else if(currentShowing.equals("video")){
+            if(pageVideo > 1) {  
+                pageVideo--; 
+                List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo); // Beri parameter pageVideo
+                Aplikasi.controllerManajemen.showVideo(videos);
+            }
+        } else if(currentShowing.equals("artikel")){
+            if(pageArtikel > 1) {  
+                pageArtikel--;  
+                List<Artikel> articles = Aplikasi.controllerManajemen.loadArticle(pageArtikel); 
+                Aplikasi.controllerManajemen.showArticle(articles);
+            }
+        }
+                
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-        
+        if(currentShowing.equals("all")){
+            if(pageAll+1 <= (int)Math.ceil((Aplikasi.article.totalArticle()+Aplikasi.video.totalVideos())/4)){
+                pageAll++;
+                Aplikasi.controllerManajemen.showAll(pageAll);
+            }
+        } else if(currentShowing.equals("video")){
+            if(pageVideo+1 <= Aplikasi.video.getTotalPages()){
+                pageVideo++;
+                List<Video> videos = Aplikasi.controllerManajemen.loadVideo(pageVideo);
+                Aplikasi.controllerManajemen.showVideo(videos);
+            }
+        }else {
+            if(pageArtikel+1 <= Aplikasi.article.getTotalPages()){
+                pageArtikel++;
+                List<Artikel> articles = Aplikasi.controllerManajemen.loadArticle(pageArtikel); 
+                Aplikasi.controllerManajemen.showArticle(articles);
+            }
+        }        
     }//GEN-LAST:event_jButton28ActionPerformed
-
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton27ActionPerformed
-
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -919,8 +897,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         }else{
             //manajemen konten
-            List<Content> all = Aplikasi.controllerManajemen.loadAll();
-            Aplikasi.controllerManajemen.showAll(all);
+            Aplikasi.controllerManajemen.showAll(pageAll);
             this.dispose();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -944,22 +921,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     public void tampilkanArticle(List<Artikel> Articles){        
         int totalPages = Aplikasi.article.getTotalPages();
         List <Artikel> articles = Articles;
-        if(totalPages<5){
-            jButton27.setVisible(false);
-            if(totalPages<4){
-                jButton26.setVisible(false);
-                if(totalPages<3){
-                    jButton25.setVisible(false);
-                    if(totalPages<2){
-                        jButton12.setVisible(false);                      
-                    }
-                }
-            }
-        }else{
-            jButton26.setText("..");
-            jButton27.setText(String.valueOf(totalPages));
-        }
-        
+                
         
         if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton10.setVisible(true);
@@ -977,56 +939,50 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         
         if(articles.size() >=1){
             Artikel artikel = articles.get(0);
-            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));          
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel28.setIcon(new javax.swing.ImageIcon(path));                     
             jTextArea5.setText(artikel.getJudul());
-            jTextArea6.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea6.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel6.setVisible(true);
+            jLabel3.setText(artikel.getIdArtikel());
+            jLabel3.setVisible(true);
         }
         if(articles.size() >=2){
             Artikel artikel = articles.get(1);
-            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel29.setIcon(new javax.swing.ImageIcon(path));         
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel7.setVisible(true);
+            jLabel4.setText(artikel.getIdArtikel());
+            jLabel4.setVisible(true);
         }
         if(articles.size() >=3){
             Artikel artikel = articles.get(2); 
-            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel30.setIcon(new javax.swing.ImageIcon(path));        
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel8.setVisible(true);
+            jLabel5.setText(artikel.getIdArtikel());
+            jLabel5.setVisible(true);
         }
         if(articles.size() >=4){
             Artikel artikel = articles.get(3);            
-            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));     
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel31.setIcon(new javax.swing.ImageIcon(path));            
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel9.setVisible(true);
+            jLabel6.setText(artikel.getIdArtikel());
+            jLabel6.setVisible(true);
         }
         
         this.setVisible(true);
     }
            
     
-    public void tampilkanVideo(List<Video> Videos){
-        int totalPages = Aplikasi.video.getTotalPages();
-        List <Video> videos = Videos;
-        if(totalPages<5){
-            jButton27.setVisible(false);
-            if(totalPages<4){
-                jButton26.setVisible(false);
-                if(totalPages<3){
-                    jButton25.setVisible(false);
-                    if(totalPages<2){
-                        jButton12.setVisible(false);                      
-                    }
-                }
-            }
-        }else{
-            jButton26.setText("..");
-            jButton27.setText(String.valueOf(totalPages));
-        }
-        
+    public void tampilkanVideo(List<Video> Videos){        
         if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton10.setVisible(true);
         }else{
@@ -1043,7 +999,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         
         if(Videos.size()>=1){
             Video video = Videos.get(0);
-            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel28.setIcon(new javax.swing.ImageIcon(path));       
             jTextArea5.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea6.setText(deskripsi);         
@@ -1052,7 +1009,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
         if(Videos.size()>=2){
             Video video = Videos.get(1);
-            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel29.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea7.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea8.setText(deskripsi);    
@@ -1061,7 +1019,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
         if(Videos.size()>=3){
             Video video = Videos.get(2);            
-            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel30.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea9.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea10.setText(deskripsi);       
@@ -1070,7 +1029,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
         if(Videos.size()>=4){
             Video video = Videos.get(3);            
-            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/video/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel31.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea11.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea12.setText(deskripsi);       
@@ -1083,24 +1043,8 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         this.setVisible(true);
     }
     
-    public void tampilkanSemua(List<Content> all){ 
-        int totalPages = (int) Math.ceil(all.size() / 4.0);
-        if(totalPages<5){
-            jButton27.setVisible(false);
-            if(totalPages<4){
-                jButton26.setVisible(false);
-                if(totalPages<3){
-                    jButton25.setVisible(false);
-                    if(totalPages<2){
-                        jButton12.setVisible(false);                      
-                    }
-                }
-            }
-        }else{
-            jButton26.setText("..");
-            jButton27.setText(String.valueOf(totalPages));
-        }
-        tampilkan(); 
+    public void tampilkanSemua(List<Content> all){       
+        tampilkan();
         
         jButton10.setVisible(false);        
         for (int i = 0; i < Math.min(4, all.size()); i++) {
@@ -1110,7 +1054,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
         // Tentukan ikon dan teks berdasarkan tipe konten
         if (content instanceof Video video) {
-            imagePath = "/video/Thumbnail_db_" + video.getJudul() + ".png";
+            imagePath = "/images/Thumbnail_db_" + video.getJudul() + ".png";
             description = video.getDeskripsi();
         } else if (content instanceof Artikel artikel) {
             imagePath = "/images/Thumbnail_db_" + artikel.getJudul() + ".png";
@@ -1146,8 +1090,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jPanel9.setVisible(true);
             }
         }
-    }   
-        
+    }     
            
         this.setVisible(true);
     }
@@ -1162,10 +1105,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jButton3.setText("Manajemen Konten");       
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
-        if(jButton11.getText().equals("1"))jButton2.setEnabled(false);
-        if(jButton27.getText().equals(Aplikasi.article.getTotalPages())||jButton11.getText().equals(Aplikasi.article.getTotalPages())){
-            jButton28.setEnabled(false);
-        }
+        
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel8.setVisible(false);
@@ -1189,8 +1129,6 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
@@ -1204,9 +1142,6 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
@@ -1215,6 +1150,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -1222,8 +1158,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;

@@ -44,7 +44,7 @@ public class Video extends Content {
                 }         
                 
                 if(totalVideo!=0){
-                    int limit = (totalVideo - offset < 4) ? totalVideo - offset : 4;
+                    int limit = Math.max(4, totalVideo - offset);
                     pstmt.setInt(1, limit);
                     pstmt.setInt(2, offset);
                     try (ResultSet rs = pstmt.executeQuery()) { 
@@ -97,7 +97,7 @@ public class Video extends Content {
                                 File pathTargetVideo = new File("src/main/resources/video/Video_db" + video.judul + ".mp4");
 
                                 try {
-                                    Files.move(fileThumbnail.toPath(), pathTargetVideo.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                                    Files.move(fileVideo.toPath(), pathTargetVideo.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
                                 }catch (Exception ex) {
                                     Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
@@ -171,7 +171,7 @@ public class Video extends Content {
                     File pathTargetVideo = new File("src/main/resources/video/Video_db" + video.judul + ".mp4");
 
                     try {
-                        Files.move(fileThumbnail.toPath(), pathTargetVideo.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                        Files.move(fileVideo.toPath(), pathTargetVideo.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
                     }catch (Exception ex) {
                         Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
@@ -204,6 +204,47 @@ public class Video extends Content {
 
         return totalPages;
     }
+
+    public int totalVideos(){        
+        String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_VIDEO";
+        int totalVideos = 0;
+
+        try {
+            Aplikasi.database.databaseConnection();
+            try (Connection con = Aplikasi.database.getCon(); Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(countQuery)) {
+
+                if (rs.next()) {
+                    totalVideos = rs.getInt(1);                  
+                }
+            }
+        } catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+
+        return totalVideos;    
+    }
+    
+    public List<Video> getAllVideos() {
+    List<Video> allVideos = new ArrayList<>();
+    int currentPage = 1;
+
+    while (true) {
+        List<Video> videosPage = getVideosByPages(currentPage);
+
+        // Jika tidak ada video yang tersisa, hentikan proses
+        if (videosPage.isEmpty()) {
+            break;
+        }
+
+        // Tambahkan video dari halaman saat ini ke daftar utama
+        allVideos.addAll(videosPage);
+
+        // Pindah ke halaman berikutnya
+        currentPage++;
+    }
+    return allVideos;
+    }
+
     
     
     

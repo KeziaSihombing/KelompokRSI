@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class HalamanUtamaUI extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form sesiKonsultasiUI
      */
@@ -268,7 +269,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 370, 60));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (3).png"))); // NOI18N
-        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 12, -1, -1));
+        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 12, 375, 192));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 430, 360));
@@ -331,7 +332,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 278, 370, 60));
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
-        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 10, -1, -1));
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 10, 375, 192));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
@@ -394,7 +395,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel4.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 278, 370, 60));
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 45.png"))); // NOI18N
-        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 10, -1, -1));
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 10, 375, 192));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
@@ -466,7 +467,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel5.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (3).png"))); // NOI18N
-        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 375, 192));
 
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(11, 177, 203));
@@ -484,7 +485,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel5.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 475, -1, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
-        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 430, 520));
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 410, 520));
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1580, 470, 530));
 
@@ -543,7 +544,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel6.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
 
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Image Placeholder (1).png"))); // NOI18N
-        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 375, 192));
 
         jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(11, 177, 203));
@@ -620,7 +621,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel7.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 370, 110));
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Image Placeholder (2).png"))); // NOI18N
-        jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 375, 192));
 
         jButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(11, 177, 203));
@@ -765,21 +766,20 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        List<Content> all = Aplikasi.controllerManajemen.loadAll();
-        Aplikasi.controllerManajemen.showAll(all);
+        Aplikasi.controllerManajemen.showAll(1);
         this.dispose();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 
-        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle();
+        List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(1);
         Aplikasi.controllerManajemen.showArticle(artikels);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        List<Video> videos = Aplikasi.controllerManajemen.loadVideo();
+        List<Video> videos = Aplikasi.controllerManajemen.loadVideo(1);
         Aplikasi.controllerManajemen.showVideo(videos);
         this.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -789,9 +789,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         if(Aplikasi.akun.getPerson().contains("k")){
             Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         }else{
-            //manajemen konten
-            List<Content> all = Aplikasi.controllerManajemen.loadAll();
-            Aplikasi.controllerManajemen.showAll(all);
+            //manajemen konten           
+            Aplikasi.controllerManajemen.showAll(1);
             this.dispose();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -858,7 +857,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         
         if(recentVideo.size()>=1){
             Video video = recentVideo.get(0);
-            jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel26.setIcon(new javax.swing.ImageIcon(path));          
             jTextArea1.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea2.setText(deskripsi);         
@@ -867,7 +867,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         }
         if(recentVideo.size()>=2){
             Video video = recentVideo.get(1);
-            jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel27.setIcon(new javax.swing.ImageIcon(path));          
             jTextArea3.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea4.setText(deskripsi);    
@@ -876,7 +877,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         }
         if(recentVideo.size()>=3){
             Video video = recentVideo.get(2);            
-            jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+video.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
+            jLabel28.setIcon(new javax.swing.ImageIcon(path));          
             jTextArea5.setText(video.getJudul());
             String deskripsi = video.getDeskripsi();
             jTextArea6.setText(deskripsi);       
@@ -895,7 +897,8 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
        
         if(recentArticles.size() >= 1){
             Artikel artikel = recentArticles.get(0);
-            jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel29.setIcon(new javax.swing.ImageIcon(path));          
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             // Konversi string tanggalKonsul menjadi LocalDate
             LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
@@ -903,12 +906,13 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel32.setText(formattedTanggal);
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel5.setVisible(true);
         }
         if(recentArticles.size() >=2){
             Artikel artikel = recentArticles.get(1);
-            jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel30.setIcon(new javax.swing.ImageIcon(path));                     
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             // Konversi string tanggalKonsul menjadi LocalDate
             LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
@@ -916,12 +920,13 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel33.setText(formattedTanggal);
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel6.setVisible(true);
         }
         if(recentArticles.size() >=3){
             Artikel artikel = recentArticles.get(2);            
-            jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Thumbnail_db_"+artikel.judul+".png")));
+            String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
+            jLabel31.setIcon(new javax.swing.ImageIcon(path));          
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             // Konversi string tanggalKonsul menjadi LocalDate
             LocalDate tanggal = LocalDate.parse(artikel.getTanggalPublikasi(), formatter);
@@ -929,7 +934,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel34.setText(formattedTanggal);
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,250)+"...");
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
             jPanel7.setVisible(true);
         }        
     }
