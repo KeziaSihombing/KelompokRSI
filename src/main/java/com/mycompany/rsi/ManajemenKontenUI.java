@@ -766,7 +766,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
+       //ini harusnya cek kondisi dulu jenis kontennya artikel atau video?
+        // klu artikel manggil editArtikel, klu video manggil edit video
+        //logicnya mungkin mirip sm tombol unggah
+        //ini blum ada kelas editVideonya sm editVideoController aja
+        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
@@ -795,7 +799,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
+        //ini harusnya cek kondisi dulu jenis kontennya artikel atau video?
+        // klu artikel manggil editArtikel, klu video manggil edit video
+        //logicnya mungkin mirip sm tombol unggah
+        //ini blum ada kelas editVideonya sm editVideoController aja
+        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
@@ -824,7 +832,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        // TODO add your handling code here:
+        //ini harusnya cek kondisi dulu jenis kontennya artikel atau video?
+        // klu artikel manggil editArtikel, klu video manggil edit video
+        //logicnya mungkin mirip sm tombol unggah
+        //ini blum ada kelas editVideonya sm editVideoController aja
+        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
