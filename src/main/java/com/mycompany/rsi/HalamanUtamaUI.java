@@ -46,29 +46,29 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jButton11 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jLabel26 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jButton14 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jLabel27 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
+        jButton15 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextArea6 = new javax.swing.JTextArea();
         jLabel28 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -231,6 +231,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel2.setVerifyInputWhenFocusTarget(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton11.setBorderPainted(false);
+        jButton11.setContentAreaFilled(false);
+        jButton11.setFocusPainted(false);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 390, 350));
+
         jScrollPane2.setBorder(null);
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -274,16 +284,6 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 430, 360));
 
-        jButton11.setBorderPainted(false);
-        jButton11.setContentAreaFilled(false);
-        jButton11.setFocusPainted(false);
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 390, 350));
-
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1090, 470, 370));
 
         jPanel3.setDoubleBuffered(false);
@@ -293,6 +293,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel3.setRequestFocusEnabled(false);
         jPanel3.setVerifyInputWhenFocusTarget(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton14.setBorderPainted(false);
+        jButton14.setContentAreaFilled(false);
+        jButton14.setFocusPainted(false);
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
 
         jScrollPane4.setBorder(null);
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -337,16 +347,6 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
 
-        jButton14.setBorderPainted(false);
-        jButton14.setContentAreaFilled(false);
-        jButton14.setFocusPainted(false);
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
-
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1090, 470, 370));
 
         jPanel4.setDoubleBuffered(false);
@@ -356,6 +356,16 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel4.setRequestFocusEnabled(false);
         jPanel4.setVerifyInputWhenFocusTarget(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton15.setBorderPainted(false);
+        jButton15.setContentAreaFilled(false);
+        jButton15.setFocusPainted(false);
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
 
         jScrollPane6.setBorder(null);
         jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -399,16 +409,6 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Rectangle 42.png"))); // NOI18N
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 360));
-
-        jButton15.setBorderPainted(false);
-        jButton15.setContentAreaFilled(false);
-        jButton15.setFocusPainted(false);
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 1090, 470, 370));
 
@@ -802,33 +802,39 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea7.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea7.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea9.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea9.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea11.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea11.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         //MELIHAT VIDEONYAAAAA
+        Aplikasi.lihatKonten.showVideo(jTextArea1.getText());
+        
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+         Aplikasi.lihatKonten.showVideo(jTextArea3.getText());
+        
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
+         Aplikasi.lihatKonten.showVideo(jTextArea5.getText());
+        
     }//GEN-LAST:event_jButton15ActionPerformed
 
     /**

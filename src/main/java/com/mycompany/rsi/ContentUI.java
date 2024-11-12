@@ -263,7 +263,7 @@ public class ContentUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void tampilkan(String judul){
+    public void tampilkanArtikel(String judul){
         String query = "SELECT SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
                 + "FROM FAMIFY.KONTEN_ARTIKEL WHERE JUDUL_ARTIKEL = ?";
         
@@ -284,6 +284,30 @@ public class ContentUI extends javax.swing.JFrame {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
         }
         this.setVisible(true);        
+    }
+    
+    public void tampilkanVideo(String judul){
+        String query = "SELECT DESKRIPSI, PENGUNGGAH, TANGGAL_PUBLIKASI, VIDEO "
+                + "FROM FAMIFY.KONTEN_VIDEO WHERE JUDUL_VIDEO = ?";
+        
+        try {
+            Aplikasi.database.databaseConnection();
+            Connection con = Aplikasi.database.getCon();            
+            PreparedStatement pstmt = con.prepareStatement(query); 
+            pstmt.setString(1, judul);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                jLabel6.setText(judul);               
+                jLabel5.setText(rs.getString("PENGUNGGAH")+" admin");
+                jLabel7.setText(rs.getString("TANGGAL_PUBLIKASI"));
+                jTextArea8.setText(rs.getString("DESKRIPSI"));
+                
+               
+            }
+        }catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+        this.setVisible(true);
     }
     
     

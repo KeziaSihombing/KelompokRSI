@@ -9,9 +9,13 @@ package com.mycompany.rsi;
  *
  * @author ASUS
  */
-public class MelihatArtikel {
+public class MelihatKonten {
     public void showArticle(String judul){
-        Aplikasi.lihatMateri.tampilkan(judul);
+        Aplikasi.lihatMateri.tampilkanArtikel(judul);
+    }
+    
+    public void showVideo(String judul){
+        Aplikasi.lihatMateri.tampilkanVideo(judul);
     }
         
 

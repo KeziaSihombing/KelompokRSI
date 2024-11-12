@@ -743,7 +743,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea5.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea5.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton15ActionPerformed
 
@@ -776,7 +776,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea7.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea7.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton18ActionPerformed
 
@@ -809,7 +809,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea9.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea9.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton21ActionPerformed
 
@@ -842,7 +842,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatArtikel.showArticle(jTextArea11.getText());        
+        Aplikasi.lihatKonten.showArticle(jTextArea11.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton24ActionPerformed
 
