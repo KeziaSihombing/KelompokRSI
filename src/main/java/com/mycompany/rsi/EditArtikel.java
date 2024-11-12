@@ -17,7 +17,8 @@ import java.sql.ResultSet;
  * @author ASUS
  */
 public class EditArtikel extends javax.swing.JFrame {
-
+    private String judulLama;
+    private String idArtikel;
     /**
      * Creates new form ProsesUpArtikelGUI
      */
@@ -220,20 +221,21 @@ public class EditArtikel extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1440, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(329, 329, 329)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
-                        .addComponent(jTextField2)
-                        .addComponent(jTextField1)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane1)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(323, 323, 323)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField1)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -252,7 +254,7 @@ public class EditArtikel extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -260,9 +262,9 @@ public class EditArtikel extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(304, Short.MAX_VALUE))
         );
 
         pack();
@@ -304,34 +306,34 @@ public class EditArtikel extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Aplikasi.addArticle.LoadThumbnail();
         //munculin thumnailnya pake logic kaya munculin file di hasil konsul
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         // Mengambil input dari UI
-    String judul = Aplikasi.editArtikel.getjTextField1().getText();
-    String subJudul = Aplikasi.editArtikel.getjTextField2().getText();
-    String isiArtikel = Aplikasi.editArtikel.getjTextArea1().getText();
-    String diisiOleh = Aplikasi.editArtikel.getjTextField3().getText();
-
-    // Pastikan path thumbnail sudah di-load dari ProsesNulisArtikel
-    String thumbnailPath = Aplikasi.updateArtikel.getPathThumbnail();
-
-    File thumbnailFile = new File(thumbnailPath);
-
+    String judul = jTextField1.getText();
+    String subJudul = jTextField2.getText();
+    String isiArtikel = jTextArea1.getText();
+    String diisiOleh = jTextField3.getText();
+    
+ //thumbnail tidak dpt diubah   
     // Panggil metode simpanArtikelDB
-    Aplikasi.updateArtikel.updateArtikelDB(judul, subJudul, isiArtikel, diisiOleh, thumbnailFile);
+    Aplikasi.updateArtikel.updateArtikelDB(getIdArtikel(), getJudulLama(), judul, subJudul, isiArtikel, diisiOleh);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    public void tampilkan(String judul){
-        String query = "SELECT SUBJUDUL, ISI_ARTIKEL, PENULIS, THUMBNAIL " //ini harusnya bukan thumbnail tpi nama file thumbnail
-                + "FROM FAMIFY.KONTEN_ARTIKEL WHERE JUDUL_ARTIKEL = ?";
+    public void tampilkan(String judul,String idArtikel){
+        setJudulLama(judul);
+        setIdArtikel(idArtikel);
+        
+        String query = "SELECT *"
+                + "FROM FAMIFY.KONTEN_ARTIKEL WHERE ID_ARTIKEL = ?";
         
         try {
             Aplikasi.database.databaseConnection();
             Connection con = Aplikasi.database.getCon();            
             PreparedStatement pstmt = con.prepareStatement(query); 
-            pstmt.setString(1, judul);
+            pstmt.setString(1, idArtikel);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
                 jTextField1.setText(judul);
@@ -368,6 +370,24 @@ public class EditArtikel extends javax.swing.JFrame {
     public JTextField getjTextField3() {
         return jTextField3;
     }
+
+    public String getJudulLama() {
+        return judulLama;
+    }
+
+    public void setJudulLama(String judulLama) {
+        this.judulLama = judulLama;
+    }
+    
+    public String getIdArtikel() {
+        return idArtikel;
+    }
+
+    public void setIdArtikel(String idArtikel) {
+        this.idArtikel = idArtikel;
+    }
+    
+    
     
     
 

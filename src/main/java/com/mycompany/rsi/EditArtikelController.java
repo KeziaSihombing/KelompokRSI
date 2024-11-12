@@ -20,28 +20,28 @@ import javax.swing.JFileChooser;
  * @author HP
  */
 public class EditArtikelController {
-    private String pathThumbnail;
+    //private String pathThumbnail;
     
-    public void LoadThumbnail(){
-        JFileChooser fc = new JFileChooser();
-            fc.showOpenDialog(null);
-            File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
-
-            if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
-                 setPathThumbnail(selectedFile.getAbsolutePath());                
-                 Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
-            } else {
-                Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
-            }
-    }
+//    public void LoadThumbnail(){
+//        JFileChooser fc = new JFileChooser();
+//            fc.showOpenDialog(null);
+//            File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
+//
+//            if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
+//                 setPathThumbnail(selectedFile.getAbsolutePath());                
+//                 Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
+//            } else {
+//                Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
+//            }
+//    }
     
-    public void updateArtikelDB(String judul, String subJudul, String isiArtikel, String diisiOleh, File thumbnailFile) {
+    public void updateArtikelDB(String idArtikel, String judulLama, String judul, String subJudul, String isiArtikel, String diisiOleh) {
     Connection con = null;
     PreparedStatement pstmtSimpanArtikel = null;
 
     try {
         // Validasi input
-        if (judul.isEmpty() || subJudul.isEmpty() || diisiOleh.isEmpty() || isiArtikel.isEmpty() || thumbnailFile == null) {
+        if (judul.isEmpty() || subJudul.isEmpty() || diisiOleh.isEmpty() || isiArtikel.isEmpty()) {
             Aplikasi.dialogUI.showMessage("Semua kolom harus diisi.");
             return;
         }
@@ -51,42 +51,39 @@ public class EditArtikelController {
         con = Aplikasi.database.getCon();
 
         // Query untuk menyimpan artikel ke database dengan TANGGAL_PUBLIKASI
-        String querySimpan = "UPDATE FAMIFY.KONTEN_ARTIKEL SET JUDUL_ARTIKEL = ?, SUBJUDUL = ?, ISI_ARTIKEL = ?, PENULIS = ?, TANGGAL_PUBLIKASI = ?, THUMBNAIL = ? WHERE ID_ARTIKEL = ?";
+        String querySimpan = "UPDATE FAMIFY.KONTEN_ARTIKEL SET JUDUL_ARTIKEL = ?, SUBJUDUL = ?, ISI_ARTIKEL = ?, PENULIS = ? WHERE ID_ARTIKEL = ?";
         pstmtSimpanArtikel = con.prepareStatement(querySimpan);
+        pstmtSimpanArtikel.setString(5, idArtikel);
 
+        
         // Set nilai kolom sesuai dengan parameter
         pstmtSimpanArtikel.setString(1, judul);
         pstmtSimpanArtikel.setString(2, subJudul);
         pstmtSimpanArtikel.setString(3, isiArtikel);
         pstmtSimpanArtikel.setString(4, diisiOleh);
+        
 
-        // Set tanggal publikasi dengan tanggal saat ini
-        Date currentDate = new Date(System.currentTimeMillis());
-        pstmtSimpanArtikel.setDate(5, currentDate);
-
-        // Simpan thumbnail sebagai byte array
-        FileInputStream fis = new FileInputStream(thumbnailFile);
-        pstmtSimpanArtikel.setBinaryStream(6, fis, (int) thumbnailFile.length());
-
-        // Eksekusi penyimpanan
+   
+//        // Simpan thumbnail sebagai byte array
+//        FileInputStream fis = new FileInputStream(thumbnailFile);
+//        pstmtSimpanArtikel.setBinaryStream(5, fis, (int) thumbnailFile.length());
+//
+//        // Eksekusi penyimpanan
         int row = pstmtSimpanArtikel.executeUpdate();
-        fis.close();
-
-        if (row > 0) {
-            Aplikasi.dialogUI.showMessage("Perubahan berhasil disimpan.");
-            
-            File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + judul + ".png");
-            Files.copy(thumbnailFile.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
-        } else {
-            Aplikasi.dialogUI.showMessage("Gagal menyimpan perubahan.");
-        }
+//        fis.close();
+//
+//        if (row > 0) {
+//            Aplikasi.dialogUI.showMessage("Perubahan berhasil disimpan.");
+//            
+//            File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + judul + ".png");
+//            Files.copy(thumbnailFile.toPath(), pathTarget.toPath(), StandardCopyOption.REPLACE_EXISTING);
+//        } else {
+//            Aplikasi.dialogUI.showMessage("Gagal menyimpan perubahan.");
+//        }
 
     } catch (SQLException sqlEx) {
         sqlEx.printStackTrace();
         Aplikasi.dialogUI.showMessage("SQL Error: " + sqlEx.getMessage());
-    } catch (IOException ioEx) {
-        ioEx.printStackTrace();
-        Aplikasi.dialogUI.showMessage("Error membaca file: " + ioEx.getMessage());
     } finally {
         // Tutup resources
         try {
@@ -98,11 +95,11 @@ public class EditArtikelController {
     }
     }
 
-    public String getPathThumbnail() {
-        return pathThumbnail;
-    }
-
-    public void setPathThumbnail(String pathThumbnail) {
-        this.pathThumbnail = pathThumbnail;
-    }
+//    public String getPathThumbnail() {
+//        return pathThumbnail;
+//    }
+//
+//    public void setPathThumbnail(String pathThumbnail) {
+//        this.pathThumbnail = pathThumbnail;
+//    }
 }

@@ -13,11 +13,11 @@ import java.sql.*;
 public class Database {
     private Connection con;
     private String user = "root";
-    private String passwordSQL = "rahasia";
+    private String passwordSQL = "Rizka610_";
     
     public void databaseConnection(){
          try{
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/mysql?zeroDateTimeBehavior=CONVERT_TO_NULL", user, passwordSQL); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=CONVERT_TO_NULL", user, passwordSQL); 
         } catch(Exception ex) {
             Aplikasi.dialogUI.showMessage("Connection error" + ex.getMessage());
         }

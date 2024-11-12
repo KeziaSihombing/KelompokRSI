@@ -23,6 +23,7 @@ import java.util.List;
  * @author ASUS
  */
 public class Artikel extends Content {
+    private String idArtikel;
     private String subjudul;
     private String penulis;    
     private String isiArtikel;
@@ -31,7 +32,7 @@ public class Artikel extends Content {
 
         String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_ARTIKEL";
         int totalArticles = 0;
-        String query = "SELECT JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
+        String query = "SELECT ID_ARTIKEL, JUDUL_ARTIKEL, SUBJUDUL, ISI_ARTIKEL, PENULIS, TANGGAL_PUBLIKASI, THUMBNAIL "
                 + "FROM FAMIFY.KONTEN_ARTIKEL ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
         List<Artikel> daftarArtikelTemp = new ArrayList<>();
         int offset = (page - 1) * 4;
@@ -55,6 +56,7 @@ public class Artikel extends Content {
                 try (ResultSet rs = pstmt.executeQuery()) {
                     while (rs.next()) {
                         Artikel artikel = new Artikel();
+                        artikel.idArtikel = rs.getString("ID_ARTIKEL");
                         artikel.judul = rs.getString("JUDUL_ARTIKEL");
                         artikel.subjudul = rs.getString("SUBJUDUL");
                         artikel.tanggalPublikasi = rs.getString("TANGGAL_PUBLIKASI");
@@ -202,6 +204,10 @@ public class Artikel extends Content {
             return daftarArtikelTemp;
     }
 
+    public String getIdArtikel() {
+        return idArtikel;
+    }
+    
     public String getJudul() {
         return judul;
     }
