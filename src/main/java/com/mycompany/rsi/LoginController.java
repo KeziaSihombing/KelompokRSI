@@ -12,12 +12,8 @@ import java.sql.Connection;
  */
 public class LoginController {
     
-    private boolean validation;
-        
-    public LoginController(){
-     
-    }  
- 
+    private boolean validation;        
+   
     public void showLoginForm(){
         Aplikasi.loginUI.tampilkan();
     }           
@@ -38,8 +34,8 @@ public class LoginController {
             Aplikasi.loginUI.dispose();
         }else{
             Aplikasi.dialogUI.showMessage("Email atau password salah");
-            Aplikasi.loginUI.getjTextField2().setText("Ketik email...");
-            Aplikasi.loginUI.getjPasswordField1().setText("Ketik kata sandi..");   
+            Aplikasi.loginUI.getEmailTextField().setText("Ketik email...");
+            Aplikasi.loginUI.getPasswordField().setText("Ketik kata sandi..");   
         }
     }
     

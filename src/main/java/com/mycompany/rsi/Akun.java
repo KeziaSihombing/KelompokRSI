@@ -12,18 +12,8 @@ import java.sql.*;
 public class Akun {
    private String email;
    private String password;
-   private String person;
-   
-   
-   public Akun(String emal, String password){
-       this.email = email;
-       this.password = password;
-   }
-   
-   public Akun(){
-       
-   }
-      
+   private String person;  
+
    public boolean getUser(String email, String password){
        String query = "SELECT * FROM FAMIFY.KLIEN WHERE BINARY EMAIL = ? AND BINARY PASSWORD = ?";
        String query2 = "SELECT * FROM FAMIFY.KONSULTAN WHERE BINARY EMAIL = ? AND BINARY PASSWORD = ?";
