@@ -96,7 +96,7 @@ public class EditArtikel extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Foto user (3).png"))); // NOI18N
         jButton7.setBorderPainted(false);
         jButton7.setContentAreaFilled(false);
         jButton7.setPreferredSize(new java.awt.Dimension(70, 70));

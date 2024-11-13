@@ -201,7 +201,7 @@
         <Component class="javax.swing.JButton" name="jButton14">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/Ellipse 44.png"/>
+              <Image iconType="3" name="/images/Foto user (3).png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>

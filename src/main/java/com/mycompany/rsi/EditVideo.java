@@ -98,7 +98,7 @@ public class EditVideo extends javax.swing.JFrame {
             }
         });
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Foto user (3).png"))); // NOI18N
         jButton14.setBorderPainted(false);
         jButton14.setContentAreaFilled(false);
         jButton14.setPreferredSize(new java.awt.Dimension(70, 70));

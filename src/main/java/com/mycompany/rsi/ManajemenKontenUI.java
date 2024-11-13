@@ -628,7 +628,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(100, 94));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Foto user (3).png"))); // NOI18N
         jButton5.setBorderPainted(false);
         jButton5.setContentAreaFilled(false);
         jButton5.setPreferredSize(new java.awt.Dimension(70, 70));
@@ -703,9 +703,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(305, Short.MAX_VALUE))
         );
 
         pack();
