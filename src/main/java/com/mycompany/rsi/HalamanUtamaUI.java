@@ -44,9 +44,9 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        lihatLainnyaArtikel = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton11 = new javax.swing.JButton();
+        videoSatuButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -54,7 +54,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton14 = new javax.swing.JButton();
+        videoDuaButton = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -62,7 +62,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jButton15 = new javax.swing.JButton();
+        videoTigaButton = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -76,7 +76,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextArea8 = new javax.swing.JTextArea();
         jLabel29 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        ArtikelSatuButton = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
@@ -85,7 +85,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane11 = new javax.swing.JScrollPane();
         jTextArea10 = new javax.swing.JTextArea();
         jLabel30 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        artikelDuaButton = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
@@ -94,10 +94,10 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jScrollPane13 = new javax.swing.JScrollPane();
         jTextArea12 = new javax.swing.JTextArea();
         jLabel31 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
+        artikelTigaButton = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        lihatLainnyaVideo = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -208,20 +208,20 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel16.setText("artikel seputar");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 860, -1, -1));
 
-        jButton6.setBackground(new java.awt.Color(11, 177, 203));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(11, 177, 203));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 7.png"))); // NOI18N
-        jButton6.setText("Lihat Lainnya");
-        jButton6.setBorderPainted(false);
-        jButton6.setContentAreaFilled(false);
-        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        lihatLainnyaArtikel.setBackground(new java.awt.Color(11, 177, 203));
+        lihatLainnyaArtikel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lihatLainnyaArtikel.setForeground(new java.awt.Color(11, 177, 203));
+        lihatLainnyaArtikel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 7.png"))); // NOI18N
+        lihatLainnyaArtikel.setText("Lihat Lainnya");
+        lihatLainnyaArtikel.setBorderPainted(false);
+        lihatLainnyaArtikel.setContentAreaFilled(false);
+        lihatLainnyaArtikel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lihatLainnyaArtikel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                lihatLainnyaArtikelActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 1520, 160, -1));
+        jPanel1.add(lihatLainnyaArtikel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 1520, 160, -1));
 
         jPanel2.setDoubleBuffered(false);
         jPanel2.setEnabled(false);
@@ -231,15 +231,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel2.setVerifyInputWhenFocusTarget(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton11.setBorderPainted(false);
-        jButton11.setContentAreaFilled(false);
-        jButton11.setFocusPainted(false);
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        videoSatuButton.setBorderPainted(false);
+        videoSatuButton.setContentAreaFilled(false);
+        videoSatuButton.setFocusPainted(false);
+        videoSatuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                videoSatuButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 390, 350));
+        jPanel2.add(videoSatuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 390, 350));
 
         jScrollPane2.setBorder(null);
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -294,15 +294,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel3.setVerifyInputWhenFocusTarget(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton14.setBorderPainted(false);
-        jButton14.setContentAreaFilled(false);
-        jButton14.setFocusPainted(false);
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        videoDuaButton.setBorderPainted(false);
+        videoDuaButton.setContentAreaFilled(false);
+        videoDuaButton.setFocusPainted(false);
+        videoDuaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                videoDuaButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
+        jPanel3.add(videoDuaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
 
         jScrollPane4.setBorder(null);
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -357,15 +357,15 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jPanel4.setVerifyInputWhenFocusTarget(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton15.setBorderPainted(false);
-        jButton15.setContentAreaFilled(false);
-        jButton15.setFocusPainted(false);
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        videoTigaButton.setBorderPainted(false);
+        videoTigaButton.setContentAreaFilled(false);
+        videoTigaButton.setFocusPainted(false);
+        videoTigaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                videoTigaButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
+        jPanel4.add(videoTigaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 390, 350));
 
         jScrollPane6.setBorder(null);
         jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -469,20 +469,20 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 1 (3).png"))); // NOI18N
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 375, 192));
 
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(11, 177, 203));
-        jButton8.setText("Lihat Artikel");
-        jButton8.setBorder(null);
-        jButton8.setBorderPainted(false);
-        jButton8.setContentAreaFilled(false);
-        jButton8.setFocusPainted(false);
-        jButton8.setRequestFocusEnabled(false);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        ArtikelSatuButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ArtikelSatuButton.setForeground(new java.awt.Color(11, 177, 203));
+        ArtikelSatuButton.setText("Lihat Artikel");
+        ArtikelSatuButton.setBorder(null);
+        ArtikelSatuButton.setBorderPainted(false);
+        ArtikelSatuButton.setContentAreaFilled(false);
+        ArtikelSatuButton.setFocusPainted(false);
+        ArtikelSatuButton.setRequestFocusEnabled(false);
+        ArtikelSatuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                ArtikelSatuButtonActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 475, -1, -1));
+        jPanel5.add(ArtikelSatuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 475, -1, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
         jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 410, 520));
@@ -546,20 +546,20 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Image Placeholder (1).png"))); // NOI18N
         jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 375, 192));
 
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(11, 177, 203));
-        jButton9.setText("Lihat Artikel");
-        jButton9.setBorder(null);
-        jButton9.setBorderPainted(false);
-        jButton9.setContentAreaFilled(false);
-        jButton9.setFocusPainted(false);
-        jButton9.setRequestFocusEnabled(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        artikelDuaButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        artikelDuaButton.setForeground(new java.awt.Color(11, 177, 203));
+        artikelDuaButton.setText("Lihat Artikel");
+        artikelDuaButton.setBorder(null);
+        artikelDuaButton.setBorderPainted(false);
+        artikelDuaButton.setContentAreaFilled(false);
+        artikelDuaButton.setFocusPainted(false);
+        artikelDuaButton.setRequestFocusEnabled(false);
+        artikelDuaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                artikelDuaButtonActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 474, -1, -1));
+        jPanel6.add(artikelDuaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 474, -1, -1));
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
         jPanel6.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 430, 520));
@@ -623,20 +623,20 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Image Placeholder (2).png"))); // NOI18N
         jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 375, 192));
 
-        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(11, 177, 203));
-        jButton10.setText("Lihat Artikel");
-        jButton10.setBorder(null);
-        jButton10.setBorderPainted(false);
-        jButton10.setContentAreaFilled(false);
-        jButton10.setFocusPainted(false);
-        jButton10.setRequestFocusEnabled(false);
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        artikelTigaButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        artikelTigaButton.setForeground(new java.awt.Color(11, 177, 203));
+        artikelTigaButton.setText("Lihat Artikel");
+        artikelTigaButton.setBorder(null);
+        artikelTigaButton.setBorderPainted(false);
+        artikelTigaButton.setContentAreaFilled(false);
+        artikelTigaButton.setFocusPainted(false);
+        artikelTigaButton.setRequestFocusEnabled(false);
+        artikelTigaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                artikelTigaButtonActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 474, -1, -1));
+        jPanel7.add(artikelTigaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 474, -1, -1));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Container.png"))); // NOI18N
         jPanel7.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 430, 520));
@@ -647,20 +647,20 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 63 (1).png"))); // NOI18N
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1510, 1210, -1));
 
-        jButton7.setBackground(new java.awt.Color(11, 177, 203));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(11, 177, 203));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 7.png"))); // NOI18N
-        jButton7.setText("Lihat Lainnya");
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        lihatLainnyaVideo.setBackground(new java.awt.Color(11, 177, 203));
+        lihatLainnyaVideo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lihatLainnyaVideo.setForeground(new java.awt.Color(11, 177, 203));
+        lihatLainnyaVideo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 7.png"))); // NOI18N
+        lihatLainnyaVideo.setText("Lihat Lainnya");
+        lihatLainnyaVideo.setBorderPainted(false);
+        lihatLainnyaVideo.setContentAreaFilled(false);
+        lihatLainnyaVideo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lihatLainnyaVideo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                lihatLainnyaVideoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 1020, 160, -1));
+        jPanel1.add(lihatLainnyaVideo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 1020, 160, -1));
 
         jLabel17.setBackground(new java.awt.Color(255, 204, 153));
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Frame 63.png"))); // NOI18N
@@ -770,19 +770,19 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_ManajemenKontenButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void lihatLainnyaArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lihatLainnyaArtikelActionPerformed
 
         List<Artikel> artikels = Aplikasi.controllerManajemen.loadArticle(1);
         Aplikasi.controllerManajemen.showArticle(artikels);
         this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_lihatLainnyaArtikelActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void lihatLainnyaVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lihatLainnyaVideoActionPerformed
         // TODO add your handling code here:
         List<Video> videos = Aplikasi.controllerManajemen.loadVideo(1);
         Aplikasi.controllerManajemen.showVideo(videos);
         this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_lihatLainnyaVideoActionPerformed
 
     private void navBarTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navBarTwoActionPerformed
         // TODO add your handling code here:
@@ -800,41 +800,41 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
     }//GEN-LAST:event_navBarFourActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void ArtikelSatuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArtikelSatuButtonActionPerformed
         // TODO add your handling code here:
         Aplikasi.lihatKonten.showArticle(jTextArea7.getText());        
         this.dispose();
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_ArtikelSatuButtonActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void artikelDuaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_artikelDuaButtonActionPerformed
         // TODO add your handling code here:
         Aplikasi.lihatKonten.showArticle(jTextArea9.getText());        
         this.dispose();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_artikelDuaButtonActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void artikelTigaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_artikelTigaButtonActionPerformed
         // TODO add your handling code here:
         Aplikasi.lihatKonten.showArticle(jTextArea11.getText());        
         this.dispose();
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_artikelTigaButtonActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void videoSatuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_videoSatuButtonActionPerformed
         // TODO add your handling code here:
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_videoSatuButtonActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void videoDuaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_videoDuaButtonActionPerformed
         // TODO add your handling code here:
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_videoDuaButtonActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void videoTigaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_videoTigaButtonActionPerformed
         // TODO add your handling code here:
        Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_videoTigaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -947,17 +947,12 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ArtikelSatuButton;
     private javax.swing.JButton ManajemenKontenButton;
+    private javax.swing.JButton artikelDuaButton;
+    private javax.swing.JButton artikelTigaButton;
     private javax.swing.JButton berandaButton;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1021,9 +1016,14 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea7;
     private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextArea jTextArea9;
+    private javax.swing.JButton lihatLainnyaArtikel;
+    private javax.swing.JButton lihatLainnyaVideo;
     private javax.swing.JButton navBarFour;
     private javax.swing.JButton navBarThree;
     private javax.swing.JButton navBarTwo;
     private javax.swing.JButton reservasiButton;
+    private javax.swing.JButton videoDuaButton;
+    private javax.swing.JButton videoSatuButton;
+    private javax.swing.JButton videoTigaButton;
     // End of variables declaration//GEN-END:variables
 }
