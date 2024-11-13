@@ -68,5 +68,10 @@ public class Database {
         }
     }
     
+    public Connection getConnection(){
+        databaseConnection();
+        return getCon();
+    }
+    
     
 }

@@ -820,20 +820,19 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        //MELIHAT VIDEONYAAAAA
-        Aplikasi.lihatKonten.showVideo(jTextArea1.getText());
+        Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-         Aplikasi.lihatKonten.showVideo(jTextArea3.getText());
+        Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-         Aplikasi.lihatKonten.showVideo(jTextArea5.getText());
+       Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         
     }//GEN-LAST:event_jButton15ActionPerformed
 

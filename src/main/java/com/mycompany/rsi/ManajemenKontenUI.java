@@ -742,7 +742,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
         Aplikasi.lihatKonten.showArticle(jTextArea5.getText());        
         this.dispose();
     }//GEN-LAST:event_jButton15ActionPerformed

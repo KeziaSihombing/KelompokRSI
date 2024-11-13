@@ -9,11 +9,6 @@ package com.mycompany.rsi;
  *
  * @author ASUS
  */
-public class MelihatKonten {
-    public void showArticle(String judul){
-        Aplikasi.lihatMateri.tampilkanArtikel(judul);
-    }
-    
-        
+public class EditVideoController {
 
 }

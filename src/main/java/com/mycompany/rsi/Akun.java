@@ -36,8 +36,7 @@ public class Akun {
        ResultSet rs2;
        ResultSet rs3;
        try{
-            Aplikasi.database.databaseConnection();
-            Connection con = Aplikasi.database.getCon();
+            Connection con = Aplikasi.controllerLogin.getConnection();
             
             pStatement = con.prepareStatement(query);
             pStatement.setString(1, email);
@@ -76,6 +75,8 @@ public class Akun {
        } 
        return false;
    }
+   
+   
    
    public String getPerson(){
        return person;

@@ -88,7 +88,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         jPasswordField1.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPasswordField1.setText("Ketik kata sandi");
+        jPasswordField1.setText("Ketik kata sandi..");
         jPasswordField1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
         jPasswordField1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPasswordField1.setOpaque(true);
@@ -159,7 +159,22 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 //select Login
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Aplikasi.controllerLogin.validateUser(jTextField2.getText(), jPasswordField1.getText());
+        if((jTextField2.getText().equals("Ketik email...") || jTextField2.getText().isBlank()) &&
+           (jPasswordField1.getText().equals("Ketik kata sandi..") || jPasswordField1.getText().isBlank())){               
+            Aplikasi.controllerLogin.showMessage("Lengkapi Email dan Password Anda");
+            jTextField2.setText("Ketik email...");
+            jPasswordField1.setText("Ketik kata sandi..");
+        }else if (jTextField2.getText().equals("Ketik email...") || jTextField2.getText().isBlank()){
+            Aplikasi.controllerLogin.showMessage("Lengkapi Email Anda");
+            jTextField2.setText("Ketik email...");
+            jPasswordField1.setText("Ketik kata sandi..");
+        }else if(jPasswordField1.getText().equals("Ketik kata sandi..") || jPasswordField1.getText().isBlank()){
+             Aplikasi.controllerLogin.showMessage("Lengkapi Password Anda");
+             jTextField2.setText("Ketik email...");
+            jPasswordField1.setText("Ketik kata sandi..");
+        }else{        
+            Aplikasi.controllerLogin.validateUser(jTextField2.getText(), jPasswordField1.getText());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

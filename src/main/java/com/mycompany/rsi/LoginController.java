@@ -4,6 +4,8 @@
  */
 package com.mycompany.rsi;
 
+import java.sql.Connection;
+
 /**
  *
  * @author ASUS
@@ -26,6 +28,10 @@ public class LoginController {
         
     }
     
+    public void showMessage(String message){
+        Aplikasi.dialogUI.showMessage(message);
+    }
+    
     public void showBeranda(){
         if(validation == true){
             Aplikasi.beranda.tampilkan();
@@ -35,6 +41,10 @@ public class LoginController {
             Aplikasi.loginUI.getjTextField2().setText("Ketik email...");
             Aplikasi.loginUI.getjPasswordField1().setText("Ketik kata sandi..");   
         }
+    }
+    
+    public Connection getConnection(){
+        return Aplikasi.database.getConnection();
     }
     
     

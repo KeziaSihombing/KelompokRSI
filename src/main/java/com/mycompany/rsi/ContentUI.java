@@ -286,29 +286,9 @@ public class ContentUI extends javax.swing.JFrame {
         this.setVisible(true);        
     }
     
-    public void tampilkanVideo(String judul){
-        String query = "SELECT DESKRIPSI, PENGUNGGAH, TANGGAL_PUBLIKASI, VIDEO "
-                + "FROM FAMIFY.KONTEN_VIDEO WHERE JUDUL_VIDEO = ?";
-        
-        try {
-            Aplikasi.database.databaseConnection();
-            Connection con = Aplikasi.database.getCon();            
-            PreparedStatement pstmt = con.prepareStatement(query); 
-            pstmt.setString(1, judul);
-            ResultSet rs = pstmt.executeQuery();
-            while(rs.next()){
-                jLabel6.setText(judul);               
-                jLabel5.setText(rs.getString("PENGUNGGAH")+" admin");
-                jLabel7.setText(rs.getString("TANGGAL_PUBLIKASI"));
-                jTextArea8.setText(rs.getString("DESKRIPSI"));
-                
-               
-            }
-        }catch (Exception ex) {
-            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
-        }
-        this.setVisible(true);
-    }
+   
+    
+    
     
     
 
