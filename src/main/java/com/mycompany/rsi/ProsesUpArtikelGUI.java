@@ -71,7 +71,7 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton5.setForeground(new java.awt.Color(111, 110, 110));
-        jButton5.setText("Manajemen Konten");
+        jButton5.setText("Manajemen Jadwal");
         jButton5.setBorderPainted(false);
         jButton5.setContentAreaFilled(false);
         jButton5.setPreferredSize(new java.awt.Dimension(180, 15));
@@ -83,7 +83,7 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton6.setForeground(new java.awt.Color(111, 110, 110));
-        jButton6.setText("Notifikasi");
+        jButton6.setText("Sesi Konsultasi");
         jButton6.setBorderPainted(false);
         jButton6.setContentAreaFilled(false);
         jButton6.setPreferredSize(new java.awt.Dimension(143, 15));
@@ -102,7 +102,7 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton8.setForeground(new java.awt.Color(111, 110, 110));
-        jButton8.setText("Notifikasi");
+        jButton8.setText("Obrolan");
         jButton8.setBorderPainted(false);
         jButton8.setContentAreaFilled(false);
         jButton8.setPreferredSize(new java.awt.Dimension(143, 15));
@@ -217,21 +217,21 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1440, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(329, 329, 329)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField1)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -246,24 +246,21 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jButton1)))
-                .addContainerGap(370, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addGap(29, 29, 29)
+                .addComponent(jButton3)
+                .addContainerGap(281, Short.MAX_VALUE))
         );
 
         pack();
@@ -330,6 +327,20 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public void tampilkan(){
+         if(Aplikasi.akun.getPerson().equals("klien")){
+            jButton5.setText("Reservasi");            
+        }else if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton6.setText("Notifikasi");
+            jButton8.setVisible(false);
+            jButton5.setText("Manajemen Konten");                
+        }
+        
+        Aplikasi.addArticle.setPathThumbnail("");
+        jButton1.setText("+Unggah Thumbnail");
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextArea1.setText("");
         this.setVisible(true);
     }
 

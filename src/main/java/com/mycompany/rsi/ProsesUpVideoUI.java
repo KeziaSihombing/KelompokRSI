@@ -6,6 +6,7 @@ package com.mycompany.rsi;
 
 import java.io.File;
 import javax.swing.JButton;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -40,7 +41,6 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -48,6 +48,8 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,7 +71,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
 
         jButton12.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton12.setForeground(new java.awt.Color(111, 110, 110));
-        jButton12.setText("Manajemen Konten");
+        jButton12.setText("Manajemen Jadwal");
         jButton12.setBorderPainted(false);
         jButton12.setContentAreaFilled(false);
         jButton12.setPreferredSize(new java.awt.Dimension(180, 15));
@@ -81,7 +83,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
 
         jButton13.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton13.setForeground(new java.awt.Color(111, 110, 110));
-        jButton13.setText("Notifikasi");
+        jButton13.setText("Sesi Konsultasi");
         jButton13.setBorderPainted(false);
         jButton13.setContentAreaFilled(false);
         jButton13.setPreferredSize(new java.awt.Dimension(143, 15));
@@ -100,7 +102,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
 
         jButton15.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
         jButton15.setForeground(new java.awt.Color(111, 110, 110));
-        jButton15.setText("Notifikasi");
+        jButton15.setText("Obrolan");
         jButton15.setBorderPainted(false);
         jButton15.setContentAreaFilled(false);
         jButton15.setPreferredSize(new java.awt.Dimension(143, 15));
@@ -199,6 +201,10 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -206,21 +212,20 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1440, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(343, 343, 343)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton18))
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton18))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -234,8 +239,8 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,7 +254,7 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
                 .addComponent(jButton17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton18)
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addContainerGap(329, Short.MAX_VALUE))
         );
 
         pack();
@@ -281,9 +286,9 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        String judul = Aplikasi.upVideo.getjTextField1().getText();
-        String deskripsi = Aplikasi.upVideo.getjTextField2().getText();
-        String pengunggah = Aplikasi.upVideo.getjTextField3().getText();
+        String judul = Aplikasi.upVideo.jTextField1.getText();
+        String deskripsi = Aplikasi.upVideo.jTextArea1.getText();
+        String pengunggah = Aplikasi.upVideo.jTextField3.getText();
 
         // Validasi thumbnail dan video path
         String thumbnailPath = Aplikasi.addVideo.getThumbnailPath();
@@ -321,6 +326,13 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
 
     
     public void tampilkan(){
+         if(Aplikasi.akun.getPerson().equals("klien")){
+            jButton12.setText("Reservasi");            
+        }else if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton13.setText("Notifikasi");
+            jButton14.setVisible(false);
+            jButton12.setText("Manajemen Konten");                
+        }
         this.setVisible(true);
     }
 
@@ -340,8 +352,8 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
         return jTextField1;
     }
 
-    public JTextField getjTextField2() {
-        return jTextField2;
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
     }
 
     public JTextField getjTextField3() {
@@ -366,8 +378,9 @@ public class ProsesUpVideoUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

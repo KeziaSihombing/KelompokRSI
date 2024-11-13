@@ -35,7 +35,9 @@ public class ProsesNulisArtikel {
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
                  setPathThumbnail(selectedFile.getAbsolutePath());                
                  Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
-            } else {
+            } else if(selectedFile == null) {
+                
+            }else{
                 Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
             }
     }
@@ -78,8 +80,8 @@ public class ProsesNulisArtikel {
 
         if (row > 0) {
             Aplikasi.dialogUI.showMessage("Artikel berhasil diunggah.");
-            // Reset form setelah penyimpanan
-            Aplikasi.upArtikel.getjButton3().setText("Edit Artikel");
+            Aplikasi.controllerManajemen.showAll(1);
+            Aplikasi.upArtikel.dispose();
             
             File pathTarget = new File("src/main/resources/images/Thumbnail_db_" + judul + ".png"); 
             
@@ -89,7 +91,9 @@ public class ProsesNulisArtikel {
             }
            
         } else {
-            Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");
+            Aplikasi.dialogUI.showMessage("Gagal mengunggah artikel.");            
+            Aplikasi.upArtikel.tampilkan();
+            
         }  
        }
 

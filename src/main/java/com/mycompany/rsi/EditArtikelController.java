@@ -70,6 +70,13 @@ public class EditArtikelController {
 //
 //        // Eksekusi penyimpanan
         int row = pstmtSimpanArtikel.executeUpdate();
+        if(row>0){
+            Aplikasi.dialogUI.showMessage("Perubahan berhasil disimpan.");
+            Aplikasi.controllerManajemen.showAll(1);
+            Aplikasi.editArtikel.dispose();
+        }else{
+            Aplikasi.dialogUI.showMessage("Gagal menyimpan perubahan.");
+        }
 //        fis.close();
 //
 //        if (row > 0) {

@@ -153,7 +153,7 @@ public class ContentUI extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(128, 128, 128));
-        jLabel5.setText("DADANG ADMIN");
+        jLabel5.setText("DADANG ");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(128, 128, 128));
@@ -276,12 +276,19 @@ public class ContentUI extends javax.swing.JFrame {
             while(rs.next()){
                 jLabel6.setText(judul);
                 jLabel4.setText(rs.getString("SUBJUDUL"));
-                jLabel5.setText(rs.getString("PENULIS")+" admin");
+                jLabel5.setText(rs.getString("PENULIS"));
                 jLabel7.setText(rs.getString("TANGGAL_PUBLIKASI"));
                 jTextArea8.setText(rs.getString("ISI_ARTIKEL"));
             }
         }catch (Exception ex) {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+        if(Aplikasi.akun.getPerson().equals("klien")){
+            jButton3.setText("Reservasi");            
+        }else if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton4.setText("Notifikasi");
+            jButton2.setVisible(false);
+            jButton3.setText("Manajemen Konten");                
         }
         this.setVisible(true);        
     }

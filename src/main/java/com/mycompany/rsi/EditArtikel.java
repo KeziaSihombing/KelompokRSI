@@ -338,11 +338,18 @@ public class EditArtikel extends javax.swing.JFrame {
             while(rs.next()){
                 jTextField1.setText(judul);
                 jTextField2.setText(rs.getString("SUBJUDUL"));
-                jTextField3.setText(rs.getString("PENULIS")+" admin");
+                jTextField3.setText(rs.getString("PENULIS"));
                 jTextArea1.setText(rs.getString("ISI_ARTIKEL"));
             }
         }catch (Exception ex) {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+        if(Aplikasi.akun.getPerson().equals("klien")){
+            jButton5.setText("Reservasi");            
+        }else if(Aplikasi.akun.getPerson().equals("administrator")){
+            jButton6.setText("Notifikasi");
+            jButton8.setVisible(false);
+            jButton5.setText("Manajemen Konten");                
         }
         this.setVisible(true);        
     }

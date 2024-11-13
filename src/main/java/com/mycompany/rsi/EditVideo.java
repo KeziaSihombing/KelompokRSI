@@ -282,7 +282,7 @@ public class EditVideo extends javax.swing.JFrame {
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
         String judul = Aplikasi.upVideo.getjTextField1().getText();
-        String deskripsi = Aplikasi.upVideo.getjTextField2().getText();
+        String deskripsi = Aplikasi.upVideo.getjTextArea1().getText();
         String pengunggah = Aplikasi.upVideo.getjTextField3().getText();
 
         // Validasi thumbnail dan video path

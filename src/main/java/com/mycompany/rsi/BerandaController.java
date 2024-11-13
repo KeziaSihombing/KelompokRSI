@@ -32,6 +32,10 @@ public class BerandaController {
         Aplikasi.beranda.tampilkanVideo(recentVideos);
     }
     
+    public void showMessage(String message){
+        Aplikasi.dialogUI.showMessage(message);
+    }
+    
     
 
 }

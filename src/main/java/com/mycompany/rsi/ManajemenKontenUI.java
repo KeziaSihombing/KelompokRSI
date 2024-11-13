@@ -178,6 +178,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea6.setColumns(20);
         jTextArea6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea6.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea6.setLineWrap(true);
         jTextArea6.setRows(5);
         jTextArea6.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
         jTextArea6.setAutoscrolls(false);
@@ -738,7 +739,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
         Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
-        
+        this.dispose();
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -772,6 +773,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
         Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
+        this.dispose();
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
@@ -805,6 +807,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
         Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
+        this.dispose();
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
@@ -838,6 +841,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
         Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
+        this.dispose();
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
@@ -1020,8 +1024,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         }else{
             //manajemen konten
-            Aplikasi.controllerManajemen.showAll(pageAll);
-            this.dispose();
+            Aplikasi.controllerManajemen.showAll(pageAll);            
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -1065,7 +1068,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
             jLabel28.setIcon(new javax.swing.ImageIcon(path));                     
             jTextArea5.setText(artikel.getJudul());
-            jTextArea6.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            if(artikel.getIsiArtikel().length()>100){
+                jTextArea6.setText(artikel.getIsiArtikel().substring(0,100)+"...");
+            }else{
+                jTextArea6.setText(artikel.getIsiArtikel().length()+"...");
+            }
             jPanel6.setVisible(true);
             jLabel3.setText(artikel.getIdArtikel());
             jLabel3.setVisible(false);
@@ -1075,7 +1082,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
             jLabel29.setIcon(new javax.swing.ImageIcon(path));         
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            if(artikel.getIsiArtikel().length()>100){
+                jTextArea8.setText(artikel.getIsiArtikel().substring(0,100)+"...");
+            }else{
+                jTextArea8.setText(artikel.getIsiArtikel().length()+"...");
+            }
             jPanel7.setVisible(true);
             jLabel4.setText(artikel.getIdArtikel());
             jLabel4.setVisible(false);
@@ -1085,7 +1096,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
             jLabel30.setIcon(new javax.swing.ImageIcon(path));        
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            if(artikel.getIsiArtikel().length()>100){
+                jTextArea10.setText(artikel.getIsiArtikel().substring(0,100)+"...");
+            }else{
+                jTextArea10.setText(artikel.getIsiArtikel().length()+"...");
+            }
             jPanel8.setVisible(true);
             jLabel5.setText(artikel.getIdArtikel());
             jLabel5.setVisible(false);
@@ -1095,7 +1110,11 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + artikel.judul + ".png";
             jLabel31.setIcon(new javax.swing.ImageIcon(path));            
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            if(artikel.getIsiArtikel().length()>100){
+                jTextArea12.setText(artikel.getIsiArtikel().substring(0,100)+"...");
+            }else{
+                jTextArea12.setText(artikel.getIsiArtikel().length()+"...");
+            }
             jPanel9.setVisible(true);
             jLabel6.setText(artikel.getIdArtikel());
             jLabel6.setVisible(false);
@@ -1125,7 +1144,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel28.setIcon(new javax.swing.ImageIcon(path));       
             jTextArea5.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea6.setText(deskripsi);         
             
             jPanel6.setVisible(true);
@@ -1135,7 +1154,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel29.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea7.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea8.setText(deskripsi);    
             
             jPanel7.setVisible(true);
@@ -1145,7 +1164,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel30.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea9.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea10.setText(deskripsi);       
             
             jPanel8.setVisible(true);
@@ -1155,7 +1174,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel31.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea11.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea12.setText(deskripsi);       
             
             jPanel9.setVisible(true);
@@ -1205,7 +1224,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             description = video.getDeskripsi();
         } else if (content instanceof Artikel artikel) {
             imagePath = "src/main/resources/images/Thumbnail_db_" + artikel.getJudul() + ".png";
-            description = artikel.getIsiArtikel().substring(0, Math.min(250, artikel.getIsiArtikel().length())) + "...";
+            description = artikel.getIsiArtikel().substring(0, Math.min(100, artikel.getIsiArtikel().length())) + "...";
         } else {
             continue; // Jika tipe tidak dikenali, lewati
         }

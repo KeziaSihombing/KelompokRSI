@@ -820,19 +820,19 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
 
     private void videoSatuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_videoSatuButtonActionPerformed
         // TODO add your handling code here:
-        Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
+        Aplikasi.controllerBeranda.showMessage("FITUR INI TIDAK KAMI PROSES");
         
     }//GEN-LAST:event_videoSatuButtonActionPerformed
 
     private void videoDuaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_videoDuaButtonActionPerformed
         // TODO add your handling code here:
-        Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
+        Aplikasi.controllerBeranda.showMessage("FITUR INI TIDAK KAMI PROSES");
         
     }//GEN-LAST:event_videoDuaButtonActionPerformed
 
     private void videoTigaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_videoTigaButtonActionPerformed
         // TODO add your handling code here:
-       Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
+       Aplikasi.controllerBeranda.showMessage("FITUR INI TIDAK KAMI PROSES");
         
     }//GEN-LAST:event_videoTigaButtonActionPerformed
 
@@ -844,7 +844,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             navBarTwo.setText("Reservasi");
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon
         }else if(Aplikasi.akun.getPerson().equals("administrator")){
-            navBarThree.setVisible(false);
+            navBarThree.setText("Notifikasi");
             navBarFour.setVisible(false);
             navBarTwo.setText("Manajemen Konten");       
             jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
@@ -854,8 +854,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
         this.setVisible(true);
     }
     
-    public void tampilkanVideo(List<Video> recentVideo){
-        ////beluummmmm
+    public void tampilkanVideo(List<Video> recentVideo){      
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         jPanel4.setVisible(false);
@@ -865,7 +864,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel26.setIcon(new javax.swing.ImageIcon(path));          
             jTextArea1.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100,video.getDeskripsi().length()));
             jTextArea2.setText(deskripsi);         
             
             jPanel2.setVisible(true);
@@ -875,7 +874,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel27.setIcon(new javax.swing.ImageIcon(path));          
             jTextArea3.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100,video.getDeskripsi().length()));
             jTextArea4.setText(deskripsi);    
             
             jPanel3.setVisible(true);
@@ -885,7 +884,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String path = "src/main/resources/images/Thumbnail_db_" + video.judul + ".png";
             jLabel28.setIcon(new javax.swing.ImageIcon(path));          
             jTextArea5.setText(video.getJudul());
-            String deskripsi = video.getDeskripsi();
+            String deskripsi = video.getDeskripsi().substring(0, Math.min(100,video.getDeskripsi().length()));
             jTextArea6.setText(deskripsi);       
             
             jPanel4.setVisible(true);
@@ -911,7 +910,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel32.setText(formattedTanggal);
             jTextArea7.setText(artikel.getJudul());
-            jTextArea8.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jTextArea8.setText(artikel.getIsiArtikel().substring(0, Math.min(100, artikel.getIsiArtikel().length())));
             jPanel5.setVisible(true);
         }
         if(recentArticles.size() >=2){
@@ -925,7 +924,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel33.setText(formattedTanggal);
             jTextArea9.setText(artikel.getJudul());
-            jTextArea10.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jTextArea10.setText(artikel.getIsiArtikel().substring(0, Math.min(100, artikel.getIsiArtikel().length())));
             jPanel6.setVisible(true);
         }
         if(recentArticles.size() >=3){
@@ -939,7 +938,7 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
             String formattedTanggal = tanggal.format(formatter2);
             jLabel34.setText(formattedTanggal);
             jTextArea11.setText(artikel.getJudul());
-            jTextArea12.setText(artikel.getIsiArtikel().substring(0,1)+"...");
+            jTextArea12.setText(artikel.getIsiArtikel().substring(0, Math.min(100, artikel.getIsiArtikel().length())));
             jPanel7.setVisible(true);
         }        
     }
