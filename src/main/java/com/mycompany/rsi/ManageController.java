@@ -66,6 +66,15 @@ public class ManageController {
         Aplikasi.manage.tampilkanSemua(contentPage);
         
     }  
+    
+     public String getType(String id, String judul) {
+        if(Aplikasi.article.getTypebyID(id, judul)){
+            return "artikel";
+        }else if(Aplikasi.video.getTypebyID(id, judul)){
+            return "video";
+        }
+        return null;
+    }
   
 
 

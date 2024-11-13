@@ -34,7 +34,7 @@ public class ProsesNulisArtikel {
 
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
                  setPathThumbnail(selectedFile.getAbsolutePath());                
-                 Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
+                 Aplikasi.upArtikel.getjButton1().setText("Thumbnail Artikel.png");
             } else if(selectedFile == null) {
                 
             }else{

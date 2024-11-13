@@ -22,6 +22,7 @@ import java.util.List;
  * @author ASUS
  */
 public class Video extends Content {
+    private String idVideo;
     private String deskripsi;
     private String pengunggah;    
     private File video;
@@ -29,7 +30,7 @@ public class Video extends Content {
     public List<Video> getVideosByPages(int page){
             String countQuery = "SELECT COUNT(*) FROM FAMIFY.KONTEN_VIDEO";
             int totalVideo = 0;           
-            String query = "SELECT JUDUL_VIDEO, DESKRIPSI, PENGUNGGAH ,VIDEO, TANGGAL_PUBLIKASI, THUMBNAIL FROM FAMIFY.KONTEN_VIDEO ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
+            String query = "SELECT ID_VIDEO, JUDUL_VIDEO, DESKRIPSI, PENGUNGGAH ,VIDEO, TANGGAL_PUBLIKASI, THUMBNAIL FROM FAMIFY.KONTEN_VIDEO ORDER BY TANGGAL_PUBLIKASI DESC LIMIT ? OFFSET ?";
             List<Video> daftarVideoTemp = new ArrayList<>();
             int offset = (page - 1) * 4;
 
@@ -50,6 +51,7 @@ public class Video extends Content {
                     try (ResultSet rs = pstmt.executeQuery()) { 
                             while(rs.next()){
                                 Video video = new Video();
+                                video.idVideo = rs.getString("ID_VIDEO");
                                 video.judul = rs.getString("JUDUL_VIDEO");
                                 video.deskripsi = rs.getString("DESKRIPSI");
                                 video.tanggalPublikasi = rs.getString("TANGGAL_PUBLIKASI");
@@ -245,8 +247,28 @@ public class Video extends Content {
     return allVideos;
     }
 
+    public String getIdVideo() {
+        return idVideo;
+    }
+
     
-    
+    public boolean getTypebyID(String id, String judul){
+         String query = "SELECT * FROM FAMIFY.KONTEN_VIDEO WHERE ID_VIDEO = ? AND JUDUL_VIDEO = ?";
+        try {
+            Aplikasi.database.databaseConnection();
+            try (Connection con = Aplikasi.database.getCon(); PreparedStatement pstmt = con.prepareStatement(query)) {
+                pstmt.setInt(1, Integer.parseInt(id));
+                pstmt.setString(2, judul);
+                try (ResultSet rs = pstmt.executeQuery()) {
+                    // Memeriksa apakah ada hasil dari query
+                    return rs.next();
+                }
+            }
+        } catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+        return false;        
+    }
     
       public String getType(){
         return "video";

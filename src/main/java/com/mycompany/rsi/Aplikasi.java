@@ -39,6 +39,8 @@ public class Aplikasi {
     public static HapusVidio delVidio;
     public static EditArtikel editArtikel;
     public static EditArtikelController updateArtikel;
+    public static EditVideo editVideo;
+    public static EditVideoController updateVideo;
     
     public static void main(String[] args){
         Aplikasi.dialogUI = new DialogUI();
@@ -71,6 +73,8 @@ public class Aplikasi {
         Aplikasi.delVidio = new HapusVidio();
         Aplikasi.editArtikel = new EditArtikel();
         Aplikasi.updateArtikel = new EditArtikelController();
+        Aplikasi.editVideo = new EditVideo();
+        Aplikasi.updateVideo = new EditVideoController();
         
         Aplikasi.controllerLogin = new LoginController();        
         Aplikasi.controllerLogin.showLoginForm();

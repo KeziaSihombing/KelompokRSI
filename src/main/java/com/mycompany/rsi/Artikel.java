@@ -203,6 +203,24 @@ public class Artikel extends Content {
             } 
             return daftarArtikelTemp;
     }
+    
+    public boolean getTypebyID(String id, String judul){
+         String query = "SELECT * FROM FAMIFY.KONTEN_ARTIKEL WHERE ID_ARTIKEL = ? AND JUDUL_ARTIKEL = ?";
+        try {
+            Aplikasi.database.databaseConnection();
+            try (Connection con = Aplikasi.database.getCon(); PreparedStatement pstmt = con.prepareStatement(query)) {
+                pstmt.setInt(1, Integer.parseInt(id));
+                pstmt.setString(2, judul);
+                try (ResultSet rs = pstmt.executeQuery()) {
+                    // Menggunakan rs.next() untuk memeriksa apakah ada hasil
+                    return rs.next();
+                }
+            }
+        } catch (Exception ex) {
+            Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
+        }
+        return false;       
+    }
 
     public String getIdArtikel() {
         return idArtikel;

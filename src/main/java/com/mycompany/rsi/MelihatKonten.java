@@ -14,6 +14,7 @@ public class MelihatKonten {
         Aplikasi.lihatMateri.tampilkanArtikel(judul);
     }
     
+    
         
 
 }

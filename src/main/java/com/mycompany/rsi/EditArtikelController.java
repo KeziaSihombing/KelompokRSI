@@ -20,21 +20,7 @@ import javax.swing.JFileChooser;
  * @author HP
  */
 public class EditArtikelController {
-    //private String pathThumbnail;
-    
-//    public void LoadThumbnail(){
-//        JFileChooser fc = new JFileChooser();
-//            fc.showOpenDialog(null);
-//            File selectedFile = fc.getSelectedFile(); // Mengambil file yang dipilih
-//
-//            if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".png")) {
-//                 setPathThumbnail(selectedFile.getAbsolutePath());                
-//                 Aplikasi.upArtikel.getjButton1().setText("Thumnail Artikel.png");
-//            } else {
-//                Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PNG.");
-//            }
-//    }
-    
+
     public void updateArtikelDB(String idArtikel, String judulLama, String judul, String subJudul, String isiArtikel, String diisiOleh) {
     Connection con = null;
     PreparedStatement pstmtSimpanArtikel = null;
@@ -72,8 +58,7 @@ public class EditArtikelController {
         int row = pstmtSimpanArtikel.executeUpdate();
         if(row>0){
             Aplikasi.dialogUI.showMessage("Perubahan berhasil disimpan.");
-            Aplikasi.controllerManajemen.showAll(1);
-            Aplikasi.editArtikel.dispose();
+            Aplikasi.controllerManajemen.showAll(1);            
         }else{
             Aplikasi.dialogUI.showMessage("Gagal menyimpan perubahan.");
         }
@@ -100,6 +85,10 @@ public class EditArtikelController {
             ex.printStackTrace();
         }
     }
+    }
+    
+    public void showArticleEdit(String judul,String idArtikel){
+        Aplikasi.editArtikel.tampilkan(judul, idArtikel);
     }
 
 //    public String getPathThumbnail() {

@@ -114,7 +114,7 @@ public class ContentUI extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(928, 40, 110, -1));
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Foto user (3).png"))); // NOI18N
         jButton5.setBorderPainted(false);
         jButton5.setContentAreaFilled(false);
         jButton5.setPreferredSize(new java.awt.Dimension(70, 70));
@@ -280,6 +280,8 @@ public class ContentUI extends javax.swing.JFrame {
                 jLabel7.setText(rs.getString("TANGGAL_PUBLIKASI"));
                 jTextArea8.setText(rs.getString("ISI_ARTIKEL"));
             }
+            String path = "src/main/resources/images/Thumbnail_db_" + judul + ".png";
+            jLabel8.setIcon(new javax.swing.ImageIcon(path)); 
         }catch (Exception ex) {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
         }

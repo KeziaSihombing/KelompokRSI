@@ -330,7 +330,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
         if(Aplikasi.akun.getPerson().equals("klien") && jButton1.getText().equals("+ Unggah Hasil Konsultasi")){
             jButton1.setText("");                
             this.setVisible(true);            
-            Aplikasi.dialogUI.showMessage("Hasil Konsultasi Belum Tersedia\n Silakan Coba Lain Waktu");
+            Aplikasi.dialogUI.showMessage("Hasil Konsultasi Belum Tersedia");
         }else{
             this.setVisible(true);
         }

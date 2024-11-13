@@ -132,7 +132,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 10, -1, -1));
+        jPanel6.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 20, -1));
 
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         jButton14.setBorderPainted(false);
@@ -143,7 +143,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 10, -1, -1));
+        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 10, 30, -1));
 
         jScrollPane7.setBorder(null);
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -738,14 +738,23 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // klu artikel manggil editArtikel, klu video manggil edit video
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
-        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+            Aplikasi.updateArtikel.showArticleEdit(jTextArea5.getText(), jLabel3.getText());
+            this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+            Aplikasi.updateVideo.showVideoEdit(jTextArea5.getText(), jLabel3.getText());
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:        
-        Aplikasi.lihatKonten.showArticle(jTextArea5.getText());        
-        this.dispose();
+        // TODO add your handling code here:
+        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+           Aplikasi.lihatKonten.showArticle(jTextArea5.getText());        
+           this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+            Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
@@ -772,14 +781,23 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // klu artikel manggil editArtikel, klu video manggil edit video
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
-        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel4.getText(), jTextArea7.getText()).equals("artikel")){
+            Aplikasi.updateArtikel.showArticleEdit(jTextArea7.getText(), jLabel4.getText());
+            this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel4.getText(), jTextArea7.getText()).equals("video")){
+            Aplikasi.updateVideo.showVideoEdit(jTextArea7.getText(), jLabel4.getText());
+            this.dispose();
+        }        
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatKonten.showArticle(jTextArea7.getText());        
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+           Aplikasi.lihatKonten.showArticle(jTextArea7.getText());        
+            this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+            Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
+        }        
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
@@ -806,14 +824,24 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // klu artikel manggil editArtikel, klu video manggil edit video
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
-        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel5.getText(), jTextArea9.getText()).equals("artikel")){
+            Aplikasi.updateArtikel.showArticleEdit(jTextArea9.getText(), jLabel5.getText());
+            this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel5.getText(), jTextArea9.getText()).equals("video")){
+            Aplikasi.updateVideo.showVideoEdit(jTextArea9.getText(), jLabel5.getText());
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatKonten.showArticle(jTextArea9.getText());        
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+           Aplikasi.lihatKonten.showArticle(jTextArea9.getText());        
+           this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+            Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
+        }       
+        
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -840,14 +868,24 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // klu artikel manggil editArtikel, klu video manggil edit video
         //logicnya mungkin mirip sm tombol unggah
         //ini blum ada kelas editVideonya sm editVideoController aja
-        Aplikasi.editArtikel.tampilkan(jTextArea5.getText(), jLabel3.getText());
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel6.getText(), jTextArea11.getText()).equals("artikel")){
+            Aplikasi.updateArtikel.showArticleEdit(jTextArea11.getText(), jLabel6.getText());
+            this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel6.getText(), jTextArea11.getText()).equals("video")){
+            Aplikasi.updateVideo.showVideoEdit(jTextArea11.getText(), jLabel6.getText());
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
-        Aplikasi.lihatKonten.showArticle(jTextArea11.getText());        
-        this.dispose();
+        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+           Aplikasi.lihatKonten.showArticle(jTextArea11.getText());        
+           this.dispose();
+        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+            Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
+        }     
+        
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -1147,6 +1185,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea6.setText(deskripsi);         
             
+            jLabel3.setText(video.getIdVideo());
             jPanel6.setVisible(true);
         }
         if(Videos.size()>=2){
@@ -1155,8 +1194,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jLabel29.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea7.setText(video.getJudul());
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
-            jTextArea8.setText(deskripsi);    
+            jTextArea8.setText(deskripsi);  
             
+            jLabel3.setText(video.getIdVideo());
             jPanel7.setVisible(true);
         }
         if(Videos.size()>=3){
@@ -1165,8 +1205,9 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jLabel30.setIcon(new javax.swing.ImageIcon(path));     
             jTextArea9.setText(video.getJudul());
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
-            jTextArea10.setText(deskripsi);       
+            jTextArea10.setText(deskripsi); 
             
+            jLabel3.setText(video.getIdVideo());
             jPanel8.setVisible(true);
         }
         if(Videos.size()>=4){
@@ -1177,6 +1218,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea12.setText(deskripsi);       
             
+            jLabel3.setText(video.getIdVideo());
             jPanel9.setVisible(true);
         }
         
@@ -1217,14 +1259,17 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         Content content = all.get(i);
         String imagePath;
         String description;
+        String id;
 
         // Tentukan ikon dan teks berdasarkan tipe konten
         if (content instanceof Video video) {
             imagePath = "src/main/resources/images/Thumbnail_db_" + video.getJudul() + ".png";
             description = video.getDeskripsi();
+            id = video.getIdVideo();
         } else if (content instanceof Artikel artikel) {
             imagePath = "src/main/resources/images/Thumbnail_db_" + artikel.getJudul() + ".png";
             description = artikel.getIsiArtikel().substring(0, Math.min(100, artikel.getIsiArtikel().length())) + "...";
+            id = artikel.getIdArtikel();
         } else {
             continue; // Jika tipe tidak dikenali, lewati
         }
@@ -1235,24 +1280,28 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                 jLabel28.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea5.setText(content.getJudul());
                 jTextArea6.setText(description);
+                jLabel3.setText(id);
                 jPanel6.setVisible(true);
             }
             case 1 -> {
                 jLabel29.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea7.setText(content.getJudul());
                 jTextArea8.setText(description);
+                jLabel4.setText(id);
                 jPanel7.setVisible(true);
             }
             case 2 -> {
                 jLabel30.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea9.setText(content.getJudul());
                 jTextArea10.setText(description);
+                jLabel5.setText(id);
                 jPanel8.setVisible(true);
             }
             case 3 -> {
                 jLabel31.setIcon(new javax.swing.ImageIcon(imagePath));
                 jTextArea11.setText(content.getJudul());
                 jTextArea12.setText(description);
+                jLabel6.setText(id);
                 jPanel9.setVisible(true);
             }
         }
