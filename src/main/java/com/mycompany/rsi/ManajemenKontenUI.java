@@ -1196,7 +1196,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea8.setText(deskripsi);  
             
-            jLabel3.setText(video.getIdVideo());
+            jLabel4.setText(video.getIdVideo());
             jPanel7.setVisible(true);
         }
         if(Videos.size()>=3){
@@ -1207,7 +1207,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea10.setText(deskripsi); 
             
-            jLabel3.setText(video.getIdVideo());
+            jLabel5.setText(video.getIdVideo());
             jPanel8.setVisible(true);
         }
         if(Videos.size()>=4){
@@ -1218,7 +1218,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             String deskripsi = video.getDeskripsi().substring(0, Math.min(100, video.getDeskripsi().length()));
             jTextArea12.setText(deskripsi);       
             
-            jLabel3.setText(video.getIdVideo());
+            jLabel6.setText(video.getIdVideo());
             jPanel9.setVisible(true);
         }
         
@@ -1264,7 +1264,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         // Tentukan ikon dan teks berdasarkan tipe konten
         if (content instanceof Video video) {
             imagePath = "src/main/resources/images/Thumbnail_db_" + video.getJudul() + ".png";
-            description = video.getDeskripsi();
+            description = video.getDeskripsi();            
             id = video.getIdVideo();
         } else if (content instanceof Artikel artikel) {
             imagePath = "src/main/resources/images/Thumbnail_db_" + artikel.getJudul() + ".png";
