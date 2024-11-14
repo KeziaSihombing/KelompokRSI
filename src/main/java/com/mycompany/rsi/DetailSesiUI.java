@@ -59,8 +59,8 @@ public class DetailSesiUI extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        addseeButton = new javax.swing.JButton();
+        savedelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(200, 180));
@@ -105,24 +105,24 @@ public class DetailSesiUI extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel11.setText("Hasil Konsultasi");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jButton1.setText("+ Unggah Hasil Konsultasi");
-        jButton1.setPreferredSize(new java.awt.Dimension(75, 32));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addseeButton.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        addseeButton.setForeground(new java.awt.Color(51, 51, 51));
+        addseeButton.setText("+ Unggah Hasil Konsultasi");
+        addseeButton.setPreferredSize(new java.awt.Dimension(75, 32));
+        addseeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addseeButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(34, 184, 185));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Simpan");
-        jButton3.setPreferredSize(new java.awt.Dimension(75, 32));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        savedelButton.setBackground(new java.awt.Color(34, 184, 185));
+        savedelButton.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        savedelButton.setForeground(new java.awt.Color(255, 255, 255));
+        savedelButton.setText("Simpan");
+        savedelButton.setPreferredSize(new java.awt.Dimension(75, 32));
+        savedelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                savedelButtonActionPerformed(evt);
             }
         });
 
@@ -133,7 +133,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(109, 109, 109)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(savedelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -154,7 +154,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9))
                     .addComponent(jLabel11)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addseeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -186,9 +186,9 @@ public class DetailSesiUI extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addseeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(savedelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
         );
 
@@ -207,16 +207,16 @@ public class DetailSesiUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public JButton getjButton1() {
-        return jButton1;
+        return addseeButton;
     }
 //mengunggah dan melihat file hasil konsultasi
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(jButton3.getText().equals("Simpan") && Aplikasi.akun.getPerson().equals("konsultan")){
+    private void addseeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addseeButtonActionPerformed
+        if(savedelButton.getText().equals("Simpan") && Aplikasi.akun.getPerson().equals("konsultan")){
             Aplikasi.unggah.Load();
         }else{  
             Aplikasi.buka.Load(Aplikasi.unggah.getPath());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addseeButtonActionPerformed
     
 //    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
 //    String filePath = jButton1.getText();
@@ -231,15 +231,15 @@ public class DetailSesiUI extends javax.swing.JFrame {
 //    }
 //}
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void savedelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savedelButtonActionPerformed
     String filePath = Aplikasi.unggah.getPath();
     
     if (filePath.endsWith(".pdf")) {
-        if (jButton3.getText().equals("Simpan")) {
+        if (savedelButton.getText().equals("Simpan")) {
             File file = new File(filePath);
             Aplikasi.unggah.simpanDB(file); // Menyimpan file ke database
-            jButton3.setText("Hapus"); // Ubah teks tombol menjadi "Hapus"
-        } else if (jButton3.getText().equals("Hapus")) {
+            savedelButton.setText("Hapus"); // Ubah teks tombol menjadi "Hapus"
+        } else if (savedelButton.getText().equals("Hapus")) {
             DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
             LocalDate tanggal = LocalDate.parse(jLabel6.getText(), formatterAsal);
 
@@ -247,20 +247,20 @@ public class DetailSesiUI extends javax.swing.JFrame {
             DateTimeFormatter formatterTujuan = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             String formattedTanggal = tanggal.format(formatterTujuan);
             Aplikasi.hapus.hapusdariDB(jLabel2.getText(), formattedTanggal, jLabel7.getText()); // Menghapus file dari database
-            jButton1.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
-            jButton3.setText("Simpan"); // Kembali ke tombol "Simpan"
+            addseeButton.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
+            savedelButton.setText("Simpan"); // Kembali ke tombol "Simpan"
         }
     } else {
         Aplikasi.dialogUI.showMessage("Error: Silakan unggah file PDF.");
     }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_savedelButtonActionPerformed
 
     public JLabel getjLabel2() {
         return jLabel2;
     }
 
     public JButton getjButton3() {
-        return jButton3;
+        return savedelButton;
     }
     
     
@@ -269,8 +269,8 @@ public class DetailSesiUI extends javax.swing.JFrame {
 
 
     public void tampilkan(String nama, String tanggal, String waktu) {     
-        jButton1.setText("+ Unggah Hasil Konsultasi");
-        jButton3.setText("Simpan");  
+        addseeButton.setText("+ Unggah Hasil Konsultasi");
+        savedelButton.setText("Simpan");  
         String query2 = "SELECT HK.CATATAN_KONSULTASI FROM FAMIFY.HASIL_KONSULTASI HK JOIN FAMIFY.RESERVASI R ON HK.ID_RESERVASI = R.ID_RESERVASI JOIN FAMIFY.KLIEN KLI ON R.ID_KLIEN = KLI.ID_KLIEN JOIN FAMIFY.KONSULTAN KONS ON R.ID_KONSULTAN = KONS.ID_KONSULTAN JOIN FAMIFY.JADWAL_KONSULTASI J ON R.ID_JADWAL = J.ID_JADWAL  WHERE (KLI.NAMA_LENGKAP = ? OR KLI.EMAIL = ?) AND J.TANGGAL = ? AND J.WAKTU = ? ";
         try{
                 Aplikasi.database.databaseConnection();
@@ -292,9 +292,9 @@ public class DetailSesiUI extends javax.swing.JFrame {
                         outputStream.write(buffer);
                     }
                     Aplikasi.unggah.setPath(file.getAbsolutePath());
-                    jButton1.setText("Catatan Konsultasi " + jLabel2.getText()+ ".pdf");
+                    addseeButton.setText("Catatan Konsultasi " + jLabel2.getText()+ ".pdf");
                     
-                    jButton3.setText("Hapus");
+                    savedelButton.setText("Hapus");
                 }
         }catch(Exception ex){
                 Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
@@ -325,10 +325,10 @@ public class DetailSesiUI extends javax.swing.JFrame {
                 Aplikasi.dialogUI.showMessage("Connection Error" + ex.getMessage());
             }      
         if(Aplikasi.akun.getPerson().equals("klien")){
-            jButton3.setVisible(false);
+            savedelButton.setVisible(false);
         }
-        if(Aplikasi.akun.getPerson().equals("klien") && jButton1.getText().equals("+ Unggah Hasil Konsultasi")){
-            jButton1.setText("");                
+        if(Aplikasi.akun.getPerson().equals("klien") && addseeButton.getText().equals("+ Unggah Hasil Konsultasi")){
+            addseeButton.setText("");                
             this.setVisible(true);            
             Aplikasi.buka.showMessage("Hasil Konsultasi Belum Tersedia");
             this.dispose();
@@ -345,8 +345,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton addseeButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -359,5 +358,6 @@ public class DetailSesiUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton savedelButton;
     // End of variables declaration//GEN-END:variables
 }

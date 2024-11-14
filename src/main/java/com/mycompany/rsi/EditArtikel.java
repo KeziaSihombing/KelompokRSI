@@ -42,17 +42,17 @@ public class EditArtikel extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        eJudulA = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        eSubjudulA = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        ePenulisA = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        editAButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        eIsiA = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -144,27 +144,27 @@ public class EditArtikel extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel1.setText("Judul*");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        eJudulA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                eJudulAActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel2.setText("Sub Judul*");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        eSubjudulA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                eSubjudulAActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel4.setText("Ditulis oleh*");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        ePenulisA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                ePenulisAActionPerformed(evt);
             }
         });
 
@@ -183,20 +183,20 @@ public class EditArtikel extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(64, 228, 231));
-        jButton3.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Simpan Perubahan");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        editAButton.setBackground(new java.awt.Color(64, 228, 231));
+        editAButton.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
+        editAButton.setForeground(new java.awt.Color(255, 255, 255));
+        editAButton.setText("Simpan Perubahan");
+        editAButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                editAButtonActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        eIsiA.setColumns(20);
+        eIsiA.setLineWrap(true);
+        eIsiA.setRows(5);
+        jScrollPane1.setViewportView(eIsiA);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -208,12 +208,12 @@ public class EditArtikel extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton3)
+                        .addComponent(editAButton)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1)
+                            .addComponent(ePenulisA, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
+                            .addComponent(eSubjudulA)
+                            .addComponent(eJudulA)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,15 +228,15 @@ public class EditArtikel extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(eJudulA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(eSubjudulA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ePenulisA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -246,7 +246,7 @@ public class EditArtikel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(editAButton)
                 .addContainerGap(304, Short.MAX_VALUE))
         );
 
@@ -270,17 +270,17 @@ public class EditArtikel extends javax.swing.JFrame {
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void eJudulAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eJudulAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_eJudulAActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void ePenulisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ePenulisAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_ePenulisAActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void eSubjudulAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eSubjudulAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_eSubjudulAActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -290,19 +290,19 @@ public class EditArtikel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void editAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAButtonActionPerformed
         // TODO add your handling code here:
         // Mengambil input dari UI
-    String judul = jTextField1.getText();
-    String subJudul = jTextField2.getText();
-    String isiArtikel = jTextArea1.getText();
-    String diisiOleh = jTextField3.getText();
+    String judul = eJudulA.getText();
+    String subJudul = eSubjudulA.getText();
+    String isiArtikel = eIsiA.getText();
+    String diisiOleh = ePenulisA.getText();
     
  //thumbnail tidak dpt diubah   
     // Panggil metode simpanArtikelDB
     Aplikasi.updateArtikel.updateArtikelDB(getIdArtikel(), getJudulLama(), judul, subJudul, isiArtikel, diisiOleh);
     this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_editAButtonActionPerformed
 
     public void tampilkan(String judul,String idArtikel){
         setJudulLama(judul);
@@ -317,10 +317,10 @@ public class EditArtikel extends javax.swing.JFrame {
             pstmt.setString(1, idArtikel);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
-                jTextField1.setText(judul);
-                jTextField2.setText(rs.getString("SUBJUDUL"));
-                jTextField3.setText(rs.getString("PENULIS"));
-                jTextArea1.setText(rs.getString("ISI_ARTIKEL"));
+                eJudulA.setText(judul);
+                eSubjudulA.setText(rs.getString("SUBJUDUL"));
+                ePenulisA.setText(rs.getString("PENULIS"));
+                eIsiA.setText(rs.getString("ISI_ARTIKEL"));
             }
         }catch (Exception ex) {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
@@ -339,23 +339,23 @@ public class EditArtikel extends javax.swing.JFrame {
     }
 
     public JButton getjButton3() {
-        return jButton3;
+        return editAButton;
     } 
 
     public JTextArea getjTextArea1() {
-        return jTextArea1;
+        return eIsiA;
     }
 
     public JTextField getjTextField1() {
-        return jTextField1;
+        return eJudulA;
     }
 
     public JTextField getjTextField2() {
-        return jTextField2;
+        return eSubjudulA;
     }
 
     public JTextField getjTextField3() {
-        return jTextField3;
+        return ePenulisA;
     }
 
     public String getJudulLama() {
@@ -379,9 +379,13 @@ public class EditArtikel extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea eIsiA;
+    private javax.swing.JTextField eJudulA;
+    private javax.swing.JTextField ePenulisA;
+    private javax.swing.JTextField eSubjudulA;
+    private javax.swing.JButton editAButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -393,9 +397,5 @@ public class EditArtikel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
