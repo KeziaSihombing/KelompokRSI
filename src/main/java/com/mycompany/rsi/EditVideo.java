@@ -44,17 +44,17 @@ public class EditVideo extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        eJudulV = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        ePengunggahV = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
+        eThumbnailV = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
+        editVButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        eDescV = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,9 +146,9 @@ public class EditVideo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel1.setText("Judul*");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        eJudulV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                eJudulVActionPerformed(evt);
             }
         });
 
@@ -161,11 +161,11 @@ public class EditVideo extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel7.setText("Thumbnail/Foto Sampul*");
 
-        jButton16.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
-        jButton16.setText("+ Unggah Thumbnail");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        eThumbnailV.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
+        eThumbnailV.setText("+ Unggah Thumbnail");
+        eThumbnailV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                eThumbnailVActionPerformed(evt);
             }
         });
 
@@ -180,19 +180,19 @@ public class EditVideo extends javax.swing.JFrame {
             }
         });
 
-        jButton18.setBackground(new java.awt.Color(57, 206, 209));
-        jButton18.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
-        jButton18.setForeground(new java.awt.Color(255, 255, 255));
-        jButton18.setText("Simpan Perubahan");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        editVButton.setBackground(new java.awt.Color(57, 206, 209));
+        editVButton.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
+        editVButton.setForeground(new java.awt.Color(255, 255, 255));
+        editVButton.setText("Simpan Perubahan");
+        editVButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                editVButtonActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        eDescV.setColumns(20);
+        eDescV.setRows(5);
+        jScrollPane1.setViewportView(eDescV);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -204,16 +204,16 @@ public class EditVideo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eThumbnailV, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton18))
+                        .addComponent(editVButton))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1)
+                    .addComponent(eJudulV)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+                    .addComponent(ePengunggahV, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -224,7 +224,7 @@ public class EditVideo extends javax.swing.JFrame {
                 .addGap(59, 59, 59)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(eJudulV, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -232,17 +232,17 @@ public class EditVideo extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ePengunggahV, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton16)
+                .addComponent(eThumbnailV)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton18)
+                .addComponent(editVButton)
                 .addContainerGap(337, Short.MAX_VALUE))
         );
 
@@ -265,15 +265,15 @@ public class EditVideo extends javax.swing.JFrame {
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void eJudulVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eJudulVActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_eJudulVActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void editVButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editVButtonActionPerformed
         // Mengambil input dari UI
-        String judul = jTextField1.getText();
-        String deskripsi = jTextArea1.getText();      
-        String diisiOleh = jTextField3.getText();
+        String judul = eJudulV.getText();
+        String deskripsi = eDescV.getText();      
+        String diisiOleh = ePengunggahV.getText();
         
         String thumbnail = Aplikasi.updateVideo.getPathThumbnail();
         if(thumbnail.isEmpty()){
@@ -283,12 +283,12 @@ public class EditVideo extends javax.swing.JFrame {
             Aplikasi.updateVideo.updateVideoDB(getIdVideo(), getJudulLama(), judul, deskripsi, diisiOleh, thumbnail);
             this.dispose();
         }        
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_editVButtonActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void eThumbnailVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eThumbnailVActionPerformed
         // TODO add your handling code here:
         Aplikasi.updateVideo.loadThumbnail();
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_eThumbnailVActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
@@ -298,7 +298,7 @@ public class EditVideo extends javax.swing.JFrame {
     public void tampilkan(String judul,String idVideo){
         setJudulLama(judul);
         setIdVideo(idVideo);
-        jButton16.setText("+ Unggah Thumbnail");
+        eThumbnailV.setText("+ Unggah Thumbnail");
         String query = "SELECT *"
                 + "FROM FAMIFY.KONTEN_VIDEO WHERE ID_VIDEO = ?";
         
@@ -309,9 +309,9 @@ public class EditVideo extends javax.swing.JFrame {
             pstmt.setString(1, idVideo);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
-                jTextField1.setText(judul);
-                jTextArea1.setText(rs.getString("DESKRIPSI"));
-                jTextField3.setText(rs.getString("PENGUNGGAH"));                
+                eJudulV.setText(judul);
+                eDescV.setText(rs.getString("DESKRIPSI"));
+                ePengunggahV.setText(rs.getString("PENGUNGGAH"));                
             }
         }catch (Exception ex) {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
@@ -320,11 +320,11 @@ public class EditVideo extends javax.swing.JFrame {
     }
 
     public JButton getjButton18() {
-        return jButton18;
+        return editVButton;
     }
 
     public JButton getjButton16() {
-        return jButton16;
+        return eThumbnailV;
     }
 
     public JButton getjButton17() {
@@ -332,11 +332,11 @@ public class EditVideo extends javax.swing.JFrame {
     }
 
     public JTextField getjTextField1() {
-        return jTextField1;
+        return eJudulV;
     }
     
     public JTextField getjTextField3() {
-        return jTextField3;
+        return ePengunggahV;
     }
 
     public String getJudulLama() {
@@ -363,13 +363,16 @@ public class EditVideo extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea eDescV;
+    private javax.swing.JTextField eJudulV;
+    private javax.swing.JTextField ePengunggahV;
+    private javax.swing.JButton eThumbnailV;
+    private javax.swing.JButton editVButton;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -378,8 +381,5 @@ public class EditVideo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

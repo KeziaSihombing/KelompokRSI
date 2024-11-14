@@ -65,7 +65,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton3" min="-2" pref="756" max="-2" attributes="0"/>
+                      <Component id="savedelButton" min="-2" pref="756" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -91,7 +91,7 @@
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="0" min="-2" pref="756" max="-2" attributes="0"/>
+                      <Component id="addseeButton" alignment="0" min="-2" pref="756" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="121" max="32767" attributes="0"/>
               </Group>
@@ -132,9 +132,9 @@
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="addseeButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="savedelButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="80" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -234,7 +234,7 @@
             <Property name="text" type="java.lang.String" value="Hasil Konsultasi"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="addseeButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="16" style="0"/>
@@ -248,10 +248,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addseeButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="savedelButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="b9" green="b8" red="22" type="rgb"/>
@@ -268,7 +268,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="savedelButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
