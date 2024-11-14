@@ -24,4 +24,8 @@ public class MembukaHasilKonsultasi {
                 Logger.getLogger(DetailSesiUI.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
+    
+    public void showMessage(String message){
+        Aplikasi.dialogUI.showMessage(message);
+    }
 }

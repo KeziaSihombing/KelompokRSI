@@ -38,8 +38,7 @@ public class Artikel extends Content {
         int offset = (page - 1) * 4;
 
             try {
-                Aplikasi.database.databaseConnection();
-                Connection con = Aplikasi.database.getCon();
+                Connection con = Aplikasi.controllerManajemen.getConnection();
                 Statement stmt = con.createStatement();
                 ResultSet rs1 = stmt.executeQuery(countQuery);
                 PreparedStatement pstmt = con.prepareStatement(query); 

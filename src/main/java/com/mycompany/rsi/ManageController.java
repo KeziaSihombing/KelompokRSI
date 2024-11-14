@@ -5,6 +5,7 @@
 
 package com.mycompany.rsi;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -76,6 +77,9 @@ public class ManageController {
         return null;
     }
   
+      public Connection getConnection(){
+        return Aplikasi.database.getConnection();
+    }
 
 
 }

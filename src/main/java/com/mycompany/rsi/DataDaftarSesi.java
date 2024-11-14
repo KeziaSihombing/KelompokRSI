@@ -53,8 +53,7 @@ public class DataDaftarSesi {
             String query = "SELECT j.TANGGAL, j.WAKTU, kl.NAMA_KONSULTAN, kl.SPESIALISASI, r.TEMPAT FROM FAMIFY.RESERVASI r JOIN FAMIFY.JADWAL_KONSULTASI j ON r.ID_JADWAL = j.ID_JADWAL JOIN FAMIFY.KLIEN k ON r.ID_KLIEN = k.ID_KLIEN JOIN FAMIFY.KONSULTAN kl ON r.ID_KONSULTAN = kl.ID_KONSULTAN WHERE k.EMAIL = ?";
             List<DataDaftarSesi> daftarSesiKlien = new ArrayList<>();
             try{
-                Aplikasi.database.databaseConnection();
-                Connection con = Aplikasi.database.getCon();
+                Connection con = Aplikasi.controllerDaftarSesi.getConnection();
                 PreparedStatement pStatement = con.prepareStatement(query);
                 pStatement.setString(1, email);
                 ResultSet rs = pStatement.executeQuery(); 
