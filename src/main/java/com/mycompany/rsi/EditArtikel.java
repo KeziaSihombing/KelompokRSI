@@ -312,8 +312,7 @@ public class EditArtikel extends javax.swing.JFrame {
                 + "FROM FAMIFY.KONTEN_ARTIKEL WHERE ID_ARTIKEL = ?";
         
         try {
-            Aplikasi.database.databaseConnection();
-            Connection con = Aplikasi.database.getCon();            
+            Connection con = Aplikasi.updateArtikel.getConnection();
             PreparedStatement pstmt = con.prepareStatement(query); 
             pstmt.setString(1, idArtikel);
             ResultSet rs = pstmt.executeQuery();

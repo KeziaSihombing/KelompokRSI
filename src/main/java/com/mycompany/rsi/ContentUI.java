@@ -268,8 +268,7 @@ public class ContentUI extends javax.swing.JFrame {
                 + "FROM FAMIFY.KONTEN_ARTIKEL WHERE JUDUL_ARTIKEL = ?";
         
         try {
-            Aplikasi.database.databaseConnection();
-            Connection con = Aplikasi.database.getCon();            
+            Connection con = Aplikasi.lihatKonten.getConnection();
             PreparedStatement pstmt = con.prepareStatement(query); 
             pstmt.setString(1, judul);
             ResultSet rs = pstmt.executeQuery();

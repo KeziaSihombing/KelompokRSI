@@ -33,8 +33,7 @@ public class EditArtikelController {
         }
 
         // Koneksi ke database
-        Aplikasi.database.databaseConnection();
-        con = Aplikasi.database.getCon();
+        con = getConnection();
 
         // Query untuk menyimpan artikel ke database dengan TANGGAL_PUBLIKASI
         String querySimpan = "UPDATE FAMIFY.KONTEN_ARTIKEL SET JUDUL_ARTIKEL = ?, SUBJUDUL = ?, ISI_ARTIKEL = ?, PENULIS = ? WHERE ID_ARTIKEL = ?";
@@ -93,6 +92,10 @@ public class EditArtikelController {
     
     public void showMessage(String message){
         Aplikasi.dialogUI.showMessage(message);
+    }
+    
+     public Connection getConnection(){
+        return Aplikasi.database.getConnection();
     }
 
 //    public String getPathThumbnail() {

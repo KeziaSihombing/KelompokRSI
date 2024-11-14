@@ -5,6 +5,8 @@
 
 package com.mycompany.rsi;
 
+import java.sql.Connection;
+
 /**
  *
  * @author ASUS
@@ -12,6 +14,10 @@ package com.mycompany.rsi;
 public class MelihatKonten {
     public void showArticle(String judul){
         Aplikasi.lihatMateri.tampilkanArtikel(judul);
+    }
+    
+    public Connection getConnection(){
+        return Aplikasi.database.getConnection();
     }
     
     
