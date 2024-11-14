@@ -90,6 +90,10 @@ public class EditArtikelController {
     public void showArticleEdit(String judul,String idArtikel){
         Aplikasi.editArtikel.tampilkan(judul, idArtikel);
     }
+    
+    public void showMessage(String message){
+        Aplikasi.dialogUI.showMessage(message);
+    }
 
 //    public String getPathThumbnail() {
 //        return pathThumbnail;

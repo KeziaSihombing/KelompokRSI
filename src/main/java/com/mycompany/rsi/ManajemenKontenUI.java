@@ -792,10 +792,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+        if(Aplikasi.controllerManajemen.getType(jLabel4.getText(), jTextArea7.getText()).equals("artikel")){
            Aplikasi.lihatKonten.showArticle(jTextArea7.getText());        
             this.dispose();
-        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+        }else if(Aplikasi.controllerManajemen.getType(jLabel4.getText(), jTextArea7.getText()).equals("video")){
             Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
         }        
     }//GEN-LAST:event_jButton18ActionPerformed
@@ -835,10 +835,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+        if(Aplikasi.controllerManajemen.getType(jLabel5.getText(), jTextArea9.getText()).equals("artikel")){
            Aplikasi.lihatKonten.showArticle(jTextArea9.getText());        
            this.dispose();
-        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+        }else if(Aplikasi.controllerManajemen.getType(jLabel5.getText(), jTextArea9.getText()).equals("video")){
             Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
         }       
         
@@ -879,10 +879,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
-        if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("artikel")){
+        if(Aplikasi.controllerManajemen.getType(jLabel6.getText(), jTextArea11.getText()).equals("artikel")){
            Aplikasi.lihatKonten.showArticle(jTextArea11.getText());        
            this.dispose();
-        }else if(Aplikasi.controllerManajemen.getType(jLabel3.getText(), jTextArea5.getText()).equals("video")){
+        }else if(Aplikasi.controllerManajemen.getType(jLabel6.getText(), jTextArea11.getText()).equals("video")){
             Aplikasi.dialogUI.showMessage("Fitur ini tidak diimplementasikan");
         }     
         

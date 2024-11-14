@@ -286,6 +286,7 @@ public class EditArtikel extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Aplikasi.addArticle.LoadThumbnail();
         //munculin thumnailnya pake logic kaya munculin file di hasil konsul
+        Aplikasi.updateArtikel.showMessage("Thumbnail tidak dapat diubah");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
