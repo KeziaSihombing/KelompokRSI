@@ -39,17 +39,17 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        JudulA = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        subJudulA = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        penulisA = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        upThumbnailA = new javax.swing.JButton();
+        upAButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        isiArtikel = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -157,27 +157,27 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel1.setText("Judul*");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        JudulA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                JudulAActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel2.setText("Sub Judul*");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        subJudulA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                subJudulAActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel4.setText("Ditulis oleh*");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        penulisA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                penulisAActionPerformed(evt);
             }
         });
 
@@ -187,29 +187,29 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel6.setText("Thumbnail/Foto Sampul*");
 
-        jButton1.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
-        jButton1.setText("+Unggah Thumbnail");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        upThumbnailA.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
+        upThumbnailA.setText("+Unggah Thumbnail");
+        upThumbnailA.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        upThumbnailA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                upThumbnailAActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(64, 228, 231));
-        jButton3.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Unggah");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        upAButton.setBackground(new java.awt.Color(64, 228, 231));
+        upAButton.setFont(new java.awt.Font("Satoshi Variable", 1, 18)); // NOI18N
+        upAButton.setForeground(new java.awt.Color(255, 255, 255));
+        upAButton.setText("Unggah");
+        upAButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                upAButtonActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        isiArtikel.setColumns(20);
+        isiArtikel.setLineWrap(true);
+        isiArtikel.setRows(5);
+        jScrollPane1.setViewportView(isiArtikel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,16 +217,16 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1440, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(329, 329, 329)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(upThumbnailA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton3)
+                        .addComponent(upAButton)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1)
+                            .addComponent(penulisA, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
+                            .addComponent(subJudulA)
+                            .addComponent(JudulA)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -241,15 +241,15 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JudulA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(subJudulA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(penulisA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -257,9 +257,9 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(upThumbnailA)
                 .addGap(29, 29, 29)
-                .addComponent(jButton3)
+                .addComponent(upAButton)
                 .addContainerGap(281, Short.MAX_VALUE))
         );
 
@@ -286,24 +286,24 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void JudulAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JudulAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_JudulAActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void penulisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_penulisAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_penulisAActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void subJudulAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subJudulAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_subJudulAActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void upThumbnailAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upThumbnailAActionPerformed
         // TODO add your handling code here:
         Aplikasi.addArticle.LoadThumbnail();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_upThumbnailAActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void upAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upAButtonActionPerformed
         // TODO add your handling code here:
         // Mengambil input dari UI
     String judul = Aplikasi.upArtikel.getjTextField1().getText();
@@ -324,7 +324,7 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
 
     // Panggil metode simpanArtikelDB
     Aplikasi.addArticle.simpanArtikelDB(judul, subJudul, isiArtikel, diisiOleh, thumbnailFile);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_upAButtonActionPerformed
 
     public void tampilkan(){
          if(Aplikasi.akun.getPerson().equals("klien")){
@@ -336,44 +336,44 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
         }
         
         Aplikasi.addArticle.setPathThumbnail("");
-        jButton1.setText("+Unggah Thumbnail");
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextArea1.setText("");
+        upThumbnailA.setText("+Unggah Thumbnail");
+        JudulA.setText("");
+        subJudulA.setText("");
+        penulisA.setText("");
+        isiArtikel.setText("");
         this.setVisible(true);
     }
 
     public JButton getjButton1() {
-        return jButton1;
+        return upThumbnailA;
     }
 
     public JButton getjButton3() {
-        return jButton3;
+        return upAButton;
     } 
 
     public JTextArea getjTextArea1() {
-        return jTextArea1;
+        return isiArtikel;
     }
 
     public JTextField getjTextField1() {
-        return jTextField1;
+        return JudulA;
     }
 
     public JTextField getjTextField2() {
-        return jTextField2;
+        return subJudulA;
     }
 
     public JTextField getjTextField3() {
-        return jTextField3;
+        return penulisA;
     }
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField JudulA;
+    private javax.swing.JTextArea isiArtikel;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -386,9 +386,9 @@ public class ProsesUpArtikelGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField penulisA;
+    private javax.swing.JTextField subJudulA;
+    private javax.swing.JButton upAButton;
+    private javax.swing.JButton upThumbnailA;
     // End of variables declaration//GEN-END:variables
 }
