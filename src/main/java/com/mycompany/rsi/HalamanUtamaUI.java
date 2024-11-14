@@ -842,12 +842,10 @@ public class HalamanUtamaUI extends javax.swing.JFrame {
     public void tampilkan(){
         if(Aplikasi.akun.getPerson().equals("klien")){
             navBarTwo.setText("Reservasi");
-            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon
         }else if(Aplikasi.akun.getPerson().equals("administrator")){
             navBarThree.setText("Notifikasi");
             navBarFour.setVisible(false);
             navBarTwo.setText("Manajemen Konten");       
-            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
         }
         Aplikasi.controllerBeranda.showRecentArticle(Aplikasi.controllerBeranda.loadRecentArticle());
         Aplikasi.controllerBeranda.showRecentVideo(Aplikasi.controllerBeranda.loadRecentVideo());   

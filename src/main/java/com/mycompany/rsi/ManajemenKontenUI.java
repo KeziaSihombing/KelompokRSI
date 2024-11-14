@@ -281,6 +281,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea8.setColumns(20);
         jTextArea8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea8.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea8.setLineWrap(true);
         jTextArea8.setRows(5);
         jTextArea8.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
         jTextArea8.setAutoscrolls(false);
@@ -383,6 +384,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea10.setColumns(20);
         jTextArea10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea10.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea10.setLineWrap(true);
         jTextArea10.setRows(5);
         jTextArea10.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
         jTextArea10.setAutoscrolls(false);
@@ -485,6 +487,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jTextArea12.setColumns(20);
         jTextArea12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea12.setForeground(new java.awt.Color(111, 110, 110));
+        jTextArea12.setLineWrap(true);
         jTextArea12.setRows(5);
         jTextArea12.setText("Mengasuh bayi yang baru lahir adalah tugas yang berat dan orang tua akan \nmerasakan berbagai macam emosi. Bahagia bercampur dengan frustrasi, \nkeletihan, dan kecemasan. Emosi yang bercampur-aduk ini sama sekali tak \nperlu ditakuti...");
         jTextArea12.setAutoscrolls(false);
@@ -1071,13 +1074,13 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         if(Aplikasi.akun.getPerson().contains("k")){
             this.dispose();
             Aplikasi.controllerDaftarSesi.load();
-        }else{
+        }else if(Aplikasi.akun.getPerson().contains("admin")){
             Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:-
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
     }//GEN-LAST:event_jButton29ActionPerformed
 
@@ -1091,6 +1094,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jButton10.setVisible(true);
         }else{
             jButton10.setVisible(false);
+            jButton13.setVisible(false);
+            jButton14.setVisible(false);
+            jButton16.setVisible(false);
+            jButton17.setVisible(false);
+            jButton19.setVisible(false);
+            jButton20.setVisible(false);
+            jButton22.setVisible(false);
+            jButton23.setVisible(false);
         }
         tampilkan();  
         
@@ -1167,6 +1178,14 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             jButton10.setVisible(true);
         }else{
             jButton10.setVisible(false);
+            jButton13.setVisible(false);
+            jButton14.setVisible(false);
+            jButton16.setVisible(false);
+            jButton17.setVisible(false);
+            jButton19.setVisible(false);
+            jButton20.setVisible(false);
+            jButton22.setVisible(false);
+            jButton23.setVisible(false);
         }
         
         tampilkan(); 
@@ -1312,13 +1331,12 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     
     public void tampilkan(){        
         if(Aplikasi.akun.getPerson().equals("klien")){
-            jButton3.setText("Reservasi");
-            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti icon
+            jButton3.setText("Reservasi");            
         }else if(Aplikasi.akun.getPerson().equals("administrator")){
             jButton4.setText("Notifikasi");
             jButton29.setVisible(false);
-            jButton3.setText("Manajemen Konten");       
-            jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ellipse 44.png")));//mengganti profile
+            jButton3.setText("Manajemen Konten");      
+          
         }
         
         jPanel6.setVisible(false);
