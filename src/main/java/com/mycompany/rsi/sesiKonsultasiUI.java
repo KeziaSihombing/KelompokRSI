@@ -1,4 +1,4 @@
- /*
+  /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -31,10 +31,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        BerandaButtton = new javax.swing.JButton();
+        navBarTwo = new javax.swing.JButton();
+        navBarThree = new javax.swing.JButton();
+        navBarFour = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -46,93 +46,93 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        detailButtonOne = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        nameOne = new javax.swing.JLabel();
+        ageOne = new javax.swing.JLabel();
+        dateOne = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        timeOne = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        dateTwo = new javax.swing.JLabel();
+        nameTwo = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        ageTwo = new javax.swing.JLabel();
+        timeTwo = new javax.swing.JLabel();
+        detailButtonTwo = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        dateThree = new javax.swing.JLabel();
+        nameThree = new javax.swing.JLabel();
+        detailButtonThree = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
+        ageThree = new javax.swing.JLabel();
+        timeThree = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1446, 1256));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(111, 110, 110));
-        jButton1.setText("Beranda");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setPreferredSize(new java.awt.Dimension(78, 15));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BerandaButtton.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        BerandaButtton.setForeground(new java.awt.Color(111, 110, 110));
+        BerandaButtton.setText("Beranda");
+        BerandaButtton.setBorderPainted(false);
+        BerandaButtton.setContentAreaFilled(false);
+        BerandaButtton.setPreferredSize(new java.awt.Dimension(78, 15));
+        BerandaButtton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BerandaButttonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 40, 100, -1));
+        getContentPane().add(BerandaButtton, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 40, 100, -1));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(111, 110, 110));
-        jButton3.setText("Manajemen Jadwal");
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setPreferredSize(new java.awt.Dimension(180, 15));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        navBarTwo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        navBarTwo.setForeground(new java.awt.Color(111, 110, 110));
+        navBarTwo.setText("Manajemen Jadwal");
+        navBarTwo.setBorderPainted(false);
+        navBarTwo.setContentAreaFilled(false);
+        navBarTwo.setPreferredSize(new java.awt.Dimension(180, 15));
+        navBarTwo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                navBarTwoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, -1, -1));
+        getContentPane().add(navBarTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, -1, -1));
 
-        jButton4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(111, 110, 110));
-        jButton4.setText("Sesi Konsultasi");
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.setPreferredSize(new java.awt.Dimension(143, 15));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        navBarThree.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        navBarThree.setForeground(new java.awt.Color(111, 110, 110));
+        navBarThree.setText("Sesi Konsultasi");
+        navBarThree.setBorderPainted(false);
+        navBarThree.setContentAreaFilled(false);
+        navBarThree.setPreferredSize(new java.awt.Dimension(143, 15));
+        navBarThree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                navBarThreeActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, -1, -1));
+        getContentPane().add(navBarThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, -1, -1));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(111, 110, 110));
-        jButton2.setText("Obrolan");
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setPreferredSize(new java.awt.Dimension(76, 15));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        navBarFour.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        navBarFour.setForeground(new java.awt.Color(111, 110, 110));
+        navBarFour.setText("Obrolan");
+        navBarFour.setBorderPainted(false);
+        navBarFour.setContentAreaFilled(false);
+        navBarFour.setPreferredSize(new java.awt.Dimension(76, 15));
+        navBarFour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                navBarFourActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(928, 40, 110, -1));
+        getContentPane().add(navBarFour, new org.netbeans.lib.awtextra.AbsoluteConstraints(928, 40, 110, -1));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Foto user (3).png"))); // NOI18N
         jButton5.setBorderPainted(false);
@@ -192,21 +192,21 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-pos-has.png"))); // NOI18N
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        jButton7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(34, 184, 185));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
-        jButton7.setText("Lihat Detail Sesi");
-        jButton7.setActionCommand("");
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        detailButtonOne.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        detailButtonOne.setForeground(new java.awt.Color(34, 184, 185));
+        detailButtonOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
+        detailButtonOne.setText("Lihat Detail Sesi");
+        detailButtonOne.setActionCommand("");
+        detailButtonOne.setBorder(null);
+        detailButtonOne.setBorderPainted(false);
+        detailButtonOne.setContentAreaFilled(false);
+        detailButtonOne.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        detailButtonOne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                detailButtonOneActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 70, 220, -1));
+        jPanel1.add(detailButtonOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 70, 220, -1));
 
         jButton12.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
@@ -224,20 +224,20 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         });
         jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 70, 220, -1));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
-        jLabel13.setText("Dewi Alyssa");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
+        nameOne.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
+        nameOne.setText("Dewi Alyssa");
+        jPanel1.add(nameOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(120, 120, 135));
-        jLabel14.setText("24 Tahun");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
+        ageOne.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        ageOne.setForeground(new java.awt.Color(120, 120, 135));
+        ageOne.setText("24 Tahun");
+        jPanel1.add(ageOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(65, 65, 70));
-        jLabel19.setText("Kamis, 10 Oktober 2024");
-        jLabel19.setPreferredSize(new java.awt.Dimension(155, 20));
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
+        dateOne.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        dateOne.setForeground(new java.awt.Color(65, 65, 70));
+        dateOne.setText("Kamis, 10 Oktober 2024");
+        dateOne.setPreferredSize(new java.awt.Dimension(155, 20));
+        jPanel1.add(dateOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(34, 184, 185));
@@ -245,11 +245,11 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel20.setPreferredSize(new java.awt.Dimension(155, 20));
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, -1));
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(65, 65, 70));
-        jLabel21.setText("02.00 PM - 03.00 PM");
-        jLabel21.setPreferredSize(new java.awt.Dimension(155, 20));
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, -1, -1));
+        timeOne.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        timeOne.setForeground(new java.awt.Color(65, 65, 70));
+        timeOne.setText("02.00 PM - 03.00 PM");
+        timeOne.setPreferredSize(new java.awt.Dimension(155, 20));
+        jPanel1.add(timeOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(96, 96, 96));
@@ -282,46 +282,46 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel17.setPreferredSize(new java.awt.Dimension(155, 20));
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(65, 65, 70));
-        jLabel18.setText("Kamis, 10 Oktober 2024");
-        jLabel18.setPreferredSize(new java.awt.Dimension(155, 20));
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
+        dateTwo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        dateTwo.setForeground(new java.awt.Color(65, 65, 70));
+        dateTwo.setText("Kamis, 10 Oktober 2024");
+        dateTwo.setPreferredSize(new java.awt.Dimension(155, 20));
+        jPanel3.add(dateTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
-        jLabel15.setText("Dewi Alyssa");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
+        nameTwo.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
+        nameTwo.setText("Dewi Alyssa");
+        jPanel3.add(nameTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(96, 96, 96));
         jLabel11.setText("Akan Berlangsung");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 60, -1, -1));
 
-        jLabel16.setForeground(new java.awt.Color(120, 120, 135));
-        jLabel16.setText("24 Tahun");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
+        ageTwo.setForeground(new java.awt.Color(120, 120, 135));
+        ageTwo.setText("24 Tahun");
+        jPanel3.add(ageTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
 
-        jLabel22.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(65, 65, 70));
-        jLabel22.setText("02.00 PM - 03.00 PM");
-        jLabel22.setPreferredSize(new java.awt.Dimension(155, 20));
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
+        timeTwo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        timeTwo.setForeground(new java.awt.Color(65, 65, 70));
+        timeTwo.setText("02.00 PM - 03.00 PM");
+        timeTwo.setPreferredSize(new java.awt.Dimension(155, 20));
+        jPanel3.add(timeTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
 
-        jButton8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(34, 184, 185));
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
-        jButton8.setText("Lihat Detail Sesi");
-        jButton8.setActionCommand("");
-        jButton8.setBorder(null);
-        jButton8.setBorderPainted(false);
-        jButton8.setContentAreaFilled(false);
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        detailButtonTwo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        detailButtonTwo.setForeground(new java.awt.Color(34, 184, 185));
+        detailButtonTwo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
+        detailButtonTwo.setText("Lihat Detail Sesi");
+        detailButtonTwo.setActionCommand("");
+        detailButtonTwo.setBorder(null);
+        detailButtonTwo.setBorderPainted(false);
+        detailButtonTwo.setContentAreaFilled(false);
+        detailButtonTwo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        detailButtonTwo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                detailButtonTwoActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, 218, 47));
+        jPanel3.add(detailButtonTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, 218, 47));
 
         jButton14.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton14.setForeground(new java.awt.Color(255, 255, 255));
@@ -362,31 +362,31 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel32.setPreferredSize(new java.awt.Dimension(155, 20));
         jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
 
-        jLabel33.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(65, 65, 70));
-        jLabel33.setText("Kamis, 10 Oktober 2024");
-        jLabel33.setPreferredSize(new java.awt.Dimension(155, 20));
-        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
+        dateThree.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        dateThree.setForeground(new java.awt.Color(65, 65, 70));
+        dateThree.setText("Kamis, 10 Oktober 2024");
+        dateThree.setPreferredSize(new java.awt.Dimension(155, 20));
+        jPanel4.add(dateThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
 
-        jLabel34.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
-        jLabel34.setText("Dewi Alyssa");
-        jPanel4.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
+        nameThree.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
+        nameThree.setText("Dewi Alyssa");
+        jPanel4.add(nameThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
 
-        jButton9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(34, 184, 185));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
-        jButton9.setText("Lihat Detail Sesi");
-        jButton9.setActionCommand("");
-        jButton9.setBorder(null);
-        jButton9.setBorderPainted(false);
-        jButton9.setContentAreaFilled(false);
-        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        detailButtonThree.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        detailButtonThree.setForeground(new java.awt.Color(34, 184, 185));
+        detailButtonThree.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/button.u-t-capitalize.png"))); // NOI18N
+        detailButtonThree.setText("Lihat Detail Sesi");
+        detailButtonThree.setActionCommand("");
+        detailButtonThree.setBorder(null);
+        detailButtonThree.setBorderPainted(false);
+        detailButtonThree.setContentAreaFilled(false);
+        detailButtonThree.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        detailButtonThree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                detailButtonThreeActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, 218, 47));
+        jPanel4.add(detailButtonThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, 218, 47));
 
         jButton15.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton15.setForeground(new java.awt.Color(255, 255, 255));
@@ -409,15 +409,15 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         jLabel35.setText("Akan Berlangsung");
         jPanel4.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 60, -1, -1));
 
-        jLabel36.setForeground(new java.awt.Color(120, 120, 135));
-        jLabel36.setText("24 Tahun");
-        jPanel4.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
+        ageThree.setForeground(new java.awt.Color(120, 120, 135));
+        ageThree.setText("24 Tahun");
+        jPanel4.add(ageThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
 
-        jLabel37.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(65, 65, 70));
-        jLabel37.setText("02.00 PM - 03.00 PM");
-        jLabel37.setPreferredSize(new java.awt.Dimension(155, 20));
-        jPanel4.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
+        timeThree.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        timeThree.setForeground(new java.awt.Color(65, 65, 70));
+        timeThree.setText("02.00 PM - 03.00 PM");
+        timeThree.setPreferredSize(new java.awt.Dimension(155, 20));
+        jPanel4.add(timeThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
 
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-border-general--bottom.png"))); // NOI18N
@@ -435,21 +435,21 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BerandaButttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BerandaButttonActionPerformed
         // TODO add your handling code here:
         Aplikasi.beranda.tampilkan();
         this.dispose();
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BerandaButttonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void navBarThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navBarThreeActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_navBarThreeActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void detailButtonOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailButtonOneActionPerformed
         // TODO add your handling code here:
-        String tanggalText = jLabel19.getText();
+        String tanggalText = dateOne.getText();
         DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
         LocalDate tanggal = LocalDate.parse(tanggalText, formatterAsal);
 
@@ -458,18 +458,18 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         String formattedTanggal = tanggal.format(formatterTujuan);
         
         if(Aplikasi.akun.getPerson().equals("konsultan")){
-            Aplikasi.pilihSesi.load(jLabel13.getText(), formattedTanggal, jLabel21.getText());
+            Aplikasi.pilihSesi.load(nameOne.getText(), formattedTanggal, timeOne.getText());
         }else if(Aplikasi.akun.getPerson().equals("klien")){
-            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, jLabel21.getText());
+            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, timeOne.getText());
         }        
         
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_detailButtonOneActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void detailButtonTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailButtonTwoActionPerformed
         // TODO add your handling code here:
         String tanggalText = jLabel4.getText();
         DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
@@ -480,19 +480,19 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         String formattedTanggal = tanggal.format(formatterTujuan);
         
         if(Aplikasi.akun.getPerson().equals("konsultan")){
-            Aplikasi.pilihSesi.load(jLabel15.getText(),formattedTanggal, jLabel22.getText());
+            Aplikasi.pilihSesi.load(nameTwo.getText(),formattedTanggal, timeTwo.getText());
         }else if(Aplikasi.akun.getPerson().equals("klien")){
-            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, jLabel22.getText());
+            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, timeTwo.getText());
         }        
         
         
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_detailButtonTwoActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void detailButtonThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailButtonThreeActionPerformed
        // TODO add your handling code here:
         String tanggalText = jLabel4.getText();
         DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
@@ -503,25 +503,25 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         String formattedTanggal = tanggal.format(formatterTujuan);
         
         if(Aplikasi.akun.getPerson().equals("konsultan")){
-             Aplikasi.pilihSesi.load(jLabel34.getText(),formattedTanggal, jLabel37.getText());
+             Aplikasi.pilihSesi.load(nameThree.getText(),formattedTanggal, timeThree.getText());
         }else if(Aplikasi.akun.getPerson().equals("klien")){
-            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, jLabel37.getText());
+            Aplikasi.pilihSesi.load(Aplikasi.akun.getEmail(), formattedTanggal, timeThree.getText());
         }    
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_detailButtonThreeActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void navBarTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navBarTwoActionPerformed
         // TODO add your handling code here:
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_navBarTwoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void navBarFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navBarFourActionPerformed
         // TODO add your handling code here:
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_navBarFourActionPerformed
 
     /**
      * @param args the command line arguments
@@ -534,7 +534,7 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
         //perbedaan tampilan untuk klien dan konsultan
         if(Aplikasi.akun.getPerson().equals("klien")){
             //tampilan klien  
-            jButton3.setText("Reservasi");
+            navBarTwo.setText("Reservasi");
             if(daftar.size()>=1){              
                 DataDaftarSesi sesi1 = daftar.get(0);
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -544,10 +544,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
                 String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                 
                 jLabel4.setText(formattedTanggal);
-                jLabel13.setText(sesi1.getNama()); // Nama
-                jLabel14.setText(sesi1.getSpesialisasi()); // Spesialisasi
-                jLabel19.setText(formattedTanggal); // Tanggal Konsultasi
-                jLabel21.setText(sesi1.getWaktuKonsul()); // Waktu Konsultasi
+                nameOne.setText(sesi1.getNama()); // Nama
+                ageOne.setText(sesi1.getSpesialisasi()); // Spesialisasi
+                dateOne.setText(formattedTanggal); // Tanggal Konsultasi
+                timeOne.setText(sesi1.getWaktuKonsul()); // Waktu Konsultasi
                 jLabel20.setText("Konsultasi " + sesi1.getTempat()); // Tempat
                 if(tanggalKonsultasi.isBefore(LocalDate.now())){
                     jButton12.setVisible(false);
@@ -567,10 +567,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
                 DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
                 String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                 
-                jLabel15.setText(sesi2.getNama()); // Nama
-                jLabel16.setText(sesi2.getSpesialisasi()); // Spesialisasi
-                jLabel18.setText(formattedTanggal); // Tanggal Konsultasi
-                jLabel22.setText(sesi2.getWaktuKonsul()); // Waktu Konsultasi
+                nameTwo.setText(sesi2.getNama()); // Nama
+                ageTwo.setText(sesi2.getSpesialisasi()); // Spesialisasi
+                dateTwo.setText(formattedTanggal); // Tanggal Konsultasi
+                timeTwo.setText(sesi2.getWaktuKonsul()); // Waktu Konsultasi
                 jLabel17.setText("Konsultasi " + sesi2.getTempat()); // Tempat
 
                 if(tanggalKonsultasi.isBefore(LocalDate.now())){
@@ -591,10 +591,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
                 DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
                 String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                 
-                jLabel34.setText(sesi3.getNama()); // Nama
-                jLabel36.setText(sesi3.getSpesialisasi()); // Spesialisasi
-                jLabel33.setText(formattedTanggal); // Tanggal Konsultasi
-                jLabel37.setText(sesi3.getWaktuKonsul()); // Waktu Konsultasi
+                nameThree.setText(sesi3.getNama()); // Nama
+                ageThree.setText(sesi3.getSpesialisasi()); // Spesialisasi
+                dateThree.setText(formattedTanggal); // Tanggal Konsultasi
+                timeThree.setText(sesi3.getWaktuKonsul()); // Waktu Konsultasi
                 jLabel32.setText("Konsultasi " + sesi3.getTempat()); // Tempat
                 
                 if(tanggalKonsultasi.isBefore(LocalDate.now())){
@@ -621,10 +621,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
                 String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                 
                 jLabel4.setText(formattedTanggal);
-                jLabel13.setText(sesi1.getNama()); // Nama
-                jLabel14.setText(sesi1.getUmur() + " Tahun"); // Umur
-                jLabel19.setText(formattedTanggal); // Tanggal Konsultasi
-                jLabel21.setText(sesi1.getWaktuKonsul()); // Waktu Konsultasi
+                nameOne.setText(sesi1.getNama()); // Nama
+                ageOne.setText(sesi1.getUmur() + " Tahun"); // Umur
+                dateOne.setText(formattedTanggal); // Tanggal Konsultasi
+                timeOne.setText(sesi1.getWaktuKonsul()); // Waktu Konsultasi
                 jLabel20.setText("Konsultasi " + sesi1.getTempat()); // Tempat
                 if(tanggalKonsultasi.isBefore(LocalDate.now())){
                     jButton12.setVisible(false);
@@ -644,10 +644,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
                 DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
                 String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                 
-                jLabel15.setText(sesi2.getNama()); // Nama
-                jLabel16.setText(sesi2.getUmur() + " Tahun"); // Umur
-                jLabel18.setText(formattedTanggal); // Tanggal Konsultasi
-                jLabel22.setText(sesi2.getWaktuKonsul()); // Waktu Konsultasi
+                nameTwo.setText(sesi2.getNama()); // Nama
+                ageTwo.setText(sesi2.getUmur() + " Tahun"); // Umur
+                dateTwo.setText(formattedTanggal); // Tanggal Konsultasi
+                timeTwo.setText(sesi2.getWaktuKonsul()); // Waktu Konsultasi
                 jLabel17.setText("Konsultasi " + sesi2.getTempat()); // Tempat
 
                 if(tanggalKonsultasi.isBefore(LocalDate.now())){
@@ -668,10 +668,10 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
                 DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
                 String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
                 
-                jLabel34.setText(sesi3.getNama()); // Nama
-                jLabel36.setText(sesi3.getUmur() + " Tahun"); // Umur
-                jLabel33.setText(formattedTanggal); // Tanggal Konsultasi
-                jLabel37.setText(sesi3.getWaktuKonsul()); // Waktu Konsultasi
+                nameThree.setText(sesi3.getNama()); // Nama
+                ageThree.setText(sesi3.getUmur() + " Tahun"); // Umur
+                dateThree.setText(formattedTanggal); // Tanggal Konsultasi
+                timeThree.setText(sesi3.getWaktuKonsul()); // Waktu Konsultasi
                 jLabel32.setText("Konsultasi " + sesi3.getTempat()); // Tempat
                 
                 if(tanggalKonsultasi.isBefore(LocalDate.now())){
@@ -693,40 +693,31 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BerandaButtton;
+    private javax.swing.JLabel ageOne;
+    private javax.swing.JLabel ageThree;
+    private javax.swing.JLabel ageTwo;
+    private javax.swing.JLabel dateOne;
+    private javax.swing.JLabel dateThree;
+    private javax.swing.JLabel dateTwo;
+    private javax.swing.JButton detailButtonOne;
+    private javax.swing.JButton detailButtonThree;
+    private javax.swing.JButton detailButtonTwo;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -739,5 +730,14 @@ public class sesiKonsultasiUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel nameOne;
+    private javax.swing.JLabel nameThree;
+    private javax.swing.JLabel nameTwo;
+    private javax.swing.JButton navBarFour;
+    private javax.swing.JButton navBarThree;
+    private javax.swing.JButton navBarTwo;
+    private javax.swing.JLabel timeOne;
+    private javax.swing.JLabel timeThree;
+    private javax.swing.JLabel timeTwo;
     // End of variables declaration//GEN-END:variables
 }
