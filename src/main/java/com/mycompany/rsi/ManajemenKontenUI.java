@@ -46,7 +46,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         delete1 = new javax.swing.JButton();
-        EditButton1 = new javax.swing.JButton();
+        Edit1 = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         judul1 = new javax.swing.JTextArea();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -134,16 +134,16 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         });
         jPanel6.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 20, -1));
 
-        EditButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
-        EditButton1.setBorderPainted(false);
-        EditButton1.setContentAreaFilled(false);
-        EditButton1.setFocusPainted(false);
-        EditButton1.addActionListener(new java.awt.event.ActionListener() {
+        Edit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
+        Edit1.setBorderPainted(false);
+        Edit1.setContentAreaFilled(false);
+        Edit1.setFocusPainted(false);
+        Edit1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditButton1ActionPerformed(evt);
+                Edit1ActionPerformed(evt);
             }
         });
-        jPanel6.add(EditButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 10, 30, -1));
+        jPanel6.add(Edit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 10, 30, -1));
 
         jScrollPane7.setBorder(null);
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -735,7 +735,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_delete1ActionPerformed
 
-    private void EditButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditButton1ActionPerformed
+    private void Edit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit1ActionPerformed
         // TODO add your handling code here:
         //ini harusnya cek kondisi dulu jenis kontennya artikel atau video?
         // klu artikel manggil editArtikel, klu video manggil edit video
@@ -748,7 +748,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             Aplikasi.updateVideo.showVideoEdit(judul1.getText(), jLabel3.getText());
             this.dispose();
         }
-    }//GEN-LAST:event_EditButton1ActionPerformed
+    }//GEN-LAST:event_Edit1ActionPerformed
 
     private void read1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_read1ActionPerformed
         // TODO add your handling code here:
@@ -908,7 +908,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
                
         //menampilkan semua
         unggahButton.setVisible(false);
-        EditButton1.setVisible(false);
+        Edit1.setVisible(false);
         edit2.setVisible(false);
         edit3.setVisible(false);
         edit4.setVisible(false);
@@ -933,7 +933,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //memanggil tampilkanHanya artikel
         if(Aplikasi.akun.getPerson().equals("administrator")){
             unggahButton.setVisible(true);
-            EditButton1.setVisible(true);
+            Edit1.setVisible(true);
             edit2.setVisible(true);
             edit3.setVisible(true);
             edit4.setVisible(true);
@@ -967,7 +967,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         //memanggil tampilkan hanyaa video
         if(Aplikasi.akun.getPerson().equals("administrator")){
             unggahButton.setVisible(true);
-            EditButton1.setVisible(true);
+            Edit1.setVisible(true);
             edit2.setVisible(true);
             edit3.setVisible(true);
             edit4.setVisible(true);
@@ -1095,7 +1095,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             unggahButton.setVisible(false);
             delete1.setVisible(false);
-            EditButton1.setVisible(false);
+            Edit1.setVisible(false);
             delete2.setVisible(false);
             edit2.setVisible(false);
             delete3.setVisible(false);
@@ -1179,7 +1179,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }else{
             unggahButton.setVisible(false);
             delete1.setVisible(false);
-            EditButton1.setVisible(false);
+            Edit1.setVisible(false);
             delete2.setVisible(false);
             edit2.setVisible(false);
             delete3.setVisible(false);
@@ -1267,7 +1267,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel6.setVisible(false);
         unggahButton.setVisible(false);
         delete1.setVisible(false);
-        EditButton1.setVisible(false);
+        Edit1.setVisible(false);
         delete2.setVisible(false);
         edit2.setVisible(false);
         delete3.setVisible(false);
@@ -1360,7 +1360,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton EditButton1;
+    private javax.swing.JButton Edit1;
     private javax.swing.JButton artikelButton;
     private javax.swing.JButton berandaButton;
     private javax.swing.JButton delete1;
