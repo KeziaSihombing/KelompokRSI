@@ -45,7 +45,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        deleteButton1 = new javax.swing.JButton();
+        delete1 = new javax.swing.JButton();
         EditButton1 = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         judul1 = new javax.swing.JTextArea();
@@ -123,16 +123,16 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jPanel6.setVerifyInputWhenFocusTarget(false);
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        deleteButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Sampah.png"))); // NOI18N
-        deleteButton1.setBorderPainted(false);
-        deleteButton1.setContentAreaFilled(false);
-        deleteButton1.setFocusPainted(false);
-        deleteButton1.addActionListener(new java.awt.event.ActionListener() {
+        delete1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Sampah.png"))); // NOI18N
+        delete1.setBorderPainted(false);
+        delete1.setContentAreaFilled(false);
+        delete1.setFocusPainted(false);
+        delete1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButton1ActionPerformed(evt);
+                delete1ActionPerformed(evt);
             }
         });
-        jPanel6.add(deleteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 20, -1));
+        jPanel6.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 20, -1));
 
         EditButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pencil.png"))); // NOI18N
         EditButton1.setBorderPainted(false);
@@ -714,7 +714,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deleteButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButton1ActionPerformed
+    private void delete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete1ActionPerformed
         // TODO add your handling code here:
         ImageIcon iconButton8 = (ImageIcon) artikelButton.getIcon();
         ImageIcon iconReference = new ImageIcon(getClass().getResource("/images/Frame 209 (1).png"));
@@ -733,7 +733,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         }
        
         
-    }//GEN-LAST:event_deleteButton1ActionPerformed
+    }//GEN-LAST:event_delete1ActionPerformed
 
     private void EditButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditButton1ActionPerformed
         // TODO add your handling code here:
@@ -937,7 +937,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             edit2.setVisible(true);
             edit3.setVisible(true);
             edit4.setVisible(true);
-            deleteButton1.setVisible(true);
+            delete1.setVisible(true);
             delete2.setVisible(true);
             delete3.setVisible(true);
             delete4.setVisible(true);
@@ -971,7 +971,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             edit2.setVisible(true);
             edit3.setVisible(true);
             edit4.setVisible(true);
-            deleteButton1.setVisible(true);
+            delete1.setVisible(true);
             delete2.setVisible(true);
             delete3.setVisible(true);
             delete4.setVisible(true);
@@ -1094,7 +1094,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             unggahButton.setVisible(true);
         }else{
             unggahButton.setVisible(false);
-            deleteButton1.setVisible(false);
+            delete1.setVisible(false);
             EditButton1.setVisible(false);
             delete2.setVisible(false);
             edit2.setVisible(false);
@@ -1178,7 +1178,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             unggahButton.setVisible(true);
         }else{
             unggahButton.setVisible(false);
-            deleteButton1.setVisible(false);
+            delete1.setVisible(false);
             EditButton1.setVisible(false);
             delete2.setVisible(false);
             edit2.setVisible(false);
@@ -1266,7 +1266,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
         jLabel5.setVisible(false);
         jLabel6.setVisible(false);
         unggahButton.setVisible(false);
-        deleteButton1.setVisible(false);
+        delete1.setVisible(false);
         EditButton1.setVisible(false);
         delete2.setVisible(false);
         edit2.setVisible(false);
@@ -1355,7 +1355,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
      */
 
     public JButton getjButton13() {
-        return deleteButton1;
+        return delete1;
     }
  
 
@@ -1363,10 +1363,10 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
     private javax.swing.JButton EditButton1;
     private javax.swing.JButton artikelButton;
     private javax.swing.JButton berandaButton;
+    private javax.swing.JButton delete1;
     private javax.swing.JButton delete2;
     private javax.swing.JButton delete3;
     private javax.swing.JButton delete4;
-    private javax.swing.JButton deleteButton1;
     private javax.swing.JTextArea desc1;
     private javax.swing.JTextArea desc2;
     private javax.swing.JTextArea desc3;
