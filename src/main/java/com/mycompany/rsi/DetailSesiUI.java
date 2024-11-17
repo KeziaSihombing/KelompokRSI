@@ -49,12 +49,12 @@ public class DetailSesiUI extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        ageLabel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        dateLabel = new javax.swing.JLabel();
+        timeLabel = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -73,12 +73,12 @@ public class DetailSesiUI extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/div.u-pos-has.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        jLabel2.setText("Ester Howard");
+        nameLabel.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        nameLabel.setText("Ester Howard");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(120, 120, 135));
-        jLabel3.setText("30 Tahun");
+        ageLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        ageLabel.setForeground(new java.awt.Color(120, 120, 135));
+        ageLabel.setText("30 Tahun");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(34, 184, 185));
@@ -87,11 +87,11 @@ public class DetailSesiUI extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel5.setText("Tanggal Konsultasi:");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel6.setText("Kamis, 10 Agustus 2024");
+        dateLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        dateLabel.setText("Kamis, 10 Agustus 2024");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel7.setText("10.00 AM - 11.00 AM");
+        timeLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        timeLabel.setText("10.00 AM - 11.00 AM");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel8.setText("Jam                         :");
@@ -137,18 +137,18 @@ public class DetailSesiUI extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6))
+                        .addComponent(dateLabel))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(20, 20, 20)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addComponent(nameLabel)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel3)))
+                            .addComponent(ageLabel)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7))
+                        .addComponent(timeLabel))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -166,19 +166,19 @@ public class DetailSesiUI extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(jLabel2)
+                        .addComponent(nameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
+                        .addComponent(ageLabel)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4)))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel6))
+                    .addComponent(dateLabel))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jLabel7))
+                    .addComponent(timeLabel))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -206,7 +206,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    public JButton getjButton1() {
+    public JButton getAddSeeButton() {
         return addseeButton;
     }
 //mengunggah dan melihat file hasil konsultasi
@@ -218,18 +218,6 @@ public class DetailSesiUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addseeButtonActionPerformed
     
-//    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
-//    String filePath = jButton1.getText();
-//    
-//    if (filePath.endsWith(".pdf")) {
-//        try {
-//            File myFile = new File(filePath);
-//            Desktop.getDesktop().open(myFile); // Membuka file PDF
-//        } catch (IOException ex) {
-//            Aplikasi.dialogUI.showMessage("Gagal membuka file: " + ex.getMessage());
-//        }
-//    }
-//}
 
     private void savedelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savedelButtonActionPerformed
     String filePath = Aplikasi.unggah.getPath();
@@ -241,12 +229,12 @@ public class DetailSesiUI extends javax.swing.JFrame {
             savedelButton.setText("Hapus"); // Ubah teks tombol menjadi "Hapus"
         } else if (savedelButton.getText().equals("Hapus")) {
             DateTimeFormatter formatterAsal = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
-            LocalDate tanggal = LocalDate.parse(jLabel6.getText(), formatterAsal);
+            LocalDate tanggal = LocalDate.parse(dateLabel.getText(), formatterAsal);
 
             // Format ulang ke yyyy-MM-dd
             DateTimeFormatter formatterTujuan = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             String formattedTanggal = tanggal.format(formatterTujuan);
-            Aplikasi.hapus.hapusdariDB(jLabel2.getText(), formattedTanggal, jLabel7.getText()); // Menghapus file dari database
+            Aplikasi.hapus.hapusdariDB(nameLabel.getText(), formattedTanggal, timeLabel.getText()); // Menghapus file dari database
             addseeButton.setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
             savedelButton.setText("Simpan"); // Kembali ke tombol "Simpan"
         }
@@ -255,11 +243,11 @@ public class DetailSesiUI extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_savedelButtonActionPerformed
 
-    public JLabel getjLabel2() {
-        return jLabel2;
+    public JLabel getnameLabel() {
+        return nameLabel;
     }
 
-    public JButton getjButton3() {
+    public JButton getSaveDelButton() {
         return savedelButton;
     }
     
@@ -292,7 +280,7 @@ public class DetailSesiUI extends javax.swing.JFrame {
                         outputStream.write(buffer);
                     }
                     Aplikasi.unggah.setPath(file.getAbsolutePath());
-                    addseeButton.setText("Catatan Konsultasi " + jLabel2.getText()+ ".pdf");
+                    addseeButton.setText("Catatan Konsultasi " + nameLabel.getText()+ ".pdf");
                     
                     savedelButton.setText("Hapus");
                 }
@@ -315,10 +303,10 @@ public class DetailSesiUI extends javax.swing.JFrame {
                     LocalDate tanggalKonsultasi = LocalDate.parse(tanggal, formatter);
                     DateTimeFormatter formatterWithDay = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
                     String formattedTanggal = tanggalKonsultasi.format(formatterWithDay);
-                    jLabel6.setText(formattedTanggal);
-                    jLabel7.setText(rs.getString("WAKTU"));
-                    jLabel2.setText(rs.getString("NAMA_LENGKAP")); 
-                    jLabel3.setText(String.valueOf(rs.getInt("UMUR") + " Tahun")); 
+                    dateLabel.setText(formattedTanggal);
+                    timeLabel.setText(rs.getString("WAKTU"));
+                    nameLabel.setText(rs.getString("NAMA_LENGKAP")); 
+                    ageLabel.setText(String.valueOf(rs.getInt("UMUR") + " Tahun")); 
                     jLabel4.setText("Konsultasi " + rs.getString("TEMPAT"));
                 }
             }catch(Exception ex){
@@ -346,18 +334,18 @@ public class DetailSesiUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addseeButton;
+    private javax.swing.JLabel ageLabel;
+    private javax.swing.JLabel dateLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JButton savedelButton;
+    private javax.swing.JLabel timeLabel;
     // End of variables declaration//GEN-END:variables
 }

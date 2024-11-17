@@ -55,8 +55,8 @@ public class ProsesHapusSesi {
                     }
                 }
                         
-                Aplikasi.upHasil.getjButton1().setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
-                Aplikasi.upHasil.getjButton3().setText("Simpan"); // Kembali ke tombol "Simpan"
+                Aplikasi.upHasil.getAddSeeButton().setText("+ Unggah Hasil Konsultasi"); // Reset jButton1
+                Aplikasi.upHasil.getSaveDelButton().setText("Simpan"); // Kembali ke tombol "Simpan"
         } else {
                 Aplikasi.dialogUI.showMessage("File hasil konsultasi tidak ditemukan");
         }      

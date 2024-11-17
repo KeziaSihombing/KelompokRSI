@@ -28,7 +28,7 @@ public class ProsesUnggahHasil {
 
             if (selectedFile != null && selectedFile.getAbsolutePath().endsWith(".pdf")) {
                 setPath(selectedFile.getAbsolutePath());
-                Aplikasi.upHasil.getjButton1().setText("Catatan Konsultasi " + Aplikasi.upHasil.getjLabel2().getText()+".pdf");
+                Aplikasi.upHasil.getAddSeeButton().setText("Catatan Konsultasi " + Aplikasi.upHasil.getnameLabel().getText()+".pdf");
             } else {
                 Aplikasi.dialogUI.showMessage("Error: Format file tidak didukung. Harus PDF.");
             }
@@ -51,7 +51,7 @@ public class ProsesUnggahHasil {
 
         // Ambil data yang diperlukan
         String filePath = getPath(); // Path file hasil konsultasi
-        String namaKlien = Aplikasi.upHasil.getjLabel2().getText(); // Nama klien dari label
+        String namaKlien = Aplikasi.upHasil.getnameLabel().getText(); // Nama klien dari label
 
         // Koneksi ke database
         Aplikasi.database.databaseConnection();
@@ -101,8 +101,8 @@ public class ProsesUnggahHasil {
         if (row > 0) {
             Aplikasi.dialogUI.showMessage("Hasil konsultasi berhasil disimpan.");
             // Reset UI setelah menyimpan
-            Aplikasi.upHasil.getjButton1().setText(Aplikasi.upHasil.getjButton1().getText());
-            Aplikasi.upHasil.getjButton3().setText("Hapus");
+            Aplikasi.upHasil.getAddSeeButton().setText(Aplikasi.upHasil.getAddSeeButton().getText());
+            Aplikasi.upHasil.getSaveDelButton().setText("Hapus");
         } else {
             Aplikasi.dialogUI.showMessage("Gagal menyimpan hasil konsultasi.");
         }
