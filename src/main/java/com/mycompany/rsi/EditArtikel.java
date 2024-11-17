@@ -36,9 +36,9 @@ public class EditArtikel extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        berandaButton = new javax.swing.JButton();
+        navBarTwo = new javax.swing.JButton();
+        navBarThree = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -49,7 +49,7 @@ public class EditArtikel extends javax.swing.JFrame {
         ePenulisA = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        thumbnailButton = new javax.swing.JButton();
         editAButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         eIsiA = new javax.swing.JTextArea();
@@ -60,39 +60,39 @@ public class EditArtikel extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setPreferredSize(new java.awt.Dimension(100, 94));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(111, 110, 110));
-        jButton2.setText("Beranda");
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setPreferredSize(new java.awt.Dimension(78, 15));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        berandaButton.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        berandaButton.setForeground(new java.awt.Color(111, 110, 110));
+        berandaButton.setText("Beranda");
+        berandaButton.setBorderPainted(false);
+        berandaButton.setContentAreaFilled(false);
+        berandaButton.setPreferredSize(new java.awt.Dimension(78, 15));
+        berandaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                berandaButtonActionPerformed(evt);
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(111, 110, 110));
-        jButton5.setText("Manajemen Konten");
-        jButton5.setBorderPainted(false);
-        jButton5.setContentAreaFilled(false);
-        jButton5.setPreferredSize(new java.awt.Dimension(180, 15));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        navBarTwo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        navBarTwo.setForeground(new java.awt.Color(111, 110, 110));
+        navBarTwo.setText("Manajemen Konten");
+        navBarTwo.setBorderPainted(false);
+        navBarTwo.setContentAreaFilled(false);
+        navBarTwo.setPreferredSize(new java.awt.Dimension(180, 15));
+        navBarTwo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                navBarTwoActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(111, 110, 110));
-        jButton6.setText("Notifikasi");
-        jButton6.setBorderPainted(false);
-        jButton6.setContentAreaFilled(false);
-        jButton6.setPreferredSize(new java.awt.Dimension(143, 15));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        navBarThree.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        navBarThree.setForeground(new java.awt.Color(111, 110, 110));
+        navBarThree.setText("Notifikasi");
+        navBarThree.setBorderPainted(false);
+        navBarThree.setContentAreaFilled(false);
+        navBarThree.setPreferredSize(new java.awt.Dimension(143, 15));
+        navBarThree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                navBarThreeActionPerformed(evt);
             }
         });
 
@@ -109,11 +109,11 @@ public class EditArtikel extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(429, 429, 429)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(berandaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(navBarTwo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(navBarThree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(536, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -128,9 +128,9 @@ public class EditArtikel extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(berandaButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(navBarTwo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(navBarThree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -174,12 +174,12 @@ public class EditArtikel extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
         jLabel6.setText("Thumbnail/Foto Sampul*");
 
-        jButton1.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
-        jButton1.setText("thumbnail");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        thumbnailButton.setFont(new java.awt.Font("Satoshi Variable", 1, 14)); // NOI18N
+        thumbnailButton.setText("thumbnail");
+        thumbnailButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        thumbnailButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                thumbnailButtonActionPerformed(evt);
             }
         });
 
@@ -206,7 +206,7 @@ public class EditArtikel extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(323, 323, 323)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(thumbnailButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(editAButton)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -244,7 +244,7 @@ public class EditArtikel extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(thumbnailButton)
                 .addGap(18, 18, 18)
                 .addComponent(editAButton)
                 .addContainerGap(304, Short.MAX_VALUE))
@@ -253,22 +253,22 @@ public class EditArtikel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void berandaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_berandaButtonActionPerformed
         // TODO add your handling code here:
         Aplikasi.beranda.tampilkan();
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_berandaButtonActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void navBarTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navBarTwoActionPerformed
         // TODO add your handling code here:
        Aplikasi.controllerManajemen.showAll(1);
        this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_navBarTwoActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void navBarThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navBarThreeActionPerformed
         // TODO add your handling code here:
         Aplikasi.dialogUI.showMessage("FITUR INI TIDAK KAMI PROSES");
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_navBarThreeActionPerformed
 
     private void eJudulAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eJudulAActionPerformed
         // TODO add your handling code here:
@@ -282,13 +282,13 @@ public class EditArtikel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_eSubjudulAActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void thumbnailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thumbnailButtonActionPerformed
         // TODO add your handling code here:
         //Aplikasi.addArticle.LoadThumbnail();
         //munculin thumnailnya pake logic kaya munculin file di hasil konsul
         Aplikasi.updateArtikel.showMessage("Thumbnail tidak dapat diubah");
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_thumbnailButtonActionPerformed
 
     private void editAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAButtonActionPerformed
         // TODO add your handling code here:
@@ -326,37 +326,13 @@ public class EditArtikel extends javax.swing.JFrame {
             Aplikasi.dialogUI.showMessage("Connection Error: " + ex.getMessage());
         }
         if(Aplikasi.akun.getPerson().equals("klien")){
-            jButton5.setText("Reservasi");            
+            navBarTwo.setText("Reservasi");            
         }else if(Aplikasi.akun.getPerson().equals("administrator")){
-            jButton6.setText("Notifikasi");
-            jButton5.setText("Manajemen Konten");                
+            navBarThree.setText("Notifikasi");
+            navBarTwo.setText("Manajemen Konten");                
         }
         this.setVisible(true);        
-    }
-    
-    public JButton getjButton1() {
-        return jButton1;
-    }
-
-    public JButton getjButton3() {
-        return editAButton;
-    } 
-
-    public JTextArea getjTextArea1() {
-        return eIsiA;
-    }
-
-    public JTextField getjTextField1() {
-        return eJudulA;
-    }
-
-    public JTextField getjTextField2() {
-        return eSubjudulA;
-    }
-
-    public JTextField getjTextField3() {
-        return ePenulisA;
-    }
+    }    
 
     public String getJudulLama() {
         return judulLama;
@@ -379,15 +355,12 @@ public class EditArtikel extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton berandaButton;
     private javax.swing.JTextArea eIsiA;
     private javax.swing.JTextField eJudulA;
     private javax.swing.JTextField ePenulisA;
     private javax.swing.JTextField eSubjudulA;
     private javax.swing.JButton editAButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -397,5 +370,8 @@ public class EditArtikel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton navBarThree;
+    private javax.swing.JButton navBarTwo;
+    private javax.swing.JButton thumbnailButton;
     // End of variables declaration//GEN-END:variables
 }
