@@ -1120,7 +1120,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             if(artikel.getIsiArtikel().length()>100){
                 desc1.setText(artikel.getIsiArtikel().substring(0,100)+"...");
             }else{
-                desc1.setText(artikel.getIsiArtikel().length()+"...");
+                desc1.setText(artikel.getIsiArtikel() + "...");
             }
             jPanel6.setVisible(true);
             jLabel3.setText(artikel.getIdArtikel());
@@ -1134,7 +1134,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             if(artikel.getIsiArtikel().length()>100){
                 desc2.setText(artikel.getIsiArtikel().substring(0,100)+"...");
             }else{
-                desc2.setText(artikel.getIsiArtikel().length()+"...");
+                desc2.setText(artikel.getIsiArtikel()+"...");
             }
             jPanel7.setVisible(true);
             jLabel4.setText(artikel.getIdArtikel());
@@ -1148,7 +1148,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             if(artikel.getIsiArtikel().length()>100){
                 desc3.setText(artikel.getIsiArtikel().substring(0,100)+"...");
             }else{
-                desc3.setText(artikel.getIsiArtikel().length()+"...");
+                desc3.setText(artikel.getIsiArtikel()+"...");
             }
             jPanel8.setVisible(true);
             jLabel5.setText(artikel.getIdArtikel());
@@ -1162,7 +1162,7 @@ public class ManajemenKontenUI extends javax.swing.JFrame {
             if(artikel.getIsiArtikel().length()>100){
                 desc4.setText(artikel.getIsiArtikel().substring(0,100)+"...");
             }else{
-                desc4.setText(artikel.getIsiArtikel().length()+"...");
+                desc4.setText(artikel.getIsiArtikel()+"...");
             }
             jPanel9.setVisible(true);
             jLabel6.setText(artikel.getIdArtikel());
